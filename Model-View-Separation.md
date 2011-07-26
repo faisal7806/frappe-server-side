@@ -63,7 +63,7 @@ Create the following classes:
 
 1. Get the view file as doctype.__view and model file as doctype.__model
 2. Keep individual model, view objects for each of the forms / models
-
+    
     wn.app.models[dt][dn]
     wn.app.model_types[dt]
     
@@ -74,7 +74,7 @@ Create the following classes:
     // subclass this from view prototype of that class 
     wn.app.views[dt][dn] 
     wn.app.forms[dt] // all forms
-
+    
     // switch model + get view
     wn.app.forms[dt].use[dn] 
     
