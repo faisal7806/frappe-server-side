@@ -51,7 +51,7 @@ The view files should be read / write / parse friendly. Hence in a JSON model. H
 1. Write .model file without 'Column Break', 'Section Break', 'HTML' fields
 2. Write out .view file by breaking each section into a separate dict. Add fields in each section dict
 
-## Form Widget
+### Form Widget
 
 Create the following classes:
     
@@ -75,4 +75,6 @@ Create the following classes:
     wn.app.forms[dt] // all forms
     wn.app.forms[dt].use[dn] // switch model + get view
     
-   
+### File structure
+
+Move everything to js/wn folder
