@@ -62,7 +62,7 @@ Create the following classes:
 ### Changes to doctype processing
 
 1. Get the view file as doctype.__view and model file as doctype.__model
-2. Keep individual model, view objects for each of the forms / models
+2. Keep individual model, view objects for each of the forms / models:
     
     wn.app.models[dt][dn]
     wn.app.model_types[dt]
