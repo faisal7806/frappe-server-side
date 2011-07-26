@@ -42,7 +42,7 @@ The view files should be read / write / parse friendly. Hence in a JSON model. H
 	}
 
 ***
-### To Do
+## To Do
 
 1. A file / db converter
 2. Write the client-side form object to accept the new structure
@@ -58,7 +58,7 @@ Create the following classes:
     
     class wn.widgets.Form
     class wn.widgets.FormSection
-    class wn.widgets.FormField
+    class wn.widgets.FormField // baseclass
 
 ### Changes to doctype processing
 
@@ -66,7 +66,12 @@ Create the following classes:
 2. Keep individual model, view objects for each of the forms / models
 
 API:
-        
+    
+    class wn.models.Model
+        get
+        set
+        bind    
+
     wn.app.models[dt][dn]
     wn.app.model_types[dt]
     
@@ -82,7 +87,7 @@ API:
     wn.app.forms[dt].use[dn] 
     
 ***
-### Property Separation
+## Property Separation
 
 Properties part of model:
 
@@ -97,6 +102,8 @@ Properties part of model:
 
 Properties part of view (model properties plus these):
 
+    fieldtype (new type: HTML)
+    content
     hidden
     description
     width
