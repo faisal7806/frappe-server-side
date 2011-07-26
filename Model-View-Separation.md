@@ -66,14 +66,17 @@ Create the following classes:
 
     wn.app.models[dt][dn]
     wn.app.model_types[dt]
-
+    
     // model attributes cannot change
     wn.app.model_attributes[dt][fieldname]
     wn.app.view_prototype[dt]
-    wn.app.views[dt][dn] // subclass this from view prototype of that class
-
+    
+    // subclass this from view prototype of that class 
+    wn.app.views[dt][dn] 
     wn.app.forms[dt] // all forms
-    wn.app.forms[dt].use[dn] // switch model + get view
+
+    // switch model + get view
+    wn.app.forms[dt].use[dn] 
     
 ### File structure
 
