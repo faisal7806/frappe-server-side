@@ -41,6 +41,7 @@ The view files should be read / write / parse friendly. Hence in a JSON model. H
 		]
 	}
 
+***
 ### To Do
 
 1. A file / db converter
@@ -80,6 +81,25 @@ API:
     // switch model + get view
     wn.app.forms[dt].use[dn] 
     
-### File structure
+***
+### Property Separation
 
-Move everything to js/wn folder
+Properties part of model:
+
+    fieldname
+    fieldtype
+    label
+    reqd
+    length
+    index
+    in_filter
+    options
+
+Properties part of view (model properties plus these):
+
+    hidden
+    description
+    width
+    height
+    css
+    color
