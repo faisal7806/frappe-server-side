@@ -41,7 +41,6 @@ The view files should be read / write / parse friendly. Hence in a JSON model. H
 		]
 	}
 
-***
 ## To Do
 
 1. A file / db converter
@@ -86,7 +85,6 @@ API:
     // switch model + get view
     wn.app.forms[dt].use[dn] 
     
-***
 ## Property Separation
 
 Properties part of model:
