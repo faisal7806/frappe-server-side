@@ -12,22 +12,22 @@ Test Driven Refactoring of namespaces, and higher object orientation
 
 Delegate Foreign keys, authentication, etc to database
 
-### Separation of model and views
+### Separation of model and views:
 
 Separate .model files and .view files
 
-### Multiple views, controllers per model
+### Multiple views, controllers per model:
 
 Ability to select controller based on a model attribute
 
-### RESTful HTTP
+### RESTful HTTP:
 
 Use HTTP GET, PUT, POST and DELETE to manage interaction
 
-### Refactor client side structure
+### Refactor client side structure:
 
 Re-design client side view management. Use more ready made plugins, HTML5 and other frameworks
 
-### Lazy loading of libraries
+### Lazy loading of libraries:
 
 Improve page loading speed by lazy loading of libraries
