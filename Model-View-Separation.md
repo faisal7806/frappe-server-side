@@ -8,17 +8,32 @@ The view files should be read / write / parse friendly. Hence in a JSON model. H
 
 	{
 		'model':'Project',
-		'sections': [
+		'rows': [
 			{
 				'heading': 'Project Details',
 				'css': {
 					'background-color':'BLUE'
 				}
-				'contents': [
-					{'fieldname':'project_name'},
-					{'fieldname':'description'},
-					{'type':'html', 'content': 'Hello world'}
-				],
+				'columns': [
+					{
+						'heading': 'Col 1'
+						'css: {
+							'width':'50%'
+						},
+						contents: [
+							{'fieldname':'project_name', 'element':'h1', class='main-heading'},
+							{'fieldname':'description'},
+							{'fieldtype':'HTML', content:'<h3>hello world</h3>'}
+						]
+					
+					},
+					
+					{
+						{'fieldname':'project_owner'},
+						{'fieldname':'start_date'},
+						{'fieldname':'end_date', css: {'font-size': '22px'}},
+					}
+				]
 				events: {
 					'project_name change': function(model) {
 						//do something
@@ -28,12 +43,18 @@ The view files should be read / write / parse friendly. Hence in a JSON model. H
 	
 			{
 				'heading': 'Project To Dos',
-				'contents': [
-					{'type':'list', 'list_type':'projects.todo'}
+				'columns': [
+					{
+						'content': [
+							{'type':'list', 'list_type':'projects.todo'}
+						]
+					}
 				]
 			},
 	
 			{
+				# column not explicitly defined
+				# assume it inside the column
 				'contents': [
 					{'type':'list', 'list_type':'projects.project_member'}
 				]
