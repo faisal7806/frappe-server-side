@@ -38,6 +38,8 @@ Will create a new module rdfs which will have methods:
 4. load_model_def will become "load_class"
 5. load_class will load from database:
 
+### Sample Queries
+
     # select all attributes of a subject
     select predicate, object from rdfs_triple where subject = 'Thing'
 
