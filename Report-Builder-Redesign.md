@@ -2,12 +2,12 @@
    To make it more user-friendly and feature rich
 
 ### **Use Case**
-  * Users will select base document to create report
+  * Select base document to create report
   * Options to filter (default filter)
   * Options to select columns (default columns)
-  * Export formatted data in html/xml
-  * Sort option on each column
-  * Paging options
+  * Export (html/xml)
+  * Paging
+  * Print
 
 ### **To-do-list**
   * Document selection options considering multi table join
@@ -17,3 +17,5 @@
   * Export formatted data in html/xml
   * On refresh run client script (dependency,mandatory and validation in filter)
   * No base document for developer
+  * Flexible column width
+  * Print option with company letter head
