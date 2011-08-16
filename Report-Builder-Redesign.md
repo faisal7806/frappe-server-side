@@ -6,11 +6,14 @@
   * Options to filter (default filter)
   * Options to select columns (default columns)
   * Export formatted data in html/xml
+  * Sort option on each column
+  * Paging options
 
 ### **To-do-list**
   * Document selection options considering multi table join
   * Load default filters and columns
   * User can add filter based on any field and select any columns
-  * Multiple sorting options 
+  * Sort based on each column
   * Export formatted data in html/xml
   * On refresh run client script (dependency,mandatory and validation in filter)
+  * No base document for developer
