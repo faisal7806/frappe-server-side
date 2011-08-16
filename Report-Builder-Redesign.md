@@ -13,4 +13,4 @@
   * User can add filter based on any field and select any columns
   * Multiple sorting options 
   * Export formatted data in html/xml
-  * 
+  * On refresh run client script (dependency,mandatory and validation in filter)
