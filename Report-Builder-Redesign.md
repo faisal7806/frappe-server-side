@@ -19,3 +19,4 @@
   * No base document for developer
   * Flexible column width
   * Print option with company letter head
+  * Utility function
