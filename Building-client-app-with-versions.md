@@ -28,10 +28,10 @@ To find changes:
 
 Once you development is complete, you need to pull the latest `version-master.db`. Note, you *must* have the latest master and there can only be once master across all developers. To merge into master:
 
-   wnf merge master
+    wnf merge master
 
 This will merge the master version db both ways (new commits from elsewhere will also be pulled)
 
 To reset version control (sends a signal to the client, to clear localStorage):
 
-   wnf version reset
+    wnf version reset
