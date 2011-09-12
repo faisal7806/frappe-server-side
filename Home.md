@@ -1,10 +1,10 @@
 # Welcome to the wnframework wiki!
 
-## Tuturials
+## Tutorials
 
 1. [[Building client app with versions]]
 
-## Detailed Discussion of new features
+## New Features
 
 [[Version 1.8]]
 
