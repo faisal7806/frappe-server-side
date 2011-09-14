@@ -10,28 +10,30 @@ both Javascript (js) and Stylesheets (css) files can be lazy loaded:
 
 Once the object is lazy loaded, it is not re-loaded untill you commit a new version.
 
-## Committing new versions
+## Developer Guide
+
+#### Commit new changes
 
 To commit new versions to the system, use the `wnf` utility:
 
-    ./wnf add path/to/myfile
-    ..
-    ./wnf commit
+    python wnf.py build
 
-To search and commit:
-
-    ./wnf commit -a
-
-To find changes:
-
-    ./wnf diff
+#### Merge with master
 
 Once you development is complete, you need to pull the latest `version-master.db`. Note, you *must* have the latest master and there can only be once master across all developers. To merge into master:
 
-    ./wnf merge master
+    # merge local changes into master
+    python wnf.py merge local
 
-This will merge the master version db both ways (new commits from elsewhere will also be pulled)
+    # merge master changes into local
+    python wnf.py merge master
 
-To reset version control (sends a signal to the client, to clear localStorage):
+#### Start a new project
 
-    ./wnf version reset
+Before starting a new project, you must initialize the versions-local.db:
+
+    python wnf.py setup
+
+To setup the master for the first time,
+
+    python wnf.py setup_master
