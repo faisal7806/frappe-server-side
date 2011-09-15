@@ -1,4 +1,4 @@
-This tutorial is meant for understanding objective of writing test cases
+This tutorial is meant for understanding and standardize writing test cases
 
 ## OBJECTIVES
 1. To automate the testing procedure
@@ -16,4 +16,12 @@ This tutorial is meant for understanding objective of writing test cases
   1. Performance testing
   1
 1. Identifying Tests
-  Any system designed based of given set of requirements
+   A system which is designed based of given set of requirements, needs just one set of test cases.
+   But given two people the same task of writing test cases for a given system, they may not end up with same test cases. This is just an attempt to achieve the one unique set of test cases by any one.
+   Eg: Attempting a simple scenario of "creating an ITEM"
+   1. Mandatory Fields
+      1. Independently Mandatory
+         "Code", "Description"
+      2. Dependent Mandatory
+         "Warehouse" and "Stock UOM" Depends on "Is Stock Item"
+   2. 
