@@ -1,4 +1,4 @@
-This tutorial is meant to understand and standardize writing test cases for a given set requirements
+This tutorial is meant to understand and standardize writing test cases for a given set of requirements
 ---
 ## OBJECTIVES
 1. To identify areas of testing
