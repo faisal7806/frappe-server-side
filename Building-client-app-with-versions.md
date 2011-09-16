@@ -2,6 +2,16 @@
 
 wnframework uses HTML5 localStorage to store the application client-side and improve the user experience. It also uses lazy loading so that you can load the app gradually and on-demand.
 
+## Concepts
+
+All the js/css files are sent only once to the client (browser). If there are changes, the client maintains a version number and will supply the version number on refresh. If the version is shifted, the client will get a list of changed files that it needs to reload (on demand).
+
+The version info is stored in the file `versions-local.db`
+
+#### Merging with global changes
+
+The `versions-local.db` is not a part of the repository as the developer might make many changes. So when the changes are to be committed, the have to be merged with the `versions-master.db`. This works both ways. When a new version is pulled, the changes have to merged from the master to local.
+
 ## Developer Guide
 
 #### Get the latest changes
