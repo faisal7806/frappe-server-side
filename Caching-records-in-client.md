@@ -44,3 +44,11 @@ Get the diff (changes since):
     webnotes.model.updates(version)
 
 Handle requests from the client 
+
+### Pulling from db
+
+When the git version is changed, there can be 2 options - either all (doctypes) can be re-loaded, or we need to maintain a list of doctypes that have been changed from the last version.
+
+This can be kept in versions-local.db (timestamps). If the timestamps of the txt files have been changed, when merge-local is called, it will also log all timestamp changes in doctype (txt) files
+
+This needs to be done in "all" databases in a multi-tenant system. - or there needs to be a push mechanism for multi-tenant system based
