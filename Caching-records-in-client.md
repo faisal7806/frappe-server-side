@@ -13,37 +13,44 @@ Use localStorage to store documents in the browser and periodically refresh upda
 
 Client will have a DocumentStore that will expose the cache API:
 
-    // return a doclist of the given doc, either from local or server
+Return a doclist of the given doc, either from local or server:
+
     wn.docstore.get(dt, dn) - synchronous ajax call
 
-    // check the server for updates
+Check the server for updates:
+
     wn.docstore.refresh()
 
-    // clear a particular item from the docstore
+Clear a particular item from the docstore:
+
     wn.docstore.clear(dt, dn)
 
-    // load a from server
-    // will load add to localStorage (use the "docs" format)
-    wn.docstore.load(dt, dn)
+Load a from server:
+ 
+   wn.docstore.load(dt, dn)
 
-    // properties
+Version:
+
     wn.docstore.version
 
 ### Server
 
 The server must log updates (modifications to existing docs):
 
-    webnotes.model.log(dt ,dn)
+    webnotes.model.update_log.log(dt ,dn)
 
 Keep a version number:
 
-    webnotes.model.get_global('update_version')
+    webnotes.model.update_log.get_updates('update_version')
 
-Get the diff (changes since):
-
-    webnotes.model.updates(version)
+returns a list of updates [[dt, dn], [dt1, dn1], ..]
 
 Handle requests from the client 
+
+### Implemetation
+
+1. implement `wn.docstore` on client side
+2. implement `webnotes.model.update_log` on server side
 
 ### Pulling from db
 
