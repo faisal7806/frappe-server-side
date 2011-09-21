@@ -1,6 +1,7 @@
 # Caching Records in Browser
 
 Use localStorage to store documents in the browser and periodically refresh updates from the server.
+#Hard problem, from my skimming. different browsers, different ways. docs.google.com uses it on chrome for sure though.
 
 ## Design
 
