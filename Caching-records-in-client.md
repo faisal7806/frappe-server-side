@@ -1,6 +1,7 @@
 # Caching Records in Browser
 
 Use localStorage to store documents in the browser and periodically refresh updates from the server.
+For mozilla the js apis can be found here:<https://developer.mozilla.org/en/DOM/Storage#localStorage>
 
 ## Design
 
