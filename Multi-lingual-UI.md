@@ -65,9 +65,10 @@ DocLayer is a pattern by which we can layer any record (doc) in the system with 
 
 Make a message DocType and layer it. Messages for a particular language will have to be installed along with the `install_language` method.
 
-- each language file for message will be a dict of dict, such that the key will be a string and its value will be a dict containing language code as key and the translation of string as value.
-
-  example: {'Welcome %s': {'FR':'Bienvenue %s', 'RU':'добро пожаловать %s'}}
+- each language file for message will be a JSON object
+  example: (filenames will be `<language>-<locale>.txt`)
+  fr-FR.txt will contain: {'Welcome %s': 'Bienvenue %s'}
+  ru-RU.txt will contain: {'Welcome %s': 'добро пожаловать %s'}
 
 - a method `_(string)` will be used to fetch the translations for that string from tabMessage, for the language code specified in global defaults.
 - we can use msgprint as msgprint(_("Welcome %s") % 'Alex') to get the translations. This is in accordance with GNU gettext.
