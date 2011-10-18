@@ -77,6 +77,7 @@ Verify
 ## E. Internationalization
 
 Points to consider (From Wikipedia article: http://en.wikipedia.org/wiki/Internationalization_and_localization)
+
 - Spelling variants for different countries where the same language is spoken, e.g. localization (en-US, en-CA, en-GB-oed) vs. localisation (en-GB, en-AU)
 - Plural forms in text output, which differ depending upon language
 - Writing direction left to right in German, right to left in Persian, Hebrew and Arabic
