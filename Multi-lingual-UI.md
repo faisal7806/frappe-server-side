@@ -67,10 +67,10 @@ Make a message DocType and layer it. Messages for a particular language will hav
 
 - each language file for message will be a JSON object
 
-   example: (filenames will be `<language>-<locale>.txt`)
+      example: (filenames will be `<language>-<locale>.txt`)
 
-   * fr-FR.txt will contain: {'Welcome %s': 'Bienvenue %s'}
-   * ru-RU.txt will contain: {'Welcome %s': 'добро пожаловать %s'}
+      * fr-FR.txt will contain: {'Welcome %s': 'Bienvenue %s'}
+      * ru-RU.txt will contain: {'Welcome %s': 'добро пожаловать %s'}
 
 - a method `_(string)` will be used to fetch the translations for that string from tabMessage, for the language code specified in global defaults.
 - we can use msgprint as msgprint(_("Welcome %s") % 'Alex') to get the translations. This is in accordance with GNU gettext.
