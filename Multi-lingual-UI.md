@@ -1,6 +1,6 @@
 ## A. DocLayer
 
-DocLayer is a pattern by which we can layer any record (doc) in the system with masks or layers. These layers will be rendered on the client side and will over-ride properties of the layers below it. This pattern will used to implement multi-lingual views as well as customizations in DocTypes   
+DocLayer is a pattern by which we can layer any record (doc) in the system with masks or layers. These layers will be rendered on the client side and will over-ride properties of the layers below it. This pattern will be used to implement multi-lingual views as well as customizations in DocTypes   
 
 ### Design / Implementation
 
@@ -9,24 +9,37 @@ DocLayer is a pattern by which we can layer any record (doc) in the system with 
     * `__lang`: Language
     * `__base`: Base record
     * `__zIndex`: A number signifying hierarchy of rendering
+    
+    * `__base, __lang, __zIndex` will be a unique key
+    * If `__base` is null, it is the base record. It will have:
+        * `__lang` = null
+        * `__zIndex` = 0
 
 #### DocLayer - serverside
    - make_layered method will add additional columns in the table to make it layerable
    - loading - load from files (if module exists), then from base sorted by zIndex  (in doc.py)
    - install_language method
-      - import .txt files for that record and language in the db
+      - import .txt files for that language in the db (in layerable docs), by traversing through the directory tree.
+      - verify / alert if translations for any layerable doc is missing.
+      - if language already installed, show confirmation box for reinstallation. If yes, first export existing translations, delete records for the particular language and then re-import from .txt files
+      - provision for translation updates i.e. insert if not exists.
+      - import / export provision for .xls files (since .csv doesn't support utf8)
+      - uninstall a language
 
 #### Editing
    - if layer, then show full rendered layer upto that zIndex for editing
-   - on saving, save diff with the previous rendered layer
+   - on saving
+      - save diff with the previous rendered layer i.e. layer flattened upto previous layer
+      - save the modified time stamp of the base record only. Any change in a child record changes base record timestamp. Timestamps of child records will be null.
    - new layer, assume zIndex=(max+1)
-   - validate zIndex before saving (zIndex must be unique for each language)
-   - load all individual records with zIndex and render dynamically onchange of zIndex
+   - validate zIndex before saving (zIndex must be unique for each language - this will be taken care of by unique index)
+   - load all individual records with zIndex and render dynamically onchange of zIndex (preview functionality)
 
 #### Rendering
    - based on `__base`, `__lang` and `__zIndex`
    - update in doclist.js (to merge dicts)
    - update sync (from server)
+      - check timestamp of base record for layered tables. If required, fetch base + child records.
 
 #### Global "Language" property
    - there will be a global default property `__lang`
@@ -39,6 +52,7 @@ DocLayer is a pattern by which we can layer any record (doc) in the system with 
       - input for zIndex
 
    - on save, if a record for the corresponding (language, zIndex) is not present, create it
+   - a list of all layers for that doc can also be displayed (???) which on click will open that layer.
 
 ### Discussion
 
