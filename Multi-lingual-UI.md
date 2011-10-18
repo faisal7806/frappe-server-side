@@ -71,6 +71,7 @@ Make a message DocType and layer it. Messages for a particular language will hav
 
       * fr-FR.txt will contain: {'Welcome %s': 'Bienvenue %s'}
       * ru-RU.txt will contain: {'Welcome %s': 'добро пожаловать %s'}
+      * en-GB.txt will contain: {'Localization and Color': 'Localisation and Colour'} etc.
 
 - a method `_(string)` will be used to fetch the translations for that string from tabMessage, for the language code specified in global defaults.
 - we can use msgprint as msgprint(_("Welcome %s") % 'Alex') to get the translations. This is in accordance with GNU gettext.
