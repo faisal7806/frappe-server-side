@@ -73,3 +73,18 @@ Make a message DocType and layer it. The method `msgprint` will get the message 
 ## D. Convert tables to utf8
 
 Verify
+
+## E. Internationalization
+
+Points to consider (From Wikipedia article: http://en.wikipedia.org/wiki/Internationalization_and_localization)
+- Spelling variants for different countries where the same language is spoken, e.g. localization (en-US, en-CA, en-GB-oed) vs. localisation (en-GB, en-AU)
+- Plural forms in text output, which differ depending upon language
+- Writing direction left to right in German, right to left in Persian, Hebrew and Arabic
+- Different systems of numerals (too complex)
+- Telephone numbers, addresses and international postal codes
+- Currency (symbols, positions of currency markers)
+- Weights and measures
+- Date/time format, including use of different calendars
+- Time zones (UTC in internationalized environments)
+- Formatting of numbers (decimal separator, digit grouping)
+- Differences in symbols (e.g. quoting text using double-quotes (" "), as in English, or guillemets (« »), as in French).
