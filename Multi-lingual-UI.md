@@ -36,7 +36,7 @@ DocLayer is a pattern by which we can layer any record (doc) in the system with 
    - load all individual records with zIndex and render dynamically onchange of zIndex (preview functionality)
 
 #### Rendering
-   - based on `__base`, `__lang` and `__zIndex`
+   - based on `__base`, `__lang`, `__zIndex` and `docStatus`
    - update in doclist.js (to merge dicts)
    - update sync (from server)
       - check timestamp of base record for layered tables. If required, fetch base + child records.
