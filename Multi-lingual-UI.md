@@ -6,7 +6,10 @@ DocLayer is a pattern by which we can layer any record (doc) in the system with 
 
 #### Additional Columns
     The table will have the following columns:
-    * `__lang`: Language
+    * `__lang`: Language --> instead of __lang, we can use __rule and store a dict in it
+
+         example: __rule = {'lang':'fr-FR', 'role':['System Manager', 'Accounts Manager']}
+
     * `__base`: Base record
     * `__zIndex`: A number signifying hierarchy of rendering
     
