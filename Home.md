@@ -1,6 +1,9 @@
 # Welcome to the wnframework wiki!
 
-## Tutorials
+## Tutorials  
+
+You can get the technical documentation and brief overview of wnframework here: http://readthedocs.org/docs/wnframework/en/latest/   
+
 
 1. [[Building client app with versions]]
 
