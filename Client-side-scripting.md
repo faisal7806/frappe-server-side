@@ -23,8 +23,6 @@ On server side:
 				mode_of_payment, "default_account")
 		}
 
-### Custom Validation - client side:
-
 #### Date Validation: Do not allow past dates in a date field
 
 	cur_frm.cscript.custom_validate = function(doc) {
