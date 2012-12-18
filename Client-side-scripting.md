@@ -23,5 +23,15 @@ On server side:
 				mode_of_payment, "default_account")
 		}
 
-### Filtering Values in Link
+### Custom Validation - client side:
+
+1. Date Validation: Do not allow past dates in a date field
+
+	cur_frm.cscript.custom_validate = function(doc) {
+		if (doc.from_date < get_today()) {
+			msgprint("You can not select past date in From Date");
+			validated = false;
+		}
+
+	}
 
