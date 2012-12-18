@@ -25,7 +25,7 @@ On server side:
 
 ### Custom Validation - client side:
 
-1. Date Validation: Do not allow past dates in a date field
+#### Date Validation: Do not allow past dates in a date field
 
 	cur_frm.cscript.custom_validate = function(doc) {
 		if (doc.from_date < get_today()) {
@@ -34,3 +34,11 @@ On server side:
 		}
 	}
 
+#### Allow user only single perpose of stock entry:
+
+	cur_frm.cscript.custom_validate = function(doc) {
+		if(user=="user1@example.com" && doc.purpose!="Material Receipt") {
+			msgprint("You are only allowed Material Receipt");
+			return false;
+		}
+	}
