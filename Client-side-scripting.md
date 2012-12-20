@@ -1,6 +1,6 @@
 Client Side Scripting:
 
-### Fetching Values:
+## Fetching Values:
 
 Example, get default "cash_bank_account" when mode_of_payment is updated
 
@@ -23,7 +23,7 @@ On server side:
 				mode_of_payment, "default_account")
 		}
 
-#### Date Validation: Do not allow past dates in a date field
+### Date Validation: Do not allow past dates in a date field
 
 	cur_frm.cscript.custom_validate = function(doc) {
 		if (doc.from_date < get_today()) {
@@ -32,11 +32,29 @@ On server side:
 		}
 	}
 
-#### Allow user only single perpose of stock entry:
+### Allow user only single perpose of stock entry:
 
 	cur_frm.cscript.custom_validate = function(doc) {
 		if(user=="user1@example.com" && doc.purpose!="Material Receipt") {
 			msgprint("You are only allowed Material Receipt");
-			return false;
+			validated = false;
+		}
+	}
+
+### Validation on Stock Entry based on Warehouse Detail
+
+	cur_frm.cscript.custom_validate = function(doc) {
+		if(user_roles.indexOf("Material Manager")==-1) {
+		
+			var restricted_in_source = wn.model.get("Stock Entry Detail", 
+				{parent:cur_frm.doc.name, s_warehouse:"Restricted"});
+				
+			var restricted_in_target = wn.model.get("Stock Entry Detail", 
+				{parent:cur_frm.doc.name, t_warehouse:"Restricted"})
+		
+			if(restricted_in_source.length || restricted_in_target.length) {
+				msgprint("Only Material Manager can make entry in Restricted Warehouse");
+				validated = false;
+			}
 		}
 	}
