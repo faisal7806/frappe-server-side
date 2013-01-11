@@ -58,3 +58,18 @@ On server side:
 			}
 		}
 	}
+
+### Calculate Incentive in Sales Team table based on some custom logic
+
+	cur_frm.cscript.custom_validate = function(doc) {
+		// calculate incentives for each person on the deal
+		$.each(wn.model.get("Sales Team", {parent:doc.name}), function(i, d) {
+    
+			// calculate incentive
+			var incentive_percent = 2;
+			if(doc.grand_total > 400) incentive_percent = 4;
+
+			// actual incentive
+			d.incentives = flt(doc.grand_total) * incentive_percent / 100;
+		});
+	}
