@@ -1,6 +1,13 @@
 Client Side Scripting:
 
-## Fetching Values:
+### Using add_fetch to pull link details
+
+    # set employee_name field to employee_name value from employee link field
+    cur_frm.add_fetch('employee','employee_name','employee_name')
+
+    
+
+### Fetching Values:
 
 Example, get default "cash_bank_account" when mode_of_payment is updated
 
