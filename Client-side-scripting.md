@@ -5,6 +5,7 @@ Client Side Scripting:
 Add this line in the Custom Script (not in any function)
 
     // set employee_name field to employee_name value from employee link field
+    // function add_fetch(link_fieldname, source_fieldname, target_fieldname)
     cur_frm.add_fetch('employee','employee_name','employee_name')
 
     
