@@ -21,7 +21,7 @@ This will throw out a list of any dependant records that need to be created.
 To add test records, in the python module of the DocType, just add a property test_records that will contain the list of records required for this DocType. Use the following naming convention:
 
 1. For masters, use `_Test ` and the DocType. For example `_Test Department`
-2. For naming_series, use `_T-` + DocType + `_`. For example `_T-Employee-` as the naming_series value.
+2. For naming_series, use `_T-` + DocType + `-`. For example `_T-Employee-` as the naming_series value.
 3. For variants, go descriptive, example `_Test Department with Block List`
 
 Example of test record in Employee:
