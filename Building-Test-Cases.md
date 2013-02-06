@@ -26,17 +26,19 @@ To add test records, in the python module of the DocType, just add a property te
 
 Example of test record in Employee:
 
-	test_records = [[{
-		"doctype":"Employee",
-		"employee_name": "_Test Employee",
-		"naming_series": "_T-Employee-",
-		"date_of_joining": "2010-01-01",
-		"date_of_birth": "1980-01-01",
-		"gender": "Female",
-		"status": "Active",
-		"company": "_Test Company",
-		"user_id": "test@erpnext.com"
-	}]]
+```
+test_records = [[{
+	"doctype":"Employee",
+	"employee_name": "_Test Employee",
+	"naming_series": "_T-Employee-",
+	"date_of_joining": "2010-01-01",
+	"date_of_birth": "1980-01-01",
+	"gender": "Female",
+	"status": "Active",
+	"company": "_Test Company",
+	"user_id": "test@erpnext.com"
+}]]
+```
 
 #### Writing the Test Case
 
