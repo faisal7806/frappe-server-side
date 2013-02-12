@@ -12,7 +12,7 @@ If you run the module directly via command line, and pass a DocType as an option
 
 For example, to see if there are any dependant records for "Leave Application" to be created, from the main folder run:
 
-    python lib/webnotes/test_runner.py "Leave Application"
+    python lib/webnotes/test_runner.py -d "Leave Application"
 
 This will throw out a list of any dependant records that need to be created.
 
@@ -21,7 +21,7 @@ This will throw out a list of any dependant records that need to be created.
 To add test records, in the python module of the DocType, just add a property test_records that will contain the list of records required for this DocType. Use the following naming convention:
 
 1. For masters, use `_Test ` and the DocType. For example `_Test Department`
-2. For naming_series, use `_T-` + DocType + `-`. For example `_T-Employee-` as the naming_series value.
+2. For naming_series, value `_T-` + DocType + `-`. For example `_T-Employee-` will be set automatically.
 3. For variants, go descriptive, example `_Test Department with Block List`
 
 Example of test record in Employee:
