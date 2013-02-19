@@ -1,5 +1,17 @@
 Client Side Scripting:
 
+### Make attachments mandatory:
+
+    cur_frm.cscript.custom_validate = function(doc) {
+        if(!doc.__islocal) {
+            if(!doc.file_list) {
+                var msg = wn._("Please attach atleast 1 file");
+                msgprint(msg);
+                throw msg;
+            }
+        }
+    }
+
 ### Set Naming System For Item Code
 
     cur_frm.cscript.custom_validate = function(doc) {
