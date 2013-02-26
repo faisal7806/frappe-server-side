@@ -1,5 +1,24 @@
 Client Side Scripting:
 
+### Get Values from Server
+
+A standard way to query values from server side.
+
+    wn.call({
+        method:"webnotes.client.get_value",
+        args: {
+            doctype:"Delivery Note Item",
+            filters: {
+                parent:"DN00038",
+                item_code:"Ser/003"
+            },
+            fieldname:["qty", "stock_uom"]
+        }, 
+        callback: function(r) { 
+            console.log(r); 
+        }
+    })
+
 ### Make attachments mandatory:
 
     cur_frm.cscript.custom_validate = function(doc) {
