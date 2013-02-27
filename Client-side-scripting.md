@@ -1,5 +1,12 @@
 Client Side Scripting:
 
+### Make fields read-only after saving
+
+    cur_frm.cscript.custom_refresh = function(doc) {
+        // use the __islocal value of doc, to check if the doc is saved or not
+        cur_frm.set_df_property("myfield", "read_only", doc.__islocal ? 0 : 1);
+    }
+
 ### Get Values from Server
 
 A standard way to query values from server side.
