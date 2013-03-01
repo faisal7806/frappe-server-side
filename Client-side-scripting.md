@@ -102,6 +102,41 @@ On server side:
 				mode_of_payment, "default_account")
 		}
 
+### Fetching a table row's values in the form
+
+on client side
+```
+// client script (example: in sales_invoice.js)
+cur_frm.cscript.wash_type = function(doc, cdt, cdn) {
+    var d = locals[cdt][cdn];
+    if(d.wash_type) {
+        cur_frm.call({
+	    child: d,
+	    method: "get_item_qty",
+	    args: {
+	        item_code: d.item_code,
+	        wash_type: d.wash_type
+	    }
+	});
+    }
+}
+```
+
+on server side
+```
+# server script (example: in sales_invoice.py)
+# not a method of DocType object of 
+    
+# whitelist allows method to be called from web request
+@webnotes.whitelist()
+def get_item_qty(item_code, wash_type):
+    # do something
+    fieldvalue1 = "something"
+
+    # return a dict of row's fieldnames and values to be updated in that table row
+    return { "fieldname1":  fieldvalue1 }
+```
+
 ### Date Validation: Do not allow past dates in a date field
 
 	cur_frm.cscript.custom_validate = function(doc) {
