@@ -7,6 +7,13 @@ Client Side Scripting:
         cur_frm.set_df_property("myfield", "read_only", doc.__islocal ? 0 : 1);
     }
 
+### Hide a field based on some condition
+
+    cur_frm.cscript.custom_refresh = function(doc) {
+        // use the __islocal value of doc, to check if the doc is saved or not
+        cur_frm.toggle_display("myfield1", doc.myfield2=="some_value");
+    }
+
 ### Get Values from Server
 
 A standard way to query values from server side.
