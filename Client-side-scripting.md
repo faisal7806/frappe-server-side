@@ -10,7 +10,6 @@ Client Side Scripting:
 ### Hide a field based on some condition
 
     cur_frm.cscript.custom_refresh = function(doc) {
-        // use the __islocal value of doc, to check if the doc is saved or not
         cur_frm.toggle_display("myfield1", doc.myfield2=="some_value");
     }
 
