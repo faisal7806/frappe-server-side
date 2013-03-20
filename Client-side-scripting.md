@@ -77,7 +77,7 @@ A standard way to query values from server side.
 
 ### Using add_fetch to pull link details
 
-Add this line in the Custom Script (not in any function)
+Add this line in the Custom Script (not in any function) for the target DocType (where you want to value to be fetched).
 
     // set employee_name field to employee_name value from employee link field
     // function add_fetch(link_fieldname, source_fieldname, target_fieldname)
