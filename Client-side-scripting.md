@@ -193,3 +193,16 @@ def get_item_qty(item_code, wash_type):
 			d.incentives = flt(doc.grand_total) * incentive_percent / 100;
 		});
 	}
+
+### Cancel permission based on grand total
+
+	cur_frm.cscript.custom_before_cancel = function(doc) {
+		if (user_roles.indexOf("Accounts User")!=-1 && user_roles.indexOf("Accounts Manager")==-1
+				&& user_roles.indexOf("System Manager")==-1) {
+			if (flt(doc.grand_total) > 10000) {
+				msgprint("You can not cancel this transaction, because grand total \
+					is greater than 10000");
+				validated = false;
+			}
+		}
+	}
