@@ -28,7 +28,10 @@ A standard way to query values from server side.
             fieldname:["qty", "stock_uom"]
         }, 
         callback: function(r) { 
-            console.log(r); 
+            console.log(r);
+
+            // set the returned value in a field
+            cur_frm.set_value(fieldname, r.message);
         }
     })
 
