@@ -7,6 +7,6 @@
 1. `formview.show` creates a new `_f.Frm` object, changes the container to point to this new form and calls its refresh method
 1. `refresh` method of the form object calls `setnewdoc`
 1. Then, Following events are fired in sequence:
-    1. `cur_frm.cscript.onload`
+    1. `cur_frm.cscript.onload` (only for new)
     1. `cur_frm.cscript.refresh`
-    1. `cur_frm.cscript.onload_post_render`
+    1. `cur_frm.cscript.onload_post_render` (only for new)
