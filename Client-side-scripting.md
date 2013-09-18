@@ -221,3 +221,10 @@ def get_item_qty(item_code, wash_type):
 			cur_frm.appframe.buttons.Submit.remove();
 		}
 	}
+
+### Assign Expected Delivery Date as x days after Sales Order Date
+	cur_frm.cscript.custom_sales_order_date = function(doc) {
+		cur_frm.set_value("expected_delivery_date", wn.datetime.add_days(doc.sales_order_date, x));
+	}
+
+	cur_frm.cscript.custom_onload = cur_frm.cscript.custom_sales_order_date;
