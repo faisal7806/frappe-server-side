@@ -228,3 +228,9 @@ def get_item_qty(item_code, wash_type):
 	}
 
 	cur_frm.cscript.custom_onload = cur_frm.cscript.custom_sales_order_date;
+
+### Prevent back-dating for Resolution Date in Customer Issues
+    if (doc.resolution_date && wn.datetime.get_day_diff(new Date(), wn.datetime.str_to_obj(doc.resolution_date)) > 0) { 
+            validated = false;
+             msgprint("Resolution Date cannot be a past date"); // or any other message you want..
+         }
