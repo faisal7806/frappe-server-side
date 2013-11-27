@@ -155,7 +155,7 @@ def get_item_qty(item_code, wash_type):
 		}
 	}
 
-### Allow user only single perpose of stock entry:
+### Allow user only single purpose of stock entry:
 
 	cur_frm.cscript.custom_validate = function(doc) {
 		if(user=="user1@example.com" && doc.purpose!="Material Receipt") {
