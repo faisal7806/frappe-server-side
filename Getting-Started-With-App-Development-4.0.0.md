@@ -1,6 +1,6 @@
 ### Introduction
 
-1. App applications are Python modules
+1. All applications are Python modules
 1. Installation will by via `setuptools`
 1. Apps communicate to base framework and other apps via `hooks.txt`
 1. Important: DocType names and module names must be unique throughout all apps! So please check existing names before creating new apps / modules / doctypes
