@@ -29,17 +29,6 @@ Final Directory structure should be:
     + site2
 ```
 
-## Creating a New App
-
-1. Add setup.py
-1. Add MANIFEST.IN
-1. Add README
-1. Create app folder
-1. Add `[app]/__init__.py`
-1. Add `[app]/hooks.txt`
-1. Add `[app]/modules.txt`. List of modules in the app in code format (lowercase and no spaces)
-1. Add `[app]/desktop.json`. List of desktop icons for the app.
-
 ### Installing for Development
 
 - Setup each app (`webnotes`, `erpnext` etc) `python setup.py develop`
@@ -51,6 +40,16 @@ Final Directory structure should be:
 To start serving
 
 - From the sites folder: `webnotes site1 --serve`
+## Creating a New App
+
+1. Add setup.py
+1. Add MANIFEST.IN
+1. Add README
+1. Create app folder
+1. Add `[app]/__init__.py`
+1. Add `[app]/hooks.txt`
+1. Add `[app]/modules.txt`. List of modules in the app in code format (lowercase and no spaces)
+1. Add `[app]/desktop.json`. List of desktop icons for the app.
 
 ### Hooks
 
