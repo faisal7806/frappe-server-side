@@ -77,6 +77,23 @@ There are two javascript / css builds, one for the website and one for the appli
 
 To run scheduled events, add scheduler hooks
 
+#### Bean Events
+
+These replace custom server scripts
+
+Examples:
+
+###### To execute a function after on_update of Quotation
+
+Write a function in app-repository-name.app_name.some_folder_hierarchy.some_py_file module
+
+    def do_this_stuff(controller, method_name):
+        pass
+
+Entry in hooks.txt
+
+`bean_event = Quotation:on_update:app_name.some_folder_hierarchy.some_py_file.do_this_stuff`
+
 ### `desktop.json`
 
 Sample:
