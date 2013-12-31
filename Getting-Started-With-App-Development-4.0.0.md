@@ -85,7 +85,7 @@ Examples:
 
 ###### To execute a function after on_update of Quotation
 
-Write a function in app-repository-name.app_name.some_folder_hierarchy.some_py_file module
+Write a function in `app-repository-name.app_name.some_folder_hierarchy.some_py_file` module
 
     def do_this_stuff(controller, method_name):
         pass
