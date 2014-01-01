@@ -30,6 +30,13 @@ Final Directory structure should be:
     + site2
 ```
 
+Sample `apps.txt`
+
+```
+webnotes
+erpnext
+```
+
 ### Installing for Development
 
 - Setup each app (`webnotes`, `erpnext` etc) `python setup.py develop`
