@@ -45,9 +45,15 @@ erpnext
 - run `webnotes site1 --install_app erpnext`
 - run `webnotes site1 --build`
 
+To add a new site:
+
+- create a folder in the `sites` folder
+- run `webnotes [newsite] --install [dbname]`
+ 
 To start serving
 
 - From the sites folder: `webnotes site1 --serve`
+
 ## Creating a New App
 
 1. Add setup.py
