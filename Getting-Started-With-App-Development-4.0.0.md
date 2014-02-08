@@ -11,6 +11,10 @@
 1. Create your `bench` folder - which will contain the sites and apps.
 1. In bench, you can create a separate folder for each app repository. Clone your `wnframework` and `erpnext` folders here. Please clone `wnframework` as `webnotes` - the repository name will be changed when the final release is complete.
 1. In bench, create a `sites` folder for all sites to be served on this implementation.
+1. You may need to install the required packages for your system. For ubuntu, run
+```
+sudo apt-get install libmysqlclient-dev libxml2-dev libxslt-dev
+``` 
 1. Install `webnotes` and `erpnext` by running `python setup.py develop` in each folder.
 1. Create `sites/apps.txt` for list of globally installable apps.
 1. Create `sites/languages.txt` for installable languages. Copy from `webnotes/data/languages.txt`
