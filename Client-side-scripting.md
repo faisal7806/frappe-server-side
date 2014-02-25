@@ -241,7 +241,7 @@ def get_item_qty(item_code, wash_type):
 			$.each(frappe.model.get("Stock Entry Detail", {parent:doc.name}), function(i, d) {
 				if(d.t_warehouse=="WarehouseX" && !d.material_request) {
 					msgprint("You must receive against Material Request");
-				        validated = false;
+					validated = false;
 					return;
 				}
 			}
