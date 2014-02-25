@@ -234,3 +234,15 @@ def get_item_qty(item_code, wash_type):
             validated = false;
              msgprint("Resolution Date cannot be a past date"); // or any other message you want..
          }
+
+### Stock Entry of type Material Receipt in WarehouseX must be made against Material Request
+cur_frm.cscript.custom_validate = function(doc) {
+	if(doc.purpose == "Material Receipt") {
+		$.each(frappe.model.get("Stock Entry Detail", {parent:doc.name}), function(i, d) {
+			if(d.t_warehouse=="WarehouseX" && !d.material_request) {
+				msgprint("You must receive against Material Request");
+			        validated = false;
+			}
+		}
+	}
+}
