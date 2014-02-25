@@ -244,6 +244,6 @@ def get_item_qty(item_code, wash_type):
 					validated = false;
 					return;
 				}
-			}
+			})
 		}
 	}
