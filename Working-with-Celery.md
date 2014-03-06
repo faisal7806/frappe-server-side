@@ -12,5 +12,5 @@
 * Start workers by running, 
 `cd sites && python -m frappe.celery_app worker`
 
-* beat == crontab 
+* beat == crontab   
 `cd sites && python -m frappe.celery_app beat -s scheduler.schedule`
