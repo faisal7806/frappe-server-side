@@ -25,7 +25,8 @@ Here is my desktop:
 
 [Desktop vagrant in action...](https://meocloud.pt/link/703a0b49-9a4f-404e-b77b-29416d77cacb/vagrantBox.png/)
 
-# For Windows you have to install PuTTY, ### because you can´t enter vagrant ssh, and enter the following:
+### For Windows you have to install PuTTY or other.
+You can't enter vagrant ssh, and enter the following:
 
 Host: 127.0.0.1
 
