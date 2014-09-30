@@ -17,7 +17,7 @@ If any one of the community wants to try it is very simple, justo a few steps:
 
 Resume: if you already have installed virtualbox and vagrant you just have to download my box and make the erpnext directory, issue **vagrant box add frappe-erpnext-vagrant-box frappe-erpnext.box**, **vagrant up** and **vagrant ssh**.
 
-In the erpnext directory my box will make the frappe-bench directory with frappe and bench already configured. This is the directory that you use in the host machine and share with the guest machine. This way you don't have to open virtualbox gui of the guest machine that is heavy, and you develop always with native app of host machine. The ports are forwarded in Vagrantfile and we access the frappe desk with host browser, http://localhost:8000 or if you prefer in this case http://33.33.33.10:8000 the same to mysql, just see Vagrantfile.
+In the erpnext directory my box will make the frappe-bench directory with frappe and bench already configured. This is the directory that you use in the host machine and share with the guest machine. This way you don't have to open virtualbox gui of the guest machine that is heavy, and you develop always with native app of host machine. The ports are forwarded in Vagrantfile and we access the frappe desk with host browser, `http://localhost:8000` or if you prefer in this case `http://33.33.33.10:8000` the same to mysql, just see Vagrantfile.
 
 This ideal for windows and mac developers.
 
