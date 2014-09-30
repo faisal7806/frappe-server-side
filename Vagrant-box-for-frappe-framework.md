@@ -40,4 +40,4 @@ Password: vagrant
 
 or
 
-Private key: C:/Users/Your Name/.vagrant.d/insecure_private_key
+Import the private key: C:/Users/Your Name/.vagrant.d/insecure_private_key
