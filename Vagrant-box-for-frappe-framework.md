@@ -33,5 +33,7 @@ Port: 2222
 
 Username: vagrant
 
+Password: vagrant
+
 Private key: C:/Users/Your Name/.vagrant.d/insecure_private_key
 
