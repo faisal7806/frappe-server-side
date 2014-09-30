@@ -24,3 +24,14 @@ This ideal for windows and mac developers.
 Here is my desktop:
 
 [Desktop vagrant in action...](https://meocloud.pt/link/703a0b49-9a4f-404e-b77b-29416d77cacb/vagrantBox.png/)
+
+# For Windows you have to install PuTTY and enter the following:
+
+Host: 127.0.0.1
+
+Port: 2222
+
+Username: vagrant
+
+Private key: C:/Users/Your Name/.vagrant.d/insecure_private_key
+
