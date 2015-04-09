@@ -7,7 +7,7 @@ If any one of the community wants to try it is very simple, justo a few steps:
 
 1. first you have to install [Virtualbox](https://www.virtualbox.org) if it isn't already installed!
 2. then install vagrant from [Vagrant Home Page](https://www.vagrantup.com).
-3. then download my box file and Vagrantfile from [Vagrant box](https://meocloud.pt/link/c32bc5b3-9197-4654-971c-483d1d8ecbeb/frappe_v5/) to any directory, and inside that directory make another empty directory with the name **erpnext** [Like this](https://meocloud.pt/link/8912640b-b828-4e96-b26a-5304b988375b/setup_v5_img.png/) (it has to have this name. But you can change it in Vagrantfile that is included in download).
+3. then download my box file and Vagrantfile from [Vagrant box](https://meocloud.pt/link/c32bc5b3-9197-4654-971c-483d1d8ecbeb/frappe_v5/) to any directory, and inside that directory make another empty directory with the name **erpnext** [Like this](https://meocloud.pt/link/a20b19b2-50d3-46c1-9b6d-976869e0185c/erpnext_dir.png/) (it has to have this name. But you can change it in Vagrantfile that is included in download).
 
 4. then issue the following command, after download: **vagrant box add frappev5 frappe_erpnext_v5.box**. frappev5 is the title at your choice but if you change it you have to change it in Vagrantfile too. The second name is the name of my box, frappe_erpnext_v5.box.
 5. After that command you have to issue **vagrant up** and then wait, after that frappe is ready to start.
