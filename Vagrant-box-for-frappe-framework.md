@@ -1,5 +1,5 @@
 # Vagrant V5 box installation instructions:
-This box already has all dependencies (except wkhtmltopdf - i forgot). One database, **site1.local**, is installed by default. Mysql root password is frappe@ and Administrator password is frappe@. User frappe is not necessary because frappe was installed with user vagrant with no password. But if you must to know user frappe password is frappe@. 
+This box already has all dependencies (except wkhtmltopdf - i forgot). One database, **site1.local**, is installed by default. Mysql root password is `frappe@` and Administrator password is `frappe@`. User frappe is not necessary because frappe was installed with user vagrant with no password. But if you must to know user frappe password is `frappe@`. 
 
 Here is the link: [Vagrant box](https://meocloud.pt/link/c32bc5b3-9197-4654-971c-483d1d8ecbeb/frappe_v5/)
 
