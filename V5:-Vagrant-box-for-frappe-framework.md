@@ -16,7 +16,7 @@ If any one of the community wants to try it is very simple, justo a few steps:
 8. some important commands: `vagrant reload`; `vagrant halt`; `vagrant provision`; and you can change the memory used by guest machine in Vagrantfile.
 
 **Note:** Vagrant is in production with nginx and supervisor installed and working. The first time that you install and make `vagrant up` nginx is not working properly, you have to issue `sudo /etc/init.d/nginx restart` to refresh.
-After that nginx and supervisor will start properly. If you want to turn of nginx and supervisor when you start vagrant edit the file in /home/vagrant/.bashrc and comment `sudo supervisorctl reread` and `sudo supervisorctl update`.
+After that nginx and supervisor will start properly. If you want to turn off nginx and supervisor when you start vagrant edit the file in /home/vagrant/.bashrc and comment `sudo supervisorctl reread` and `sudo supervisorctl update`.
 
 Resume: if you already have installed virtualbox and vagrant you just have to download my box and make the erpnext directory, issue **vagrant box add frappev5 frappe_erpnext_v5.box**, **vagrant up** and **vagrant ssh**.
 
