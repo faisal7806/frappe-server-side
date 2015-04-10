@@ -1,3 +1,4 @@
+# Note: I made some changes to the box in another computer... If you get: erpnext: Warning: Authentication failure. Retrying... Then download the box `frappe_erpnext_v5_old.box`. Then in .bashrc, comment `sudo supervisorctl reread` and `sudo supervisorctl update`. By Monday i will fix this in my MAC. The new box has wkhtmltopdf installed.
 # Vagrant V5 box installation instructions:
 This box already has all dependencies. One database, **site1.local**, is installed by default. Mysql root password is `frappe@` and Administrator password is `frappe@`. User frappe is not necessary because frappe was installed with user vagrant and with no password. But if you must to know user frappe password is `frappe@`. 
 
