@@ -20,7 +20,7 @@ After that nginx and supervisor will start properly. If you want to turn of ngin
 
 Resume: if you already have installed virtualbox and vagrant you just have to download my box and make the erpnext directory, issue **vagrant box add frappev5 frappe_erpnext_v5.box**, **vagrant up** and **vagrant ssh**.
 
-In the erpnext directory my box will make the frappe-bench directory with frappe and bench already configured. This is the directory that you use in the host machine and share with the guest machine. This way you don't have to open virtualbox gui of the guest machine that is heavy, and you develop always with native app of host machine. The ports are forwarded in Vagrantfile and we access the frappe desk with host browser, with web server nginx -> `http://localhost:8020`, the same to mysql or if you want start `bench serve --port=8030`, just see Vagrantfile.
+In the erpnext directory my box will make the frappe-bench directory with frappe and bench already configured. This is the directory that you use in the host machine and share with the guest machine. This way you don't have to open virtualbox gui of the guest machine that is heavy, and you develop always with native app of host machine. The ports are forwarded in Vagrantfile and we access the frappe desk with host browser: with web server nginx on -> `http://localhost:8020`, the same to mysql or if you want start web server: `bench serve --port=8030`, just see Vagrantfile.
 
 This ideal for windows and mac developers.
 
