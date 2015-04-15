@@ -15,7 +15,7 @@ If any one of the community wants to try it is very simple, justo a few steps:
 7. After vagrant ssh you are in virtual machine inside the shared directory. This directory is shared with the host machine (mac or windows). **Note:** there is one identically directory in **/home/vagrant** (named, frappe-bench and another named bench-repo) but these are just the prototypes (things that have to do with vagrant itself...) the one that you have to use is in **/vagrant/frappe-bench** directory and is the one that you work in the host machine and share with the guest machine.
 8. Some important commands: `vagrant reload`; `vagrant halt`; `vagrant provision`; and you can change the memory used by guest machine in Vagrantfile.
 
-**Note:** Vagrant is in production with nginx and supervisor installed and working. You don't have to do `vagrant ssh` to start nginx, supervisor and guinicorn. After you issue `vagrant up` you can, from the host, browser access frappe framework, just do: `http://localhost:8020`.
+**Note:** Vagrant is in production with nginx and supervisor installed and working. You don't have to do `vagrant ssh` to start nginx, supervisor and guinicorn. After you issue `vagrant up` you can, from the host browser, access frappe framework, just do: `http://localhost:8020`.
 If you want to turn off nginx and supervisor when you start vagrant, comment `sudo supervisorctl reread` and `sudo supervisorctl update` in Vagrantfile.
 
 Resume: if you already have installed virtualbox and vagrant you just have to download my box and make the erpnext directory, issue **vagrant box add frappeV5 frappe_erpnext_v5.box**, **vagrant up** and to access frappe point the host browser to http://localhost:8020. If you wish to login issue: **vagrant ssh**.
