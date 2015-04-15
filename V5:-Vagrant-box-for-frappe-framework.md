@@ -18,7 +18,7 @@ If any one of the community wants to try it is very simple, justo a few steps:
 **Note:** Vagrant is in production with nginx and supervisor installed and working. You don't have to do `vagrant ssh` to start nginx, supervisor and guinicorn. After you issue `vagrant up` you can, from the host browser, access frappe framework, just do: `http://localhost:8020`.
 If you want to turn off nginx and supervisor when you start vagrant, comment `sudo supervisorctl reread` and `sudo supervisorctl update` in Vagrantfile.
 
-Resume: if you already have installed virtualbox and vagrant you just have to download my box and make the erpnext directory, issue **vagrant box add frappeV5 frappe_erpnext_v5.box**, **vagrant up** and to access frappe point the host browser to http://localhost:8020. If you wish to login issue: **vagrant ssh**.
+Resume: if you already have installed virtualbox and vagrant you just have to download my box and make the erpnext directory, issue **vagrant box add frappeV5 frappe_erpnext_v5.box**, **vagrant up** and to access frappe point the host browser to `http://localhost:8020`. If you wish to login issue: **vagrant ssh**.
 
 In the erpnext directory my box will make the frappe-bench directory with frappe and bench already configured. This is the directory that you use in the host machine and share with the guest machine. This way you don't have to open virtualbox gui of the guest machine that is heavy, and you develop always with native app of host machine. The ports are forwarded in Vagrantfile and we access the frappe desk with host browser: with web server nginx on -> `http://localhost:8020` or if you want start web server: `bench serve --port=8030`, the same to access mysql, just see Vagrantfile for the forwarded ports.
 
