@@ -3,7 +3,7 @@ This box already has all dependencies. One database, **site1.local**, is install
 
 Here is the link: [Vagrantfile](https://meocloud.pt/link/60770b07-eab8-4601-91c5-aee9d9ade3af/Vagrantfile/)
 
-If any one of the community wants to try it is very simple, justo a few steps:
+If any one of the community wants to try it is very simple, just a few steps:
 
 1. first you have to install [Virtualbox](https://www.virtualbox.org) if it isn't already installed!
 2. then install vagrant from [Vagrant Home Page](https://www.vagrantup.com).
