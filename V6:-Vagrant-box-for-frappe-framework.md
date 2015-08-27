@@ -39,4 +39,18 @@ or
 
 Import the private key: C:/Users/Your Name/.vagrant.d/insecure_private_key
 
+### Problems with Authentication:
+If many `frappeV6: Warning: Authentication failure. Retrying...` then do the following:
+
+1. `vagrant up`
+2. login with `vagrant ssh`. Password is vagrant.
+3. `wget https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub -O .ssh/authorized_keys`
+4. `chmod 700 .ssh`
+5. `chmod 600 .ssh/authorized_keys`
+6. `chown -R vagrant:vagrant .ssh`
+7. `exit` to logout
+8. vagrant halt
+9. vagrant up.
+ 
+ 
 Good luck!!!
