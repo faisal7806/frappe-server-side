@@ -75,7 +75,31 @@ This will be accessible as `/api/method/myapp.api.get_last_project`
 
 Desk Globals:
 
-`cur_frm`: Current form object
-`cur_list`: Current list object 
-`cur_dialog`: Current open dialog
-`cur_page`: Current page object
+- `cur_frm`: Current form object
+- `cur_list`: Current list object 
+- `cur_dialog`: Current open dialog
+- `cur_page`: Current page object
+- `locals`: All documents and DocType loaded in the browser session. A document can be access as `locals[doctype][name]` e.g. `locals['Opportunity']['OTY00001']`
+
+## Forms
+
+Form API
+
+#### 1. To add a new handler on value change.
+
+Example
+
+```
+frappe.ui.form.on("Salary Slip", {
+  company: function(frm) {
+    // this function is called when the value of company is changed.
+
+  }
+)
+```
+
+#### 2. Change value in the form
+
+```
+frm.set_value(fieldname, value);
+```
