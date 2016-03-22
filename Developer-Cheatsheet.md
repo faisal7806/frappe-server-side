@@ -73,13 +73,46 @@ This will be accessible as `/api/method/myapp.api.get_last_project`
 
 ## Desk
 
-Desk Globals:
+#### Globals
 
 - `cur_frm`: Current form object
 - `cur_list`: Current list object 
 - `cur_dialog`: Current open dialog
 - `cur_page`: Current page object
 - `locals`: All documents and DocType loaded in the browser session. A document can be access as `locals[doctype][name]` e.g. `locals['Opportunity']['OTY00001']`
+
+#### Routing
+
+Routes for standard views:
+
+- `#List/[doctype]`
+- `#Form/[doctype]/[name]`
+- `#Report/[doctype]`
+- `#Calendar/[doctype]`
+- `#modules/[module name]`
+
+To change the route via js, use `frappe.set_route`
+
+```
+frappe.set_route("List", "Customer");
+```
+
+##### Route Options
+
+To pass values to a view, use global `frappe.route_options`. `frappe.route_options` is data passed to the view to whom control is being passed. For list view, it is a filter. For form, it is a default value.
+
+Example:
+
+```
+frappe.set_route("List", "Customer", {"customer_type": "Company"});
+```
+
+or
+
+```
+frappe.route_options = {"customer_type": "Company"};
+frappe.set_route("List", "Customer");
+```
 
 ## Forms
 
