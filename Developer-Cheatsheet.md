@@ -70,3 +70,12 @@ def get_last_project():
 ```
 
 This will be accessible as `/api/method/myapp.api.get_last_project`
+
+## Desk
+
+Desk Globals:
+
+`cur_frm`: Current form object
+`cur_list`: Current list object 
+`cur_dialog`: Current open dialog
+`cur_page`: Current page object
