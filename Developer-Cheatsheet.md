@@ -2,28 +2,34 @@
 
 ### frappe module
 
-##### `frappe.form_dict`
+###### `frappe.form_dict`
 
 Request parameters
 
-##### `frappe.get_doc(doctype, name)`
+###### `frappe.get_doc(doctype, name)`
 
 e.g. frappe.get_doc('Project', 'My Project')
 
 Load a document from the database with give doctype (table) and name
 Returns a Document object. All columns are properties. e.g. doc.name
 
-##### `frappe.get_all(doctype, filters, fields)`
+###### `frappe.get_meta(doctype)`
+
+Loads the metadata (DocType) of the given doctype.
+
+e.g. `frappe.get_meta('Task').fields` is the list of fields in Task doctype
+
+###### `frappe.get_all(doctype, filters, fields)`
 
 e.g. frappe.get_all('Project', filters={'status': 'Open'}, fields=['name', 'description'])
 
 Returns a list of dict objects from the database
 
-##### `frappe.get_list(doctype, filters, fields)`
+###### `frappe.get_list(doctype, filters, fields)`
 
 Sames as frappe.get_all, but will only show permitted for the user
 
-##### `frappe.get_value(doctype, name, fieldname)`
+###### `frappe.get_value(doctype, name, fieldname)`
 
 Return a single value from the database 
 Example: frappe.get_value('Task', 'TASK00030', 'owner')
