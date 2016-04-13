@@ -54,6 +54,7 @@ def do_something(param1, param2, ...):
         frappe.db.commit()
 
     # no need to call frappe.destroy() in finally, as this is handled by frappe
+    # in fact, the whole try except else is optional if you are not doing any exception handling
 
 ```
 
