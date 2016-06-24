@@ -1,17 +1,52 @@
 This is a work in progress page to update the client side scripts page of the wiki
 
-Client Side Scripting:
-
-### Make fields read-only after saving
-
+#Client Side Scripting
+All client side scripting is done with javascript.
+##Syntax
 ```
-
-    cur_frm.cscript.custom_refresh = function(doc) {
-        // use the __islocal value of doc, to check if the doc is saved or not
-        cur_frm.set_df_property("myfield", "read_only", doc.__islocal ? 0 : 1);
+frappe.ui.form.on([DocType], {
+    [trigger]: function(frm) {
+        [function];
     }
+});
+```
+Replace [DocType] with the one you want to use, in quotations.  Example:
+```frappe.ui.form.on("Sales Order", {```
+or
+```frappe.ui.form.on("Purchase Order", {```
+in the case of a child table, the function still calls the parent doctype.
 
-### Hide a field based on some condition
+Replace [Trigger] with the one you want to use. Example:
+```company: function(frm) {```
+This would trigger the function when the company field is modified
+or
+```onload: function(frm) {``` This would trigger the function when the document is loaded.
+
+List of Triggers
+* Field Names (see the company example above)
+* onload
+* refresh
+* validate
+* onsubmit
+
+Example:
+```
+frappe.ui.form.on("Salary Slip", {
+  company: function(frm) {
+    // this function is called when the value of company is changed.
+
+  }
+});
+```
+#Functions
+
+
+## Make fields read-only after saving
+```
+// use the __islocal value of doc, to check if the doc is saved or not
+frm.set_df_property("myfield", "read_only", frm.doc.__islocal ? 0 : 1);
+```
+## Hide a field based on some condition
 
     cur_frm.cscript.custom_refresh = function(doc) {
         cur_frm.toggle_display("myfield1", doc.myfield2=="some_value");
@@ -40,47 +75,25 @@ A standard way to query values from server side.
     })
 
 ### Make attachments mandatory:
-
-    cur_frm.cscript.custom_validate = function(doc) {
-        if(!doc.__islocal) {
-            if(!doc.file_list) {
-                var msg = wn._("Please attach atleast 1 file");
-                msgprint(msg);
-                throw msg;
-            }
-        }
-    }
-
+```// To be replaced ```
 ### Set Naming System For Item Code
-
-    cur_frm.cscript.custom_validate = function(doc) {
-        // clear item_code (name is from item_code)
-        doc.item_code = "";
-
-        // first 2 characters based on item_group
-        switch(doc.item_group) {
-            case "Test A":
-                doc.item_code = "TA";
-                break;
-            case "Test B":
-                doc.item_code = "TB";
-                break;
-            default:
-                doc.item_code = "XX";
-        }
-
-        // add next 2 characters based on brand
-        switch(doc.brand) {
-            case "Brand A":
-                doc.item_code += "BA";
-                break;
-            case "Brand B":
-                doc.item_code += "BB";
-                break;
-            default:
-                doc.item_code += "BX";
-        }
-    }
+```// To be replaced ```
+frappe.ui.form.on("Item" {
+    validate: function(frm) {
+        // clear item_code
+        frm.set_value("item_code","");
+        if ( frm.doc.item_group === "Item Group A") {
+            frm.set_value("item_code", "AA");
+        } else if ( frm.doc.item_group === "Item Group B") {
+            frm.set_value("item_code", "BB");
+        } else {
+            frm.set_value("item_group", "XX");
+        if ( frm.doc.brand === "Brand 1") {
+            frm.set_value("item_code", += "B1");
+        } else if ( frm.doc.brand === "Brand 2") {
+            frm.set_value("item_code", += "B2");
+        } else {
+            frm.set_value("item_code", += "B0");
 
 ### Using add_fetch to pull link details
 
@@ -93,6 +106,8 @@ Add this line in the Custom Script (not in any function) for the target DocType 
     
 
 ### Fetching Values:
+Needs Updated
+
 
 Example, get default "cash_bank_account" when mode_of_payment is updated
 
