@@ -125,16 +125,41 @@ frappe.set_route("List", "Customer");
 Form API
 
 #### 1. To add a new handler on value change.
+Syntax
+```
+frappe.ui.form.on([DocType], {
+    [trigger]: function(frm) {
+        [function];
+    }
+});
+```
+Replace [DocType] with the one you want to use, in quotations.  Example:
+```frappe.ui.form.on("Sales Order", {```
+or
+```frappe.ui.form.on("Purchase Order", {```
+in the case of a child table, the function still calls the parent doctype.
 
-Example
+Replace [Trigger] with the one you want to use. Example:
+```company: function(frm) {```
+This would trigger the function when the company field is modified
+or
+```onload: function(frm) {``` This would trigger the function when the document is loaded.
 
+List of Triggers
+* Field Names (see the company example above)
+* onload
+* refresh
+* validate
+* onsubmit
+
+Example:
 ```
 frappe.ui.form.on("Salary Slip", {
   company: function(frm) {
     // this function is called when the value of company is changed.
 
   }
-)
+});
 ```
 
 #### 2. Change value in the form
