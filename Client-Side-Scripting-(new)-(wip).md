@@ -274,7 +274,7 @@ def get_item_qty(item_code, wash_type):
 		}
 	}
 
-### Filter the selections of a field in a parent document
+### Filter the selections of a field in a child document
 	cur_frm.fields_dict['items'].grid.get_field('item_code').get_query = function(doc, cdt, cdn) {
 		return {
 			filters:{'default_supplier': doc.supplier}
