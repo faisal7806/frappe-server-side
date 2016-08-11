@@ -26,9 +26,9 @@ When making changes to your local installation, you will need to be able to upda
 ###Pulling the latest data from your fork
 Typically, using bench update will pull the lastest data from the upstream (github.com/frappe) server, if pulling frappe or erpnext. If you want to pull your own fork from the repositories, you can use the following command, from the apps/[app_name] folder.
 
-    ```
-    git pull origin [branch_name]
-    ```
+```
+git pull origin [branch_name]
+```
 
 ###Starting to write your own code
 When you start making changes, whether to frappe/erpnext, or to modify your own app, you need to track those changes within a new branch. This allows your to push just these changes to your own github repository, which will allow you to create pull requests and merge the branch into the frappe/erpnext code, or your own app. The full procedure for starting changes all the way to pushing to your online repository is described below.
@@ -52,9 +52,7 @@ When you start making changes, whether to frappe/erpnext, or to modify your own 
     ```
     git add [file_name]
     ```
-
-If you want to add all the files that were changed, use:
-
+    If you want to add all the files that were changed, use:
     ```
     git add  .
     ```
@@ -65,7 +63,7 @@ If you want to add all the files that were changed, use:
     git commit -m "[message]"
     ```
 
-where the message is a short description of the changes you made in this commit
+    where the message is a short description of the changes you made in this commit
 
 7. Push the changes from this commit to your repository
 
