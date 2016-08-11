@@ -56,8 +56,8 @@ frm.set_df_property("myfield", "read_only", frm.doc.__islocal ? 0 : 1);
 
 A standard way to query values from server side.
 
-    wn.call({
-        method:"webnotes.client.get_value",
+    frappe.call({
+        method:"frappe.client.get_value",
         args: {
             doctype:"Delivery Note Item",
             filters: {
