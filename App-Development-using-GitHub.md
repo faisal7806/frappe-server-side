@@ -78,6 +78,15 @@ When you start making changes, whether to frappe/erpnext, or to modify your own 
     git checkout master
     ```
 
+###Creating a pull request
+Once you have a branch that has some useful contribution that you want to make part of your main branch, you can create a pull request for that branch and merge the changes.
+
+1. Go to your repository through a web browser (https://github.com/[user_name]/[repository]
+2. Click the New Pull Request button
+3. Select the base fork to the repository you want to merge into, the base branch to the branch you want to merge into, the head fork to your repository and the compare branch to the branch with your changes.
+4. Review the changes and make sure that they match the changes you wanted to make.
+5. If you are happy with the changes, click the create pull request button.
+
 ###Bringing your repository in line with the upstream repository
 Because of the high level of development that occurs within Frappe and ERPNext, you will find that very quickly your forked repository goes out of date with the upstream one. 
 
