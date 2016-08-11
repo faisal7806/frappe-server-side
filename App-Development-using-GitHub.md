@@ -120,3 +120,30 @@ Because of the high level of development that occurs within Frappe and ERPNext, 
     ```
     git push origin [branch_name] --force
     ```
+
+###Testing a branch
+Often times, you might find that you want to try out a branch from another developer:
+
+1. Add the repository as a remote
+
+    ```
+    git remote add [repo_name] http://github.com/[repo_link]
+    ```
+
+2. Pull the latest from the repository
+
+    ```
+    git pull [repo_name]
+    ```
+
+3. Check out the branch from the repository
+
+    ```
+    git checkout [branch_name]
+    ```
+
+4. Migrate the bench to take hold of the changes. In the `frappe-bench` folder:
+
+    ```
+    bench migrate
+    ```
