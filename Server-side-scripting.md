@@ -16,3 +16,20 @@ Any doc-level (class-level) method definition should be properly indented (i.e. 
 ## Examples
 
 Coming soon...
+
+###Querying the SQL database
+
+To get a list of values that meet some specification from the server
+
+    vars = frappe.db.sql("""SELECT [fieldname1], [fieldname2] 
+        FROM `tab[doctype]` WHERE [fieldnameA] = %(string1)s and [fieldnameB] = %(string2)s""", 
+        {'string1': input1, 'string2': input1}, as_dict=True )
+    
+where [fieldname1] and [fieldname2] are the fields you want returned, [doctype] is the document type you are querying from, [fieldnameA] and [fieldnameB] are the fields that filter the response based on requirements, and input1 and input 2 are variables determined earlier in the code.
+
+The SQL queries can be used between several doctype. For example, if you wanted to find the description field of DocA that has a fieldnameB = input1 in the child table DocB, you could do the following:
+
+    vars = frappe.db.sql("""SELECT description
+        FROM `tab[docA]` as docA,`tab[docB]` as docB  WHERE docB.fieldnameB = %(string1)s and docA.name = docB.parent""", 
+        {'string1': input1}, as_dict=True )
+
