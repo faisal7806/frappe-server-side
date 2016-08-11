@@ -1,0 +1,59 @@
+
+###Forking Frappe / ERPNext
+In order to make changes to Frappe and ERPNext, you need to set up a fork on your own GitHub account. This can be done easily on the GitHub website.
+
+1. Log in to GitHub
+2. Go to github.com/frappe/frappe
+3. Click on the Fork button at the top right of the screen.
+
+###Setting up local access to your fork
+When making changes to your local installation, you will need to be able to update the online repository so that you can push changes to Frappe / ERPNext, as well as keep revisions on GitHub, etc.
+
+1. Access your local installation using a terminal and go to the `frappe-bench` folder
+2. For each app you have forked, use the following commands to establish a remote to your fork:
+
+`cd apps/[app_name]`
+`git remote add origin https://github.com/[username]/[app_name]`
+
+3. Use the following command (in each apps/app_name folder) to verify the remote has been added
+
+`git remote -v`
+
+###Pulling the latest data from your fork
+Typically, using bench update will pull the lastest data from the upstream (github.com/frappe) server, if pulling frappe or erpnext. If you want to pull your own fork from the repositories, you can use the following command, from the apps/[app_name] folder.
+
+`git pull origin [branch_name]`
+
+###Starting to write your own code
+When you start making changes, whether to frappe/erpnext, or to modify your own app, you need to track those changes within a new branch. This allows your to push just these changes to your own github repository, which will allow you to create pull requests and merge the branch into the frappe/erpnext code, or your own app. The full procedure for starting changes all the way to pushing to your online repository is described below.
+
+1. Go to your app/[app_name] folder on your local server (through a terminal)
+2. Create a new local branch:
+
+````git checkout -b [my_branch_name]````
+
+3. Make changes to your app. This can be done either in the code of your app, or using the web interface of frappe to edit/add doctypes, etc. 
+4. When finished making changes, go back to the terminal in your app/[app_name] folder and find out which files have been modified:
+
+````git status````
+
+5. A list of files, each highlighted red will appear. If you want to include the changes to those files in your commit, add them using:
+
+````git add [file_name]````
+
+If you want to add all the files that were changed, use:
+
+````git add  .````
+
+6. Commit the changes to the branch
+
+````git commit -m "[message]"````
+where the message is a short description of the changes you made in this commit
+
+7. Push the changes from this commit to your repository
+
+````git push origin [branch_name]````
+
+8. If you are done making changes to this branch, change back to the master or develop branch (depending on what were on before)
+
+````git checkout master````
