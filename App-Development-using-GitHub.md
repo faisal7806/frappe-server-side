@@ -5,6 +5,7 @@ In order to make changes to Frappe and ERPNext, you need to set up a fork on you
 1. Log in to GitHub
 2. Go to github.com/frappe/frappe
 3. Click on the Fork button at the top right of the screen.
+4. Follow the instructions.
 
 ###Setting up local access to your fork
 When making changes to your local installation, you will need to be able to update the online repository so that you can push changes to Frappe / ERPNext, as well as keep revisions on GitHub, etc.
