@@ -1,4 +1,4 @@
-
+##Basic Development Commands
 ###Forking Frappe / ERPNext
 In order to make changes to Frappe and ERPNext, you need to set up a fork on your own GitHub account. This can be done easily on the GitHub website.
 
@@ -30,30 +30,54 @@ When you start making changes, whether to frappe/erpnext, or to modify your own 
 1. Go to your app/[app_name] folder on your local server (through a terminal)
 2. Create a new local branch:
 
-````git checkout -b [my_branch_name]````
+`git checkout -b [my_branch_name]`
 
 3. Make changes to your app. This can be done either in the code of your app, or using the web interface of frappe to edit/add doctypes, etc. 
 4. When finished making changes, go back to the terminal in your app/[app_name] folder and find out which files have been modified:
 
-````git status````
+`git status`
 
 5. A list of files, each highlighted red will appear. If you want to include the changes to those files in your commit, add them using:
 
-````git add [file_name]````
+`git add [file_name]`
 
 If you want to add all the files that were changed, use:
 
-````git add  .````
+`git add  .`
 
 6. Commit the changes to the branch
 
-````git commit -m "[message]"````
+`git commit -m "[message]"`
 where the message is a short description of the changes you made in this commit
 
 7. Push the changes from this commit to your repository
 
-````git push origin [branch_name]````
+`git push origin [branch_name]`
 
 8. If you are done making changes to this branch, change back to the master or develop branch (depending on what were on before)
 
-````git checkout master````
+`git checkout master`
+
+###Bringing your repository in line with the upstream repository
+Because of the high level of development that occurs within Frappe and ERPNext, you will find that very quickly your forked repository goes out of date with the upstream one. 
+
+1. Go to the apps/[app_name] folder in your terminal
+2. Make sure you are checked out on the branch you want to fix (master or develop typically)
+
+`git checkout [branch_name]`
+
+3. Pull the latest data from the upstream repository
+
+`git pull upstream [branch_name]`
+
+4. Rebase your local version to the correct repository/branch
+
+`git rebase upstream/[branch_name]`
+
+5. Check to see if everything went well
+
+`git status`
+
+6. Force your forked repository to use your rebased local data
+
+`git push origin [branch_name] --force`
