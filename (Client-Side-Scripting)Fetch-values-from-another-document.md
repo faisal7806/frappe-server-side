@@ -1,4 +1,4 @@
-[[This is part of a series on Client Side Scripting.  Click here to return to the Index|Client-Side-Scripting-(new)-(wip)]]
+[[This is part of a series on Client Side Scripting.  Click here to return to the Index|Client-Side-Scripting-Index]]
 ***
 
 The following function allows you to pull information from another document and paste it into a field in the current one.
