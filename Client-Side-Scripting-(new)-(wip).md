@@ -41,20 +41,7 @@ frappe.ui.form.on("Salary Slip", {
 ```
 #Functions
 
-## Fetch values from another document
-
-```
-frappe.ui.form.on("[DOCTYPE]", {
-	"[LINK FIELD]": function(frm) {
-		frm.add_fetch("[LINK FIELD]", "[SOURCE]", "[TARGET]");
-	}
-});
-```
-* [LINK FIELD] Is a link to the document you want to fetch the information from
-* [SOURCE] Is the data you are pulling from the linked document
-* [TARGET] Is the field that you are placing the target into
-
-Note:  This replaces `cur_frm.add_fetch("[LINK FIELD]", "[SOURCE]", "[TARGET]");` that is referenced in many places in the documentation and in forums.  `cur_frm` has been depreciated and should not be used.
+[[Fetch values from another document|(Client-Side-Scripting)Fetch-values-from-another-document]]
 
 ## Make fields read-only after saving
 ```
