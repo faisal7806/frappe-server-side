@@ -14,7 +14,8 @@ Replace [DocType] with the one you want to use, in quotations.  Example:
 ```frappe.ui.form.on("Sales Order", {```
 or
 ```frappe.ui.form.on("Purchase Order", {```
-in the case of a child table, the function still calls the parent doctype.
+
+**In the case of a child table, the function still calls the parent doctype.**
 
 Replace [Trigger] with the one you want to use. Example:
 ```company: function(frm) {```
@@ -40,6 +41,20 @@ frappe.ui.form.on("Salary Slip", {
 ```
 #Functions
 
+## Fetch values from another document
+
+```
+frappe.ui.form.on("[DOCTYPE]", {
+	"[LINK FIELD]": function(frm) {
+		frm.add_fetch("[LINK FIELD]", "[SOURCE]", "[TARGET]");
+	}
+});
+```
+* [LINK FIELD] Is a link to the document you want to fetch the information from
+* [SOURCE] Is the data you are pulling from the linked document
+* [TARGET] Is the field that you are placing the target into
+
+Note:  This replaces `cur_frm.add_fetch("[LINK FIELD]", "[SOURCE]", "[TARGET]");` that is referenced in many places in the documentation and in forums.  `cur_frm` has been depreciated and should not be used.
 
 ## Make fields read-only after saving
 ```
@@ -95,16 +110,6 @@ frappe.ui.form.on("Item" {
         } else {
             frm.set_value("item_code", += "B0");
 
-### Using add_fetch to pull link details
-
-Add this line in the Custom Script (not in any function) for the target DocType (where you want to value to be fetched).
-
-    // set employee_name field to employee_name value from employee link field
-    // function add_fetch(link_fieldname, source_fieldname, target_fieldname)
-    cur_frm.add_fetch('employee','employee_name','employee_name')
-
-    
-
 ### Fetching Values:
 Needs Updated
 
@@ -120,15 +125,6 @@ On client side:
 		});
 	}
 
-On server side:
-
-	# whitelist allows method to be called from web request
-	@webnotes.whitelist()
-	def get_bank_cash_account(mode_of_payment):
-		return {
-			"cash_bank_account": webnotes.conn.get_value("Mode of Payment", 
-				mode_of_payment, "default_account")
-		}
 
 ### Fetching a table row's values in the form
 
@@ -148,21 +144,6 @@ cur_frm.cscript.wash_type = function(doc, cdt, cdn) {
 	});
     }
 }
-```
-
-on server side
-```
-# server script (example: in sales_invoice.py)
-# not a method of DocType object of 
-    
-# whitelist allows method to be called from web request
-@webnotes.whitelist()
-def get_item_qty(item_code, wash_type):
-    # do something
-    fieldvalue1 = "something"
-
-    # return a dict of row's fieldnames and values to be updated in that table row
-    return { "fieldname1":  fieldvalue1 }
 ```
 
 ### Date Validation: Do not allow past dates in a date field
