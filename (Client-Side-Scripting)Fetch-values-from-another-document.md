@@ -16,5 +16,5 @@ frappe.ui.form.on("[DOCTYPE]", {
 
 Note:  This replaces `cur_frm.add_fetch("[LINK FIELD]", "[SOURCE]", "[TARGET]");` that is referenced in many places in the documentation and in forums.  `cur_frm` has been depreciated and should not be used.
 
-
+See also: [[Fetching Child Tables|(Client-Side-Scripting)Fetching-child-tables]]
 
