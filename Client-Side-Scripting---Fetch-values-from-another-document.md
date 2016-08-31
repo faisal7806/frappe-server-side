@@ -1,1 +1,0 @@
-[_This is part of the series on Client Side Scripting.  Click here to go to the index._](UPDATE)
