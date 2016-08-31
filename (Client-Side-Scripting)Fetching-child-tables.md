@@ -1,3 +1,6 @@
+[[This is part of a series on Client Side Scripting.  Click here to return to the Index|Client-Side-Scripting-Index]]
+***
+
 The following function will allow you to copy the values from a child table and paste them into another.
 
 ```
