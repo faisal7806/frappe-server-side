@@ -1,4 +1,5 @@
-This is a work in progress page to update the client side scripts page of the wiki
+This is a work in progress page to update the client side scripts page of the wiki.
+For the older documentation, check [[Client Side Scripting (Archive)|Client-side-scripting(Archive)]]
 
 #Client Side Scripting
 All client side scripting is done with javascript.
