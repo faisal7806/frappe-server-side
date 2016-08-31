@@ -1,5 +1,6 @@
 This is a work in progress page to update the client side scripts page of the wiki.
 For the older documentation, check [[Client Side Scripting (Archive)|Client-side-scripting(Archive)]]
+***
 
 #Client Side Scripting
 All client side scripting is done with javascript.
@@ -42,7 +43,10 @@ frappe.ui.form.on("Salary Slip", {
 ```
 #Functions
 
+## Fetching Values
+
 [[Fetch values from another document|(Client-Side-Scripting)Fetch-values-from-another-document]]
+[[Fetch a child table|(Client-Side-Scripting)Fetching-child-tables]]
 
 ## Make fields read-only after saving
 ```
