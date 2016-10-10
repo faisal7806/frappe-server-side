@@ -151,6 +151,7 @@ List of Triggers
 * refresh
 * validate
 * onsubmit
+* onload_post_render
 
 Example:
 ```
