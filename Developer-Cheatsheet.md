@@ -153,6 +153,12 @@ List of Triggers
 * onsubmit
 * onload_post_render
 
+Child Table Triggers
+* fieldname_add
+* fieldname_move
+* fieldname_before_remove
+* fieldname_remove
+
 Example:
 ```
 frappe.ui.form.on("Salary Slip", {
