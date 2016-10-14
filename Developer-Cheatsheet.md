@@ -147,6 +147,7 @@ or
 
 List of Triggers
 * Field Names (see the company example above)
+* setup
 * onload
 * refresh
 * validate
