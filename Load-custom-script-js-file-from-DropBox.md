@@ -18,3 +18,6 @@ When you get a share link in DropBox, in this case the file shown above, it will
 You must replace `dl=0` with `raw=1`.  Once you have done that, you can paste it into the script as shown above.  
 
 The file in the example is valid and can be used for testing.
+
+If you have any problems, please comment on the discussion thread on the ERPNext forum
+https://discuss.erpnext.com/t/tutorial-host-your-custom-scripts-on-dropbox/18296
