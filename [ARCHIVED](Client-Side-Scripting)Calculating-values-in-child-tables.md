@@ -1,4 +1,8 @@
-to calculate the values of child tables, you can use the following functions:
+##Archived Page
+###This page will no longer be maintained.  [Please see The New Wiki Page](https://github.com/frappe/erpnext/wiki/Community-Developed-Custom-Scripts) for the most up to date version.
+---
+
+To calculate the values of child tables, you can use the following functions:
 ```
 frappe.ui.form.on("[CHILD TABLE DOCTYPE]", {
 	[CHILDTABLEMULTIPLE1]: function(frm, cdt, cdn) {
