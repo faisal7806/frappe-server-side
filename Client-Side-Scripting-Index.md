@@ -17,8 +17,6 @@ Replace [DocType] with the one you want to use, in quotations.  Example:
 or
 ```frappe.ui.form.on("Purchase Order", {```
 
-**In the case of a child table, the function still calls the parent doctype.**
-
 Replace [Trigger] with the one you want to use. Example:
 ```company: function(frm) {```
 This would trigger the function when the company field is modified
