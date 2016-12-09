@@ -1,6 +1,6 @@
-This is a work in progress page to update the client side scripts page of the wiki.
-For the older documentation, check [[Client Side Scripting (Archive)|Client-side-scripting(Archive)]]
-***
+	##Archived Page
+###This page will no longer be maintained.  [Please see The New Wiki Page](https://github.com/frappe/erpnext/wiki/Community-Developed-Custom-Scripts) for the most up to date version.
+	---
 
 #Client Side Scripting
 All client side scripting is done with javascript.
