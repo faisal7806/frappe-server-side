@@ -1,3 +1,8 @@
+##Archived Page
+###This page will no longer be maintained.  [Please see The New Wiki Page](https://github.com/frappe/erpnext/wiki/Community-Developed-Custom-Scripts) for the most up to date version.
+---
+
+
 [[This is part of a series on Client Side Scripting.  Click here to return to the Index|Client-Side-Scripting-Index]]
 ***
 
