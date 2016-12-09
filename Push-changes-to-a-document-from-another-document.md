@@ -29,3 +29,5 @@ The following code will push changes to a document.
 		}
 	});
 
+If you have any problems, please comment on the discussion thread on the ERPNext forum 
+https://discuss.erpnext.com/t/tutorial-push-changes-to-another-document/18317
