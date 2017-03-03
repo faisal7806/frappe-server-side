@@ -175,7 +175,8 @@ To avoid issues it is important that we do the following. First ssh into our VM 
 Clear as mud? Just follow along and it will all make sense.
 
 
-From within your project folder issue the command `vagrant ssh`
+From within your project folder issue the command `vagrant up`
+Once completed issue the command `vagrant ssh`
 
 ```
 $ vagrant ssh  
