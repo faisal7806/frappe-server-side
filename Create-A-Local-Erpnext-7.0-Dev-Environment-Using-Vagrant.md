@@ -176,7 +176,8 @@ Clear as mud? Just follow along and it will all make sense.
 
 
 From within your project folder issue the command `vagrant up`
-Once completed issue the command `vagrant ssh`
+
+Once the VM is "Up" issue the command `vagrant ssh`
 
 ```
 $ vagrant ssh  
@@ -210,7 +211,7 @@ frappe@erpnext:~$
 
 ```
 We are now logged into our VM as user frappe.
-The `ls` command will list all files and folders.
+The `ls` command will list current directory files and folders.
 
 ```
 frappe@erpnext:~$ ls
@@ -225,7 +226,7 @@ sudo mv /home/frappe/frappe-bench /home/frappe/frappe-bench-TMP/
 
 ```
 
-Once completed uncomment the synced_folder line in the vagrantfile. (Line 40) and resave the vagrantfile.
+Once the files have been moved uncomment the synced_folder line in the vagrantfile. (Line 40) and resave the vagrantfile.
 
 Open a new terminal window and navigate to your Host machine project folder `cd ~/erp_v7_001`
 
@@ -237,12 +238,23 @@ Then issue the command
 
 `sudo mv /home/frappe/frappe-bench-TMP/* /home/frappe/frappe-bench/`
 
-This will take a few minutes to copy over and start to appear in your host machines shared folder. 
+This will take a few minutes to copy the files over and start to appear in your Host machines shared folder. 
 
 You should now `cd frappe-bench` and `bench update` 
 
-Just ignore all the SNIMissingWarnings. I will write add more to this tutorial when I find the best solution.
+Currently just ignore all the SNIMissingWarnings.
 
-Once completed you can issue the command `bench start` and point your web browser at `http://localhost:8080` and complete your ERPNext initial setup.
+Once ERPNext is up to date issue the command `bench start` and point your web browser at `http://localhost:8080` and complete your ERPNext initial setup.
 
-You can create as many VM's as you like this way. Just create a new project folder at say `~/erp_v7_002` in terminal `cd ~/erp_v7_002` issue `vagrant box add ERPNext-Vagrant.box --name=erp_v7_002` change the line `config.vm.box = "erp_v7_002"` in the vagrantfile etc etc.
+You can create as many VM's as you like this way. Just create a new project folder at say `~/erp_v7_002`
+```
+cd ~/erp_v7_002
+vagrant box add ERPNext-Vagrant.box --name=erp_v7_002
+vagrant init
+change the line `config.vm.box = "erp_v7_002"` in the vagrant file
+vagrant up
+vagrant ssh
+etc etc
+
+```
+
