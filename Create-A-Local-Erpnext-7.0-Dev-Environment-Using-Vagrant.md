@@ -173,7 +173,7 @@ The changes we added to the vagrant file are:
 
 This is because when Vagrant sets up its shared folders it gives priority to the host machine which of course is empty.
 
-To avoid issues it is important that we do the following (one time only) when first setting up a new vagrant box.
+To avoid issues it is important that we do the following (one time only) when first setting up a new vagrant box with ERPNext preinstalled.
 SSH into our VM and move all the ERPNext files that we want to access from our Host machine to another temp folder. Uncomment the **synced_folder** line and save the vagrantfile. Restart (aka reload in vagrant) the VM. Lastly once reloaded we will ssh back into our VM and copy back all the ERPNext files to their original folder. This way they will appear in the project folder on our Host Dev machine and can be easily accessed. 
 
 Clear as mud? Just follow along and it will all make sense.
