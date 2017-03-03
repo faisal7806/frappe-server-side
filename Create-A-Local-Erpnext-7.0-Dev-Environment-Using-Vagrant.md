@@ -243,7 +243,7 @@ Then issue the command
 
 `sudo mv /home/frappe/frappe-bench-TMP/* /home/frappe/frappe-bench/`
 
-This will take a few minutes to copy the files over and start to appear in your Host machines shared folder. 
+This will take a few minutes to move the files over and start to appear in your Host machines shared folder. 
 
 Once complete `cd frappe-bench` and `bench update` 
 
