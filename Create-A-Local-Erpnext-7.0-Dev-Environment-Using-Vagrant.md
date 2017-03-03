@@ -72,7 +72,7 @@ Create a folder in your local user root directory and name it something that mak
 
 Copy the **ERPNext-Vagrant.box** file from your downloads folder into your new VM instance folder.
 
-In your terminal navigate into your new VM instance folder :
+In your terminal navigate into your new project folder :
 
 ```
 $ cd ~/erp_v7_001
