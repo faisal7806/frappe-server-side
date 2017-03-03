@@ -229,7 +229,8 @@ sudo mv /home/frappe/frappe-bench /home/frappe/frappe-bench-TMP/
 
 ```
 
-Once the files have been moved uncomment the synced_folder line in the vagrantfile. (Line 40) and resave the vagrantfile.
+Once the files have been moved
+**Uncomment the synced_folder line in the vagrant file.** (Line 40) and resave the vagrantfile.
 
 Open a new terminal window and navigate to your Host machine project folder `cd ~/erp_v7_001`
 
