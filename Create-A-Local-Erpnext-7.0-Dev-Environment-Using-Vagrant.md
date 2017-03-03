@@ -231,7 +231,7 @@ sudo mv /home/frappe/frappe-bench /home/frappe/frappe-bench-TMP/
 ```
 
 Once the files have been moved
-**Uncomment the synced_folder line in the vagrant file.** (Line 40) and resave the vagrantfile.
+**Uncomment the synced_folder line in the vagrant file.** (Line 40) **and save the vagrant file.**
 
 Open a new terminal window and navigate to your Host machine project folder `cd ~/erp_v7_001`
 
@@ -245,7 +245,7 @@ Then issue the command
 
 This will take a few minutes to copy the files over and start to appear in your Host machines shared folder. 
 
-You should now `cd frappe-bench` and `bench update` 
+Once complete `cd frappe-bench` and `bench update` 
 
 Currently just ignore all the SNIMissingWarnings.
 
