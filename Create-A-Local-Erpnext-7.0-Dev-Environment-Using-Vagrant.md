@@ -7,7 +7,7 @@ Sometimes it may be better to run your local Dev ERPNext instance in a VM instea
 If you run a Mac I recommend installing **iTerm2** as a replacement to the default native OSX Terminal App: [https://www.iterm2.com](https://www.iterm2.com)
 
 
-If your host Dev machine runs either **Mac** or **Windows** then check out **Vagrant Manager.** It is an excelent OSX Menu Bar / Windows Task Bar VM utility.
+If your host Dev machine runs either **Mac** or **Windows** then check out **Vagrant Manager.** It is an excellent OSX Menu Bar / Windows Task Bar VM utility.
 [http://vagrantmanager.com](http://vagrantmanager.com)
 
 ## ERPNext Vagrant Setup Requirements
