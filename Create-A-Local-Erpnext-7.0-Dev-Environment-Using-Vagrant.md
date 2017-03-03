@@ -169,10 +169,11 @@ The changes we added to the vagrant file are:
 
 5: We increased the VM alotted memory from 1024MB to 2048MB. This speeds up ERPNext response time.
 
-**IMPORTANT TO NOTE that in this vagrant file the synced_folder line is currently commented out**.
+**IMPORTANT TO NOTE IS THAT IN THIS VAGRANT FILE THE SYNCED_FOLDER LINE IS CURRENTLY COMMENTED OUT**.
+
 This is because when Vagrant sets up its shared folders it gives priority to the host machine which of course is empty.
 
-To avoid issues it is important that we do the following. First ssh into our VM and move all the ERPNext files that we want to access on our Host machine to another temp folder. Then we uncomment the **synced_folder** line and save the vagrantfile. Then restart (aka reload in vagrant) the VM. Lastly once reloaded we will ssh back into our VM and copy back all the ERPNext files to their original folder. This way they will appear in our Host machines shared folder and can be easily accessed on our MAC/PC/Linux Dev machine. 
+To avoid issues it is important that we do the following. SSH into our VM and move all the ERPNext files that we want to access on our Host machine to another temp folder. Then uncomment the **synced_folder** line and save the vagrantfile. Restart (aka reload in vagrant) the VM. Lastly once reloaded we will ssh back into our VM and copy back all the ERPNext files to their original folder. This way they will appear in our Host machines shared folder and can be easily accessed on our MAC/PC/Linux Dev machine. 
 Clear as mud? Just follow along and it will all make sense.
 
 
