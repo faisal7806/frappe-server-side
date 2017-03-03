@@ -70,7 +70,7 @@ $ vagrant plugin install vagrant-vbguest
 ## Create local ERPNext project folder
 Create a folder in your local user root directory and name it something that makes sense to you. For example:  **erp_v7_001**
 
-Copy the **ERPNext-Vagrant.box** file from your downloads folder into your new VM instance folder.
+Copy the **ERPNext-Vagrant.box** file from your downloads folder into this folder.
 
 In your terminal navigate into your new project folder :
 
@@ -171,7 +171,7 @@ The changes we added to the vagrant file are:
 
 **IMPORTANT TO NOTE** that in this vagrantfile the **synced_folder line is currently commented out**. This is because when Vagrant sets up its shared folders it gives priority to the host machine which of course is empty.
 
-To avoid issues it is important that we do the following. First ssh into our VM and move all the ERPNext files that we want to access on our Host machine to another temp folder. Then we uncomment the **synced_folder** line and save the vagrantfile. Then restart (aka reload in vagrant speak) the VM. Lastly once reloaded we will ssh back into our VM and copy back all the ERPNext files to their original folder. This way they will appear in our host machines shared folder and can be accessed on our MAC/PC/Linux Dev machine. 
+To avoid issues it is important that we do the following. First ssh into our VM and move all the ERPNext files that we want to access on our Host machine to another temp folder. Then we uncomment the **synced_folder** line and save the vagrantfile. Then restart (aka reload in vagrant) the VM. Lastly once reloaded we will ssh back into our VM and copy back all the ERPNext files to their original folder. This way they will appear in our Host machines shared folder and can be easily accessed on our MAC/PC/Linux Dev machine. 
 Clear as mud? Just follow along and it will all make sense.
 
 
@@ -208,8 +208,8 @@ Last login: Wed Feb 24 11:41:18 2016
 frappe@erpnext:~$
 
 ```
-We are now logged into our VM as user frappe. The `ls` command will 
-list all files and folders.
+We are now logged into our VM as user frappe.
+The `ls` command will list all files and folders.
 
 ```
 frappe@erpnext:~$ ls
@@ -219,7 +219,10 @@ frappe@erpnext:~$
 ```
 
 Issue the command
- `sudo mv /home/frappe/frappe-bench /home/frappe/frappe-bench-TMP/`
+```
+sudo mv /home/frappe/frappe-bench /home/frappe/frappe-bench-TMP/
+
+```
 
 Once completed uncomment the synced_folder line in the vagrantfile. (Line 40) and resave the vagrantfile.
 
