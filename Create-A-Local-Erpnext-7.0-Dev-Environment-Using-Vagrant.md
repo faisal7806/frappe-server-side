@@ -1,4 +1,3 @@
-## Vagrant Dev Environment ERPNext 7.0
 ### Create A Local Erpnext 7.0 Dev Environment Using Vagrant
 #### Works on OSX, Linux and Windows. 
 
