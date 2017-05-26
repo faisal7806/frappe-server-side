@@ -23,82 +23,27 @@ Download and install **Vagrant** from:
 
 To check that vagrant was installed open your terminal App and enter:
 
-```
 $ vagrant
-```
+Install the Vagrant vbguest plugin. It allows the Host and Guest machines to share files and folders.
 
-You should see something like this:
-
-```
-Usage: vagrant [options] <command> [<args>]
-
-    -v, --version                    Print the version and exit.
-    -h, --help                       Print this help.
-
-Common commands:
-     box             manages boxes: installation, removal, etc.
-     connect         connect to a remotely shared Vagrant environment
-     destroy         stops and deletes all traces of the vagrant machine
-     global-status   outputs status Vagrant environments for this user
-     halt            stops the vagrant machine
-     help            shows the help for a subcommand
-     init            initializes a new Vagrant environment by creating a Vagrantfile
-     login           log in to HashiCorp's Atlas
-     package         packages a running vagrant environment into a box
-
-     status          outputs status of the vagrant machine
-     suspend         suspends the machine
-     up              starts and provisions the vagrant environment
-     vbguest
-     version         prints current and latest Vagrant version
-
-For help on any individual command run `vagrant COMMAND -h`
-
-Additional subcommands are available, but are either more advanced
-or not commonly used. To see all subcommands, run the command
-`vagrant list-commands`.
-
-```
-
-We now want to install the **Vagrant vbguest** plugin.  This plugin allows the Host and Guest machines to share files by installing **VirtualBox Guest Additions** onto all Guest machines.
-
-```
 $ vagrant plugin install vagrant-vbguest
+Create local ERPNext project folder
+Create a folder in your local user root directory and give it your project name. For example:  erp_v801
 
-```
-
-## Create local ERPNext project folder
-Create a folder in your local user root directory and name it something that makes sense to you. For example:  **erp_v7_001**
-
-Copy the **ERPNext-Vagrant.box** file from your downloads folder into this folder.
+Copy the ERPNext-Vagrant.box file from your downloads folder into this folder.
 
 In your terminal navigate into your new project folder :
 
-```
-$ cd ~/erp_v7_001
+$ cd ~/erp_v801
+Add the Vagrant Box.
 
-```
+$ vagrant box add ERPNext-Vagrant.box --name=erp_v801
+Now issue the command vagrant init
 
-And then add the Vagrant Box.
-
-```
-$ vagrant box add ERPNext-Vagrant.box --name=erp_v7_001
-
-```
-
-Now issue the command `vagrant init`
-
-```
 $ vagrant init  
-A `Vagrantfile` has been placed in this directory. You are now
-ready to `vagrant up` your first virtual environment! Please read
-the comments in the Vagrantfile as well as documentation on
-`vagrantup.com` for more information on using Vagrant. 
-
-```
+A `Vagrantfile` has been placed in this directory. Etc Etc
 Open up the newly created vagrantfile in your text editor, Select all the text and delete it. Replace it with the text below and then save the file.
 
-```
   # -*- mode: ruby -*-
   # vi: set ft=ruby :
 
@@ -113,7 +58,7 @@ Open up the newly created vagrantfile in your text editor, Select all the text a
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "erp_v7_001"
+  config.vm.box = "erp_v801"
   config.ssh.username = "frappe"
   config.ssh.password = "frappe"
 
@@ -155,110 +100,67 @@ Open up the newly created vagrantfile in your text editor, Select all the text a
   end
 
 end
+The changes we added to the default vagrant file are:
 
-```
-The changes we added to the vagrant file are:
+1: We want to use the erp_v801 box
 
-1: We want to use the **erp_v7_001** box
+2: We wish to ssh into our VM with the username frappe and pass frappe
 
-2: We wish to ssh into our VM with the **username frappe** and **pass frappe**
+3: We have asigned an IP of 192.168.50.5 to this VM. By default this line is ommented out and uses DHCP instead.
 
-3: We have asigned an IP of 192.168.50.5 to this VM. We could have commented this line out and just used DHCP instead.
+4: The NAT adaptor stuff is just a VirtualBox bug work around.
 
-4: The NAT adaptor stuff is just a VirtualBox "bug" work around.
+5: We increased the VM alotted memory from 1024MB to 2048MB. This speeds up VM App response time.
 
-5: We increased the VM alotted memory from 1024MB to 2048MB. This speeds up ERPNext response time.
+6: In this vagrant file the SYNCED_FOLDER LINE is currently commented out.
 
-**IMPORTANT TO NOTE IS THAT IN THIS VAGRANT FILE THE SYNCED_FOLDER LINE IS CURRENTLY COMMENTED OUT**.
+This is because when Vagrant sets up its shared folders it gives priority to the host machine.
 
-This is because when Vagrant sets up its shared folders it gives priority to the host machine which of course is empty.
+To avoid issues with the ERPNext vagrant box which has Frappe and ERPNext preinstalled on it. We need to move all the preinstalled ERPNext files to a temp folder within the VM. 
 
-To avoid issues it is important that we do the following (one time only) when first setting up a new vagrant box with ERPNext preinstalled.
-We need to SSH into our VM and move all the ERPNext files that we want to access on our Host Dev machine to another temp folder. Uncomment the **synced_folder** line in the vagrantfile. Restart (aka reload in vagrant) the VM, SSH back into our VM and move all the ERPNext files back to their original folder. This way they will appear in the project folder on our Host Dev machine and can be easily accessed for editing. 
+From within your Host Machine project folder issue the command vagrant up
 
-Clear as mud? Just follow along and it will all make sense.
+Once the VM is Up issue the command vagrant ssh
 
+Logged into our VM as user frappe. The ls command will list current directory files and folders.
 
-From within your project folder issue the command `vagrant up`
-
-Once the VM is "Up" issue the command `vagrant ssh`
-
-```
-$ vagrant ssh  
-Welcome to Ubuntu 14.04.4 LTS (GNU/Linux 3.13.0-79-generic i686)
-
- * Documentation:  https://help.ubuntu.com/
-New release '16.04.2 LTS' available.
-Run 'do-release-upgrade' to upgrade to it.
-
-
- ERPNext Development VM (built on January 22, 2017)
-
- Please access ERPNext by going to the frappe-bench folder and running
- Access from : http://localhost:8000 on the host system. Use port 3022 for SSH.
-
- We provide rock solid hosting for ERPNext : erpnext.com/pricing
-
- To update, login as
- username: frappe
- password: frappe
-
- ERPNext Administrator Login:
- username: Administrator
- password: admin
-
- cd frappe-bench
- bench update
-
-Last login: Wed Feb 24 11:41:18 2016
-frappe@erpnext:~$
-
-```
-We are now logged into our VM as user frappe.
-The `ls` command will list current directory files and folders.
-
-```
 frappe@erpnext:~$ ls
 bench-repo  frappe-bench  tmp
 frappe@erpnext:~$
+Issue the commands.
 
-```
+frappe@erpnext:~$ sudo mv /home/frappe/frappe-bench /home/frappe/frappe-bench-TMP002/ 
+frappe@erpnext:~$ mkdir frappe-bench
+sudo pass=frappe - SQL root pass=frappe
 
-Issue the command
-```
-sudo mv /home/frappe/frappe-bench /home/frappe/frappe-bench-TMP/
+Once completed, 
 
-```
+Uncomment the synced_folder line in the vagrant file. (Line 40) in your text editor and save the vagrantfile.
 
-Once the files have been moved
-**Uncomment the synced_folder line in the vagrant file.** (Line 40) **and save the vagrant file.**
+On your Host Machine cd into your local project folder cd ~/erp_v8_001
 
-Open a new terminal window and navigate to your Host machine project folder `cd ~/erp_v7_001`
+Issue the command vagrant reload
 
-Issue the command `vagrant reload`
+Once reloaded  vagrant ssh
 
-Once reloaded SSH back into your VM with `vagrant ssh`
+sudo mv /home/frappe/frappe-bench-TMP002/* /home/frappe/frappe-bench/
 
-Then issue the command
+This will take a few minutes to copy the files over and start to appear in your Host machines shared folder. 
 
-`sudo mv /home/frappe/frappe-bench-TMP/* /home/frappe/frappe-bench/`
+Once completed cd frappe-bench and bench update
 
-This will take a few minutes to move the files over and start to appear in your Host machines shared folder. 
+Currently just ignore all the SNIMissingWarnings untill someone finds a fix.
 
-Once complete `cd frappe-bench` and `bench update` 
+Once ERPNext is up to date issue the command bench start and point your web browser at http://localhost:8080 and begin  your ERPNext initial setup.
 
-Currently just ignore all the SNIMissingWarnings.
+You can create as many VM’s as you like this way. Just create a new project folder at say ~/erp_v802
 
-Once ERPNext is up to date issue the command `bench start` and point your web browser at `http://localhost:8080` and complete your ERPNext initial setup.
+ cd ~/erp_v802
 
-You can create as many VM's as you like this way. Just create a new project folder at say `~/erp_v7_002`
-```
-cd ~/erp_v7_002
-vagrant box add ERPNext-Vagrant.box --name=erp_v7_002
+vagrant box add ERPNext-Vagrant.box --name=erp_v802
+
 vagrant init
-change the line `config.vm.box = "erp_v7_002"` in the vagrant file
-vagrant up
-vagrant ssh
-etc etc
 
-```
+vagrant up
+
+ vagrant ssh 
