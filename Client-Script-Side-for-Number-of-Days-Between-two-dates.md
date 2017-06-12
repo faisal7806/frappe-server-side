@@ -7,5 +7,5 @@ frappe.ui.form.on("DOCTYPE", "refresh", function(frm, cdt, cdn) {
   refresh_field("FIELD");
 });
 ```
-[DOCTYPE] Is the doctype you want the script to be executed
-[FIELD] Is the field in which you need to set the difference you get
+* [DOCTYPE] Is the doctype you want the script to be executed
+* [FIELD] Is the field in which you need to set the difference you get
