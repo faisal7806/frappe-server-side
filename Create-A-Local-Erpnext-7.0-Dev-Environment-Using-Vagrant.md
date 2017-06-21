@@ -43,8 +43,9 @@ Add the Vagrant Box.
 
 Issue the command vagrant init
 
-$ vagrant init  
-$ `A Vagrantfile has been placed in this directory.`
+`$ vagrant init`
+
+`$ A Vagrantfile has been placed in this directory.`
 
 Open up the newly created vagrantfile in your text editor, Select all the text and delete it. Replace it with the text below and then save the file.
 
@@ -143,8 +144,9 @@ Issue the commands.
 frappe@erpnext:~$ sudo mv /home/frappe/frappe-bench /home/frappe/frappe-bench-TMP002/ 
 frappe@erpnext:~$ mkdir frappe-bench
 ```
+Password for sudo: frappe
 
-sudo pass=frappe - SQL root pass=frappe
+Password for SQL root: frappe
 
 Once completed, 
 
@@ -162,11 +164,11 @@ sudo mv /home/frappe/frappe-bench-TMP002/* /home/frappe/frappe-bench/
 
 This will take a few minutes to copy the files over and start to appear in your Host machines shared folder. 
 
-Once completed cd frappe-bench and bench update
+Once completed `cd frappe-bench` and `bench update`
 
 Currently just ignore all the SNIMissingWarnings untill someone finds a fix.
 
-Once ERPNext is up to date issue the command bench start and point your web browser at http://localhost:8080 and begin  your ERPNext initial setup.
+Once ERPNext is up to date issue the command `bench start` and point your web browser at http://localhost:8080 and begin  your ERPNext initial setup.
 
 You can create as many VM’s as you like this way. Just create a new project folder at say `~/erp_v802`
 
