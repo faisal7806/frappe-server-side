@@ -1,4 +1,4 @@
-# Good to know frappe functions
+# Server Side
 
 ### frappe module
 
@@ -77,6 +77,10 @@ def get_last_project():
 
 This will be accessible as `/api/method/myapp.api.get_last_project`
 
+---
+
+# Client Side
+
 ## Desk
 
 #### Globals
@@ -85,6 +89,7 @@ This will be accessible as `/api/method/myapp.api.get_last_project`
 - `cur_list`: Current list object 
 - `cur_dialog`: Current open dialog
 - `cur_page`: Current page object
+- `frappe.quick_entry`: Current Quick Entry object.
 - `locals`: All documents and DocType loaded in the browser session. A document can be access as `locals[doctype][name]` e.g. `locals['Opportunity']['OTY00001']`
 
 #### Routing
@@ -174,4 +179,15 @@ frappe.ui.form.on("Salary Slip", {
 
 ```
 frm.set_value(fieldname, value);
+```
+
+## Running Tasks Serially
+
+To run tasks serially, use `frappe.run_serially`
+
+```
+frappe.run_serially([
+  () => frappe.set_route('List', 'ToDo'),
+  () => frappe.new_doc('ToDo')
+]);
 ```
