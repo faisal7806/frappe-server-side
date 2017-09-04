@@ -34,6 +34,18 @@ Sames as frappe.get_all, but will only show permitted for the user
 Return a single value from the database 
 Example: frappe.get_value('Task', 'TASK00030', 'owner')
 
+###### `frappe.get_last_doc(doctype)`
+
+e.g. frappe.get_last_doc('Project')
+
+Get last created document of this type.
+
+###### `frappe.get_single(doctype)`
+
+e.g. frappe.get_single('Dropbox Settings')
+
+Return a `frappe.model.document.Document` object of the given Single doctype.`
+
 ## Document Object
 
 ##### Load a document
