@@ -1,7 +1,7 @@
 # Vagrant V6 box installation instructions:
 This box already has all dependencies. One database, **site1.local**, is installed by default. Mysql root password is `frappe@` and Administrator password is `frappe@`. User frappe is not necessary because frappe was installed with user `vagrant` and password `vagrant`. But if you must to know user frappe password is `frappe@`. 
 
-Here is the link: [Vagrantfile](https://meocloud.pt/link/60770b07-eab8-4601-91c5-aee9d9ade3af/Vagrantfile/)
+Here is the link: [Vagrantfile](https://github.com/frappe/erpnext_vagrant)
 
 If any one of the community wants to try it is very simple, just a few steps:
 
