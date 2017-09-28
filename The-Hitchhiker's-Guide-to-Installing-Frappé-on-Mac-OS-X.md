@@ -28,3 +28,12 @@ $ brew doctor
 ```
 
 You should then see - **Your system is ready to brew!** on your terminal screen
+
+### Tried and Tested
+<p align="justify">
+<b>NOTE:</b> If you're attempting to revise this page after successfully installing and running frappe, kindly add the required details in the following format only.
+</p>
+
+| Name         | Version | By
+|--------------|---------|---
+| El Capitan   | 10.11.6 | Achilles Rasquinha <br/> [@achillesrasquinha](https://github.com/achillesrasquinha), achillesrasquinha@gmail.com
