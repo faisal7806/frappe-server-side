@@ -1,5 +1,5 @@
-##Basic Development Commands
-###Forking Frappe / ERPNext
+## Basic Development Commands
+### Forking Frappe / ERPNext
 In order to make changes to Frappe and ERPNext, you need to set up a fork on your own GitHub account. This can be done easily on the GitHub website.
 
 1. Log in to GitHub
@@ -7,7 +7,7 @@ In order to make changes to Frappe and ERPNext, you need to set up a fork on you
 3. Click on the Fork button at the top right of the screen.
 4. Follow the instructions.
 
-###Setting up local access to your fork
+### Setting up local access to your fork
 When making changes to your local installation, you will need to be able to update the online repository so that you can push changes to Frappe / ERPNext, as well as keep revisions on GitHub, etc.
 
 1. Access your local installation using a terminal and go to the `frappe-bench` folder
@@ -24,14 +24,14 @@ When making changes to your local installation, you will need to be able to upda
     git remote -v
     ```
 
-###Pulling the latest data from your fork
+### Pulling the latest data from your fork
 Typically, using bench update will pull the lastest data from the upstream (github.com/frappe) server, if pulling frappe or erpnext. If you want to pull your own fork from the repositories, you can use the following command, from the apps/[app_name] folder.
 
 ```
 git pull origin [branch_name]
 ```
 
-###Starting to write your own code
+### Starting to write your own code
 When you start making changes, whether to frappe/erpnext, or to modify your own app, you need to track those changes within a new branch. This allows your to push just these changes to your own github repository, which will allow you to create pull requests and merge the branch into the frappe/erpnext code, or your own app. The full procedure for starting changes all the way to pushing to your online repository is described below.
 
 1. Go to your app/[app_name] folder on your local server (through a terminal)
@@ -55,7 +55,7 @@ When you start making changes, whether to frappe/erpnext, or to modify your own 
     ```
     If you want to add all the files that were changed, use:
     ```
-    git add  .
+    git add .
     ```
 
 6. Commit the changes to the branch
@@ -78,16 +78,16 @@ When you start making changes, whether to frappe/erpnext, or to modify your own 
     git checkout master
     ```
 
-###Creating a pull request
+### Creating a pull request
 Once you have a branch that has some useful contribution that you want to make part of your main branch, you can create a pull request for that branch and merge the changes.
 
-1. Go to your repository through a web browser (https://github.com/[user_name]/[repository]
+1. Go to your repository through a web browser (https://github.com/[user_name]/[repository])
 2. Click the New Pull Request button
 3. Select the base fork to the repository you want to merge into, the base branch to the branch you want to merge into, the head fork to your repository and the compare branch to the branch with your changes.
 4. Review the changes and make sure that they match the changes you wanted to make.
 5. If you are happy with the changes, click the create pull request button.
 
-###Bringing your repository in line with the upstream repository
+### Bringing your repository in line with the upstream repository
 Because of the high level of development that occurs within Frappe and ERPNext, you will find that very quickly your forked repository goes out of date with the upstream one. 
 
 1. Go to the apps/[app_name] folder in your terminal
@@ -121,7 +121,7 @@ Because of the high level of development that occurs within Frappe and ERPNext, 
     git push origin [branch_name] --force
     ```
 
-###Testing a branch
+### Testing a branch
 Often times, you might find that you want to try out a branch from another developer:
 
 1. Add the repository as a remote
