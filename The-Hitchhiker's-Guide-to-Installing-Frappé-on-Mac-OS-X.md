@@ -22,7 +22,7 @@ First, open your Terminal (Finder > Go (Menu Bar) > Utilities > Terminal)
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-* Ensure whether your `$PATH` variable points to **Homebrew** installed within `/usr/local/bin`
+* Ensure your `$PATH` variable points to **Homebrew** (installed within `/usr/local/bin`)
 ```console
 $ echo "export PATH=/usr/local/bin:/usr/local/sbin:$PATH" >> ~/.bash_profile
 ```
@@ -32,7 +32,7 @@ $ echo "export PATH=/usr/local/bin:/usr/local/sbin:$PATH" >> ~/.bash_profile
 $ brew doctor
 ```
 
-You should then see - **Your system is ready to brew!** on your terminal screen
+You should then see - **Your system is ready to brew!** on your terminal screen. Fix the warnings and errors, if not.
 
 ### Tried and Tested
 <p align="justify">
