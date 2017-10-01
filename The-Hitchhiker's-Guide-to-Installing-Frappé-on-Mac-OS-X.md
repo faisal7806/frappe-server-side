@@ -82,11 +82,11 @@ You can think of an app in the <a href="https://github.com/frappe/frappe">Frapp�
 
 #### Q. Apps? Sites? Why would you do such a thing?
 <p align="justify">
-Multi-tenancy. <a href="https://github.com/frappe/frappe">Frappé</a> was built with an intention for you to reuse a codebase, definitions, functions, views, etc. Both, apps and sites are contained within what we call as - <em>drum rolls</em> - <b>the Bench!</b>
+<b>Multi-tenancy</b>. <a href="https://github.com/frappe/frappe">Frappé</a> was built with an intention for you to reuse a codebase, definitions, functions, views, etc. Both, apps and sites are contained within what we call as - <em>drum rolls</em> - <b>the Bench!</b>
 </p>
 
 <p align="center">
-    <img src="https://i.imgur.com/NV9rf56.png" height="150"/>
+    <img src="https://i.imgur.com/dZBThmp.png" height="150"/>
 </p>
 
 You then manage your apps and sites within your Bench.
