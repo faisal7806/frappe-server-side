@@ -89,14 +89,20 @@ You can think of an app in the <a href="https://github.com/frappe/frappe">Frapp�
     <img src="https://i.imgur.com/dZBThmp.png" height="150"/>
 </p>
 
-You then manage your apps and sites within your Bench.
+<p align="justify">
+You then manage your apps and sites within your Bench. To know more, check <a href="https://www.youtube.com/watch?v=eCAMPcl7NKc&feature=youtu.be&t=32s">here</a> for a complete tutorial from the author <a href="https://github.com/rmehta">Rushabh Mehta himself.
+</p>
 
 #### Q. Apps? Sites? And now Bench?
-Yes, the Bench! You can think of the bench as the guardian of both, your apps and sites. Not just that
+Yes, the Bench! You can think of the bench as the guardian for both, your apps and sites. Not just that
 > [`bench`](https://github.com/frappe/bench) is to frappé, what Homebrew is to Mac OS X :wink:
 
 <p align="justify">
 We provide you the <a href="https://github.com/frappe/bench"><code>bench</code></a> command-line tool for you to create Benches, Apps and Sites. For installing apps built on Frappé, we use <a href="https://git-scm.com"><code>git</code></a> as our Source Control Manager (SCM) to have them fetched from remote repositories.
+</p>
+
+<p align="justify">
+To know more about <b>the Bench</b>, check out <a href="https://www.youtube.com/watch?v=GVWrKuj-EAc&feature=youtu.be&t=41s">this</a> talk from the author of <a href="https://github.com/frappe/bench">bench</a> (<a href="https://github.com/pdvyas">Pratik Vyas</a>).
 </p>
 
 Go ahead and install <a href="https://git-scm.com"><code>git</code></a>
