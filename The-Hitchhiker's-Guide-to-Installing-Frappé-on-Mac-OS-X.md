@@ -71,20 +71,26 @@ $ brew install mariadb redis node
 <b>Homebrew</b>'s Node.js comes with <a href="https://www.npmjs.com"><code>npm</code></a> (<em>Homebrew for Node.js</em>) installed for you.
 </p>
 
-### Getting <a href="https://github.com/frappe/frappe">Frappé</a> onto your system.
+### Getting <a href="https://github.com/frappe/frappe">Frappé</a> onto your system
 <p align="justify">
-Before going further, here's something you need to know. <a href="https://github.com/frappe/frappe">Frappé</a> is not just a web framework but an app itself. You can think of an app in the <a href="https://github.com/frappe/frappe">Frappé</a> jargon as a collection of mutable definitions and custom functionalities for a said use-case. You then install such apps on sites (which consists of one database at a domain, files, etc.) that acts as the view layer to your app (like any other website).
+Before going further, here's something you need to know. <a href="https://github.com/frappe/frappe">Frappé</a> is not just a web framework as a whole but also an app itself.
+
+#### Q. Wait, what's an app?
+You can think of an app in the <a href="https://github.com/frappe/frappe">Frappé</a> jargon as a collection of mutable definitions and custom functionalities for a said use-case (basically, a codebase). You then install such apps on sites (which consists of one database at a domain, files, etc.) that acts as the view layer to your app (just like any other website).
 </p>
 
-#### Q. Wait, why would you do that?
+#### Q. Apps? Sites? Why would you do such a thing?
 <p align="justify">
 Multi-tenancy. <a href="https://github.com/frappe/frappe">Frappé</a> was built with an intention for you to reuse a code-base, definitions, functions, views, etc. Both, apps and sites are contained within what we call as - <em>drum rolls</em> - <b>the Bench!</b>.
+</p>
 
 <div align="center">
     <img src="https://i.imgur.com/NV9rf56.png" height="256"/>
 </div>
 
+You then manage your apps and sites within your Bench.
 
+#### Q. Apps? Sites? And now Bench?
 
 
 ### Tried and Tested
