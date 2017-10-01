@@ -42,7 +42,8 @@ You should then see - <b>Your system is ready to brew!</b> on your terminal scre
 <a href="https://github.com/frappe/frappe">Frappé</a> requires Python 2.7 installed. To our luck, Python comes shipped with most Mac OS X systems. However...
 </p>
 
-> *"The version of Python that ships with OS X is great for learning, but it’s not good for development. The version shipped with OS X may be out of date from the official current Python release, which is considered the stable production version."* > 
+> *"The version of Python that ships with OS X is great for learning, but it’s not good for development. The version shipped with OS X may be out of date from the official current Python release, which is considered the stable production version."*
+> 
 > [Kenneth Reitz](https://www.kennethreitz.org/), [The Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/starting/install/osx/)
 
 * To install Python 2.7 on your Mac OS using `brew`, simply:
