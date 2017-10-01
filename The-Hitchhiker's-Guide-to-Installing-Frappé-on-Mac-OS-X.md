@@ -59,6 +59,17 @@ $ python --version
 You should then see <code>Python 2.7.X</code> on your terminal screen. <b>Homebrew</b>'s Python comes with <a href="https://pip.pypa.io"><code>pip</code></a> (<em>Homebrew for Python</em>) out of the box for you.
 </p>
 
+<p align="justify">
+<a href="https://github.com/frappe/frappe">Frappé</a> uses <a href="https://mariadb.org">MariaDB (for <a href="https://en.wikipedia.org/wiki/Relational_database_management_system">RDBMS<a/>) as its database engine, <a href="https://redis.io">Redis</a> for cache and as a message broker and <a href="https://nodejs.org">Node.js</a> for everything JavaScript. Go ahead and install the same.
+</p>
+```console
+$ brew install mariadb redis node
+```
+
+<p align="justify">
+<b>Homebrew</b>'s Node.js comes with <a href="https://www.npmjs.com"><code>npm</code></a> (<em>Homebrew for Node.js</em>) installed for you.
+</p>
+
 ### Tried and Tested
 <p align="justify">
 <b>NOTE:</b> If you're attempting to revise this page after successfully installing and running frappé, kindly add the required details in the following format only.
