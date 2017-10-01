@@ -34,13 +34,16 @@ $ echo "export PATH=/usr/local/bin:/usr/local/sbin:$PATH" >> ~/.bash_profile
 $ brew doctor
 ```
 
-You should then see - **Your system is ready to brew!** on your terminal screen. Fix the warnings and errors, if not.
-
 <p align="justify">
-Frappé requires Python 2.7 installed. To our luck, Python comes shipped with most Mac OS X systems. However
+You should then see - <b>Your system is ready to brew!</b> on your terminal screen. Fix the warnings and errors, if not.
 </p>
 
-> *"The version of Python that ships with OS X is great for learning, but it’s not good for development. The version shipped with OS X may be out of date from the official current Python release, which is considered the stable production version."* - [Kenneth Reitz](https://www.kennethreitz.org/), [The Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/starting/install/osx/)
+<p align="justify">
+<a href="https://github.com/frappe/frappe">Frappé</a> requires Python 2.7 installed. To our luck, Python comes shipped with most Mac OS X systems. However...
+</p>
+
+> *"The version of Python that ships with OS X is great for learning, but it’s not good for development. The version shipped with OS X may be out of date from the official current Python release, which is considered the stable production version."* > 
+> [Kenneth Reitz](https://www.kennethreitz.org/), [The Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/starting/install/osx/)
 
 * To install Python 2.7 on your Mac OS using `brew`, simply:
 ```console
@@ -52,7 +55,7 @@ $ brew install python
 $ python --version
 ```
 <p align="justify">
-You should then see <code>Python 2.7.X</code> on your terminal screen. <b>Homebrew</b> installs <a href="https://pip.pypa.io"><code>pip</code></a> (<em>Homebrew for Python</em>) for you already.
+You should then see <code>Python 2.7.X</code> on your terminal screen. <b>Homebrew</b>'s Python comes with <a href="https://pip.pypa.io"><code>pip</code></a> (<em>Homebrew for Python</em>) out of the box for you.
 </p>
 
 ### Tried and Tested
