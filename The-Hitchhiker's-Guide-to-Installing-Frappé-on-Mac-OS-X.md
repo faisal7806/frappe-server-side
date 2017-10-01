@@ -60,8 +60,9 @@ You should then see <code>Python 2.7.X</code> on your terminal screen. <b>Homebr
 </p>
 
 <p align="justify">
-<a href="https://github.com/frappe/frappe">Frappé</a> uses <a href="https://mariadb.org">MariaDB (for <a href="https://en.wikipedia.org/wiki/Relational_database_management_system">RDBMS<a/>) as its database engine, <a href="https://redis.io">Redis</a> for cache and as a message broker and <a href="https://nodejs.org">Node.js</a> for everything JavaScript. Go ahead and install the same.
+<a href="https://github.com/frappe/frappe">Frappé</a> uses <a href="https://mariadb.org">MariaDB (for <a href="https://en.wikipedia.org/wiki/Relational_database_management_system">RDBMS</a>) as its database engine, <a href="https://redis.io">Redis</a> for cache and as a message broker and <a href="https://nodejs.org">Node.js</a> for everything JavaScript. Go ahead and install the same.
 </p>
+
 ```console
 $ brew install mariadb redis node
 ```
