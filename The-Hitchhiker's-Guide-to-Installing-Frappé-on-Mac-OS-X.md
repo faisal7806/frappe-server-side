@@ -49,7 +49,9 @@ $ brew install python
 ```console
 $ python --version
 ```
-You should then see `Python 2.7.X` on your terminal screen. **Homebrew** installs [`pip`](https://pip.pypa.io) (**Homebrew** for Python)for you already.
+<p align="justify">
+You should then see <code>Python 2.7.X</code> on your terminal screen. <b>Homebrew</b> installs <a href="https://pip.pypa.io"><code>pip</code></a> (<em>Homebrew for Python</em>) for you already.
+</p>
 
 ### Tried and Tested
 <p align="justify">
