@@ -84,14 +84,15 @@ You can think of an app in the <a href="https://github.com/frappe/frappe">Frapp�
 Multi-tenancy. <a href="https://github.com/frappe/frappe">Frappé</a> was built with an intention for you to reuse a code-base, definitions, functions, views, etc. Both, apps and sites are contained within what we call as - <em>drum rolls</em> - <b>the Bench!</b>.
 </p>
 
-<div align="center">
-    <img src="https://i.imgur.com/NV9rf56.png" height="256"/>
-</div>
+<p align="center">
+    <img src="https://i.imgur.com/NV9rf56.png" height="150"/>
+</p>
 
 You then manage your apps and sites within your Bench.
 
 #### Q. Apps? Sites? And now Bench?
-
+Yes, the Bench! You can think of the bench as the guardian of both, your apps and sites. Not just that
+> [`bench`](https://github.com/frappe/bench) is to frappé, what Homebrew is to Mac OS X :wink:
 
 ### Tried and Tested
 <p align="justify">
