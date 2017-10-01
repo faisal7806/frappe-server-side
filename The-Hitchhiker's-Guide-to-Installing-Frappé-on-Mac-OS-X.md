@@ -1,7 +1,7 @@
 > From Zero to Hero - [Achilles Rasquinha](https://github.com/achillesrasquinha)
 
 <p align="justify">
-To the best of my knowledge, this will be the only page you'd ever require to install <a href="https://github.com/frappe/frappe">frappe</a> right from scratch. This script also believes to be a foolproof setup to have <a href="https://github.com/frappe/frappe">frappe</a> onto your system. <b>In case if you run into some problems, feel free to raise an issue <a href="https://github.com/frappe/frappe/issues">here</a></b>.
+To the best of my knowledge, this will be the only page you'd ever require to install <a href="https://github.com/frappé/frappé">frappé</a> right from scratch. This script also believes to be a foolproof setup to have <a href="https://github.com/frappé/frappé">frappé</a> onto your system. <b>In case if you run into some problems, feel free to raise an issue <a href="https://github.com/frappé/frappé/issues">here</a></b>.
 </p>
 <p align="justify">
 <b>NOTE:</b> To see if your Mac OS X version has been tested for the following script, check <a href="#tried-and-tested">here</a>. You're free to revise this page in order to add your Mac OS X version if you're successful with this script too (<em>psst</em>, helps others).
@@ -34,9 +34,26 @@ $ brew doctor
 
 You should then see - **Your system is ready to brew!** on your terminal screen. Fix the warnings and errors, if not.
 
+<p align="justify">
+Frappé requires Python 2.7 installed. To our luck, Python comes shipped with most Mac OS X systems. However
+</p>
+
+> *"The version of Python that ships with OS X is great for learning, but it’s not good for development. The version shipped with OS X may be out of date from the official current Python release, which is considered the stable production version."* - [Kenneth Reitz](https://www.kennethreitz.org/), [The Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/starting/install/osx/)
+
+* To install Python 2.7 on your Mac OS using `brew`, simply:
+```console
+$ brew install python
+```
+
+* Check whether **Python 2.7** has been installed correctly
+```console
+$ python --version
+```
+You should then see `Python 2.7.X` on your terminal screen.
+
 ### Tried and Tested
 <p align="justify">
-<b>NOTE:</b> If you're attempting to revise this page after successfully installing and running frappe, kindly add the required details in the following format only.
+<b>NOTE:</b> If you're attempting to revise this page after successfully installing and running frappé, kindly add the required details in the following format only.
 </p>
 
 | Name         | Version | By
