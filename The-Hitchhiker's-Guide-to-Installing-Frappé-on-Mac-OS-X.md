@@ -22,6 +22,11 @@ First, open your Terminal (Finder > Go (Menu Bar) > Utilities > Terminal)
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
+* Ensure whether your `$PATH` variable points to **Homebrew** installed within `/usr/local/bin`
+```console
+$ echo "export PATH=/usr/local/bin:/usr/local/sbin:$PATH" >> ~/.bash_profile
+```
+
 * Check whether **Homebrew** has been installed correctly
 ```console
 $ brew doctor
