@@ -96,7 +96,7 @@ Yes, the Bench! You can think of the bench as the guardian of both, your apps an
 > [`bench`](https://github.com/frappe/bench) is to frappé, what Homebrew is to Mac OS X :wink:
 
 <p align="justify">
-We provide you the <a href="https://github.com/frappe/bench"><code>bench</code></a> command-line tool for you to create Benchs, Apps and Sites. For installing apps built on Frappé, we use <a href="https://en.wikipedia.org/wiki/Git"><code>git</code> as our Source Control Manager (SCM) and <a href="https://github.com/frappe/frappe">GitHub</a> as the global registry for such apps.
+We provide you the <a href="https://github.com/frappe/bench"><code>bench</code></a> command-line tool for you to create Benchs, Apps and Sites. For installing apps built on Frappé, we use <a href="https://en.wikipedia.org/wiki/Git"><code>git</code></a> as our Source Control Manager (SCM).
 </p>
 
 ### Tried and Tested
