@@ -90,7 +90,7 @@ You can think of an app in the <a href="https://github.com/frappe/frappe">Frapp√
 </p>
 
 <p align="justify">
-You then manage your apps and sites within your Bench. To know more, check <a href="https://www.youtube.com/watch?v=eCAMPcl7NKc&feature=youtu.be&t=32s">here</a> for a complete tutorial from the author <a href="https://github.com/rmehta">Rushabh Mehta himself.
+You then manage your apps and sites within your Bench. To know more, check <a href="https://www.youtube.com/watch?v=eCAMPcl7NKc&feature=youtu.be&t=32s">here</a> for a complete tutorial from the author <a href="https://github.com/rmehta">Rushabh Mehta</a> himself.
 </p>
 
 #### Q. Apps? Sites? And now Bench?
