@@ -7,14 +7,14 @@ To the best of my knowledge, this will be the only page you'd ever require to in
 <b>NOTE:</b> To see if your Mac OS X version has been tested for the following script, check <a href="#tried-and-tested">here</a>. You're free to revise this page in order to add your Mac OS X version if you're successful with this script too (<em>psst</em>, helps others).
 </p>
 
+### Installation
+
+First, open your Terminal (Finder > Go (Menu Bar) > Utilities > Terminal)
+
 ### TL;DR
 ```console
 $ curl -L bit.do/get-bench | python
 ```
-
-### Installation
-
-First, open your Terminal (Finder > Go (Menu Bar) > Utilities > Terminal)
 
 #### Brewing
 
