@@ -99,7 +99,7 @@ You then manage your apps and sites within your Bench. To know more, click <a hr
 </p>
 
 #### Q. Apps? Sites? And now Bench?
-Yes, the Bench! You can think of the bench as the guardian for both, your apps and sites. Not just that
+Yes, the Bench! You can think of the bench as the guardian for both, your apps and sites. Bench is the heart and soul of apps and sites built using the <a href="https://github.com/frappe/frappe">frappé</a> framework. You store, update, manage and mutate apps within your bench. Not just that
 > [`bench`](https://github.com/frappe/bench) is to frappé, what Homebrew is to Mac OS X :wink:
 
 <p align="justify">
