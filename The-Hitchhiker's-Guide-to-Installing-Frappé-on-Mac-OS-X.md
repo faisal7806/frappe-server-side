@@ -13,7 +13,7 @@ First, open your Terminal (Finder > Go (Menu Bar) > Utilities > Terminal)
 
 ### TL;DR
 ```console
-$ curl -L bit.do/get-bench | python
+$ curl -sL bit.do/get-bench | python
 ```
 
 #### Brewing
