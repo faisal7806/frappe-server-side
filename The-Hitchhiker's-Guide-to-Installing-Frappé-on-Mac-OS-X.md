@@ -115,6 +115,15 @@ Go ahead and install <a href="https://git-scm.com"><code>git</code></a>
 $ brew install git
 ```
 
+...and install Bench using `pip`
+```console
+$ pip install -e git+https://github.com/frappe/bench#egg=frappe-bench
+```
+
+NOTE: We're having Bench `pip`ed soon (Click [here](https://github.com/frappe/bench/pull/490) for more details).
+
+
+
 ### Tried and Tested
 <p align="justify">
 <b>NOTE:</b> If you're attempting to revise this page after successfully installing and running frappé, kindly add the required details in the following format only.
