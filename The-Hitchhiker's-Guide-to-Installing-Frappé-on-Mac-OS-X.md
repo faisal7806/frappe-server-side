@@ -115,14 +115,32 @@ Go ahead and install <a href="https://git-scm.com"><code>git</code></a>
 $ brew install git
 ```
 
-...and install Bench using `pip`
+and install Bench using <a href="https://pip.pypa.io"><code>pip</code></a>
 ```console
 $ pip install -e git+https://github.com/frappe/bench#egg=frappe-bench
 ```
 
-NOTE: We're having Bench `pip`ed soon (Click [here](https://github.com/frappe/bench/pull/490) for more details).
+NOTE: We're having Bench <a href="https://pip.pypa.io"><code>pip</code></a>ed soon (Click [here](https://github.com/frappe/bench/pull/490) for more details).
 
+* Check whether **Bench** has been installed correctly
+```console
+$ bench --version
+```
+<p align="justify">
+You should then see <code>X.Y.Z</code> on your terminal screen.
 
+<p align="justify">
+And there you have it! You're now ready to build something awesome using <a href="https://github.com/frappe/frappe">frappé</a>
+</p>
+
+To create a new bench, simply use the `bench init` command as follows:
+```console
+$ bench init $MY_BENCH_NAME
+```
+e.g.
+```console
+$ bench init frappe-bench
+```
 
 ### Tried and Tested
 <p align="justify">
