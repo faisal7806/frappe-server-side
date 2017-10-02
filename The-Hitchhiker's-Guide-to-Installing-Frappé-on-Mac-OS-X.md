@@ -133,6 +133,7 @@ You should then see <code>X.Y.Z</code> on your terminal screen.
 And there you have it! You're now ready to build something awesome using <a href="https://github.com/frappe/frappe">frappé</a>
 </p>
 
+#### Bench - Quickstart
 To create a new bench, simply use the `bench init` command as follows:
 ```console
 $ bench init $MY_BENCH_NAME
@@ -141,6 +142,12 @@ e.g.
 ```console
 $ bench init frappe-bench
 ```
+
+<p align="justify">
+This goes ahead and creates a folder named `frappe-bench` with a whole lot of stuff inside! This might take a while (depending on your internet speed). We, at frappé love our coffee with flavour. Go get one brewed for yourself.
+</p>
+
+
 
 #### Tried and Tested
 <p align="justify">
