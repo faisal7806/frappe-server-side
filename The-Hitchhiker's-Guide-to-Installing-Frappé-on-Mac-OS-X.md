@@ -11,12 +11,12 @@ To the best of my knowledge, this will be the only page you'd ever require to in
 
 First, open your Terminal (Finder > Go (Menu Bar) > Utilities > Terminal)
 
-### TL;DR
+#### TL;DR
 ```console
 $ curl -sL bit.do/get-bench | python
 ```
 
-### Brewing
+#### Brewing
 
 * Install [Homebrew](https://brew.sh/) - Mac OS X's package manager <br/> (Requires [Ruby](https://www.ruby-lang.org/en/downloads/) installed. To our luck, Ruby comes packaged with most Mac OS X systems)
 > *On OS X El Capitan, Yosemite, Mavericks, and macOS Sierra, Ruby 2.0 is included. OS X Mountain Lion, Lion, and Snow Leopard ship with Ruby 1.8.7*
@@ -76,16 +76,16 @@ $ brew install mariadb redis node
 <b>Homebrew</b>'s Node.js comes with <a href="https://www.npmjs.com"><code>npm</code></a> (<em>Homebrew for Node.js</em>) installed for you.
 </p>
 
-### Getting <a href="https://github.com/frappe/frappe">Frappé</a> onto your system
+#### Getting <a href="https://github.com/frappe/frappe">Frappé</a> onto your system
 <p align="justify">
 Before going further, here's something you need to know. <a href="https://github.com/frappe/frappe">Frappé</a> is not just a web framework as a whole but also an app itself.
 
-#### Q. Wait, what's an app?
+##### Q. Wait, what's an app?
 <p align="justify">
 You can think of an app in the <a href="https://github.com/frappe/frappe">Frappé</a> jargon as a collection of mutable definitions and custom functionalities for a said use-case (basically, a codebase). You then install such apps on sites (which consists of one database at a domain, files, etc.) that acts as the view layer to your app (just like any other website).
 </p>
 
-#### Q. Apps? Sites? Why would you do such a thing?
+##### Q. Apps? Sites? Why would you do such a thing?
 <p align="justify">
 <b>Multi-tenancy</b>. <a href="https://github.com/frappe/frappe">Frappé</a> was built with an intention for you to reuse a codebase, definitions, functions, views, etc. Both, apps and sites are contained within what we call as - <em>drum rolls</em> - <b>the Bench!</b>
 </p>
@@ -98,7 +98,7 @@ You can think of an app in the <a href="https://github.com/frappe/frappe">Frapp�
 You then manage your apps and sites within your Bench. To know more, click <a href="https://www.youtube.com/watch?v=eCAMPcl7NKc&feature=youtu.be&t=32s">here</a> to completely know the architecture from the author of <a href="https://github.com/frappe/frappe">frappé</a>, <a href="https://github.com/rmehta">Rushabh Mehta</a> himself.
 </p>
 
-#### Q. Apps? Sites? And now Bench?
+##### Q. Apps? Sites? And now Bench?
 Yes, the Bench! You can think of the bench as the guardian for both, your apps and sites. Bench is the heart and soul of apps and sites built using the <a href="https://github.com/frappe/frappe">frappé</a> framework. You store, update, manage and mutate apps within your bench. Not just that
 > [`bench`](https://github.com/frappe/bench) is to frappé, what Homebrew is to Mac OS X :wink:
 
@@ -142,11 +142,11 @@ e.g.
 $ bench init frappe-bench
 ```
 
-### Tried and Tested
+#### Tried and Tested
 <p align="justify">
 <b>NOTE:</b> If you're attempting to revise this page after successfully installing and running frappé, kindly add the required details in the following format only.
 </p>
 
 | Name         | Version | By
 |--------------|---------|---
-| El Capitan   | 10.11.6 | Achilles Rasquinha <br/> [@achillesrasquinha](https://github.com/achillesrasquinha), achillesrasquinha@gmail.com
+| macOS Sierra | 10.12.5 | Achilles Rasquinha <br/> [@achillesrasquinha](https://github.com/achillesrasquinha), <<a href="mailto:achilles@frappe.io">achilles@frappe.io</a>>
