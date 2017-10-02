@@ -1,4 +1,4 @@
-> From Zero to Hero - [Achilles Rasquinha](https://github.com/achillesrasquinha)
+> From Zero to Hero - [Achilles Rasquinha](https://github.com/achillesrasquinha) <<a href="mailto:achilles@frappe.io">achilles@frappe.io</a>>
 
 <p align="justify">
 To the best of my knowledge, this will be the only page you'd ever require to install <a href="https://github.com/frappe/frappe">frappé</a> right from scratch. This script also believes to be a foolproof setup to have <a href="https://github.com/frappe/frappe">frappé</a> onto your system. <b>In case if you run into some problems, feel free to raise an issue <a href="https://github.com/frappe/frappe/issues">here</a></b>.
