@@ -40,7 +40,7 @@ $ brew doctor
 ```
 
 <p align="justify">
-You should then see - <b>Your system is ready to brew!</b> on your terminal screen. Fix the warnings and errors, if not.
+You should then see - <b>Your system is ready to brew!</b> on your terminal screen. Fix the warnings and errors mentioned, if not.
 </p>
 
 <p align="justify">
