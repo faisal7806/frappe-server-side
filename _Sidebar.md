@@ -7,6 +7,8 @@
 frappé
 ======
 
+* [[Home]]
+
 ### Support
 * [Discuss](https://discuss.erpnext.com)
 * [GitHub Issues](https://github.com/frappe/frappe/issues)
