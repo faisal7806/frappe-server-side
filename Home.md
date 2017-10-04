@@ -5,6 +5,10 @@
    </a>
 </div>
 
+<p align="justify">
+<b>frappé</b> is an Open Sourced high-level Web Application Framework (licensed under the <a href="https://github.com/frappe/frappe/blob/develop/LICENSE">MIT License</a>) built on top of Python's Werkzurg Server, Jinja 2 for templating and JavaScript for everything awesome. You can build pretty much everything using frappé for rapid application development so that you can focus on building products without reinventing wheels!
+</p>
+
 ### Table of Contents
 * [Installation](#installation)
 * [Support](#support)
