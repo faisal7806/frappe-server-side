@@ -144,10 +144,31 @@ $ bench init frappe-bench
 ```
 
 <p align="justify">
-This goes ahead and creates a folder named `frappe-bench` with a whole lot of stuff inside! This might take a while (depending on your internet speed). We, at frappé love our coffee with flavour. Go get one brewed for yourself.
+This goes ahead and creates a folder named <code>frappe-bench</code> with a whole lot of stuff inside! This might take a while (depending on your internet speed). We, at frappé love our coffee with flavour. Go get one brewed for yourself.
 </p>
 
+Once done, simply change to your bench directory:
+```console
+$ cd $MY_BENCH_NAME
+```
+e.g.
+```console
+$ cd frappe-bench
+```
 
+#### What should you see?
+Typing an `ls` on your terminal, you should see the following:
+```console
+├── 🗄️ apps               # frappé apps
+├── 🗄️ config             # all configuration files (*.conf)
+├── 🗄️ env                # virtual environment (isolated python environment catering to python dependencies of frappé apps only)
+├── 🗄️ logs               # all log files
+├── 🗄️ node_modules       # node dependencies of frappé apps
+├── 🗄️ sites              # frappé sites
+├── 📁 package.json       # list of node dependencies
+├── 📁 package-lock.json  # locking the list of node dependencies
+├── 📁 patches.txt        # list of patches patched
+├── 📁 Procfile           # process file (to activate list of all processes)
 
 #### Tried and Tested
 <p align="justify">
