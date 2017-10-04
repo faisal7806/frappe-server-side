@@ -16,3 +16,6 @@ To install frappé right from scratch, check out our exhaustive guides:
 * [[The Hitchhiker's Guide to Installing Frappé on Windows OS]] (Contributors Required)
 
 #### Support
+* [Discuss](https://discuss.erpnext.com)
+* [GitHub Issues](https://github.com/frappe/frappe/issues)
+* [Stack Overflow](https://stackoverflow.com/questions/tagged/frappe)
