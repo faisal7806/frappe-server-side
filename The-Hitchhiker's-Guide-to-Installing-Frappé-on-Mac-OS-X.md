@@ -182,7 +182,7 @@ $ bench start
 </p>
 
 ```console
-$ bench new-site $MY_SITE
+$ bench new-site <MY_SITE>
 ```
 e.g.
 ```console
