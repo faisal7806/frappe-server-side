@@ -7,7 +7,7 @@
 frappé
 ======
 
-### Help
+### Support
 * [Discuss](https://discuss.erpnext.com)
 * [GitHub Issues](https://github.com/frappe/frappe/issues)
 * [Stack Overflow](https://stackoverflow.com/questions/tagged/frappe)
