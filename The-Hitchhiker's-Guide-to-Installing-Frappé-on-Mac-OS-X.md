@@ -178,7 +178,7 @@ $ bench start
 
 #### Creating Sites
 <p align="justify">
-<b>NOTE:</b>You might need another terminal instance to run the following commands within the path to your <code><MY_BENCH></code>directory.
+<b>NOTE:</b>You might need another terminal instance to run the following commands within the path to your <code><MY_BENCH></code> directory.
 </p>
 
 ```console
@@ -207,7 +207,7 @@ e.g.
 $ bench get-app erpnext https://github.com/frappe/erpnext
 ```
 <p align="justify">
-This goes ahead and fetches the complete source code and places it within your <code><MY_BENCH>/apps/<MY_APP_NAME></code> folder. In this case - <code>frappe-bench/apps/erpnext</code>
+This goes ahead and fetches the complete source code and places it within your <code>MY_BENCH/apps/MY_APP_NAME</code> folder. In this case - <code>frappe-bench/apps/erpnext</code>
 </p>
 
 #### Installing Frappé Apps onto Sites
