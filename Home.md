@@ -23,4 +23,5 @@ To install frappé right from scratch, check out our exhaustive guides:
 #### Support
 * [Discuss](https://discuss.erpnext.com)
 * [GitHub Issues](https://github.com/frappe/frappe/issues)
+* [Gitter](https://gitter.im/frappe/erpnext)
 * [Stack Overflow](https://stackoverflow.com/questions/tagged/frappe)
