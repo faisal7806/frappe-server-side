@@ -187,6 +187,7 @@ $ bench new-site foo.bar
 <p align="justify">
 You'll be then prompted to type your MySQL root password (which then goes ahead and creates a new database for your site). A site comes frappé installed by default. Like I mentioned
 </p>
+
 > Frappé is not just a web framework as a whole but also an app itself.
 
 #### Tried and Tested
