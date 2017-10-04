@@ -169,6 +169,7 @@ Typing an `ls` on your terminal, you should see the following:
 ├── 📁 package-lock.json  # locking the list of node dependencies
 ├── 📁 patches.txt        # list of patches patched
 ├── 📁 Procfile           # process file (to activate list of all processes)
+```
 
 #### Tried and Tested
 <p align="justify">
