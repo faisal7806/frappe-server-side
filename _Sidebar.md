@@ -1,5 +1,5 @@
 <div align="centre">
    <a href="https://frappe.io">
-      <img src="https://i.imgur.com/HYDp7gu.png" width="200" height="200"/>
+      <img src="https://i.imgur.com/HYDp7gu.png" width="128" height="128"/>
    </a>
 </div>
