@@ -1,4 +1,4 @@
-[[[https://raw.githubusercontent.com/frappe/frappe/develop/.github/logo.png|width=232px|height=200px]]](https://frappe.io)
+[[[https://raw.githubusercontent.com/frappe/frappe/develop/.github/logo.png|width=210px|height=]]](https://frappe.io)
 
 frappé
 ======
