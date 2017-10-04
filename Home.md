@@ -1,6 +1,9 @@
-<a href="https://frappe.io">
-   <h1>frappé</h1>
-</a>
+<div align="center">
+   <a href="https://frappe.io">
+      <h1>frappé</h1>
+      <h4>a batteries included web framework</h4>
+   </a>
+</div>
 
 ### Table of Contents
 * [Installation](#installation)
