@@ -10,6 +10,11 @@
 * [Support](#support)
 
 #### Installation
+##### TL;DR
+```console
+$ curl -sL bit.do/install-bench | python
+```
+
 To install frappé right from scratch, check out our exhaustive guides:
 * [[The Hitchhiker's Guide to Installing Frappé on Mac OS X]]
 * [[The Hitchhiker's Guide to Installing Frappé on Linux OS]] (Contributors Required)
