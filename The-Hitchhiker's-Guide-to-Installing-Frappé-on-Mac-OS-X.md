@@ -171,6 +171,24 @@ Typing an `ls` on your terminal, you should see the following:
 ├── 📁 Procfile           # process file (to activate list of all processes)
 ```
 
+Start the processes
+```console
+$ bench start
+```
+
+#### Creating Sites
+```console
+$ bench new-site $MY_SITENAME
+```
+e.g.
+```console
+$ bench new-site foo.bar
+```
+<p align="justify">
+You'll be then prompted to type your MySQL root password (which then goes ahead and creates a new database for your site). A site comes frappé installed by default. Like I mentioned
+</p>
+> <a href="https://github.com/frappe/frappe">Frappé</a> is not just a web framework as a whole but also an app itself.
+
 #### Tried and Tested
 <p align="justify">
 <b>NOTE:</b> If you're attempting to revise this page after successfully installing and running frappé, kindly add the required details in the following format only.
