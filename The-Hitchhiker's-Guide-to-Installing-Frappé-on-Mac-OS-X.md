@@ -136,7 +136,7 @@ And there you have it! You're now ready to build something awesome using <a href
 #### Bench - Quickstart
 To create a new bench, simply use the `bench init` command as follows:
 ```console
-$ bench init $MY_BENCH
+$ bench init <MY_BENCH>
 ```
 e.g.
 ```console
@@ -149,7 +149,7 @@ This goes ahead and creates a folder named <code>frappe-bench</code> with a whol
 
 Once done, simply change to your bench directory:
 ```console
-$ cd $MY_BENCH
+$ cd <MY_BENCH>
 ```
 e.g.
 ```console
@@ -178,7 +178,7 @@ $ bench start
 
 #### Creating Sites
 <p align="justify">
-<b>NOTE:</b>You might need another terminal instance to run the following commands within the path to your $MY_BENCH directory.
+<b>NOTE:</b>You might need another terminal instance to run the following commands within the path to your <code><MY_BENCH></code>directory.
 </p>
 
 ```console
@@ -196,21 +196,23 @@ You'll be then prompted to type your MySQL root password (which then goes ahead 
 > Frappé is not just a web framework as a whole but also an app itself.
 
 #### Fetching Frappé Apps
-[ERPNext](https://erpnext.org) happens to be two things - a Frappé App and [the world's best 100% Open Source ERP](https://opensource.com/resources/top-4-open-source-erp-systems).
-You can have [erpnext](https://github.com/frappe/erpnext) installed using the following command:
+<p align="justify">
+<a href="https://erpnext.org">ERPNext</a> happens to be two things - a Frappé App and <a href="https://opensource.com/resources/top-4-open-source-erp-systems">the world's best 100% Open Source ERP</a>. You can have <a href="https://github.com/frappe/erpnext">erpnext</a> fetched and stored within your bench using the following command:
 
 ```console
-$ bench get-app $MY_APP_NAME $APP_REMOTE_REPO
+$ bench get-app <MY_APP_NAME> <APP_REMOTE_URL>
 ```
 e.g.
 ```console
 $ bench get-app erpnext https://github.com/frappe/erpnext
 ```
-This goes ahead and fetches the complete source code and places it within your `$MY_BENCH/apps/$MY_APP_NAME` folder. In this case - `frappe-bench/apps/erpnext`
+<p align="justify">
+This goes ahead and fetches the complete source code and places it within your <code><MY_BENCH>/apps/<MY_APP_NAME></code> folder. In this case - <code>frappe-bench/apps/erpnext</code>
+</p>
 
 #### Installing Frappé Apps onto Sites
 ```console
-$ bench install-app $MY_APP_NAME --site $MY_SITE
+$ bench install-app <MY_APP_NAME> --site <MY_SITE>
 ```
 e.g.
 ```console
