@@ -136,7 +136,7 @@ And there you have it! You're now ready to build something awesome using <a href
 #### Bench - Quickstart
 To create a new bench, simply use the `bench init` command as follows:
 ```console
-$ bench init $MY_BENCH_NAME
+$ bench init $MY_BENCH
 ```
 e.g.
 ```console
@@ -149,7 +149,7 @@ This goes ahead and creates a folder named <code>frappe-bench</code> with a whol
 
 Once done, simply change to your bench directory:
 ```console
-$ cd $MY_BENCH_NAME
+$ cd $MY_BENCH
 ```
 e.g.
 ```console
@@ -161,34 +161,61 @@ Typing an `ls` on your terminal, you should see the following:
 ```console
 ├── 🗄️ apps               # frappé apps
 ├── 🗄️ config             # all configuration files (*.conf)
-├── 🗄️ env                # virtual environment (isolated python environment catering to python dependencies of frappé apps only)
+├── 🗄️ env                # virtual environment (an isolated python environment catering to python dependencies for frappé apps only)
 ├── 🗄️ logs               # all log files
-├── 🗄️ node_modules       # node dependencies of frappé apps
+├── 🗄️ node_modules       # collective node dependencies for frappé apps
 ├── 🗄️ sites              # frappé sites
 ├── 📁 package.json       # list of node dependencies
 ├── 📁 package-lock.json  # locking the list of node dependencies
 ├── 📁 patches.txt        # list of patches patched
-├── 📁 Procfile           # process file (to activate list of all processes)
+├── 📁 Procfile           # process file (to let honcho activate a list of all processes)
 ```
 
-Start the processes
+Go ahead and start bench as follows:
 ```console
 $ bench start
 ```
 
 #### Creating Sites
+<p align="justify">
+<b>NOTE:</b>You might need another terminal instance to run the following commands within the path to your $MY_BENCH directory.
+</p>
+
 ```console
-$ bench new-site $MY_SITENAME
+$ bench new-site $MY_SITE
 ```
 e.g.
 ```console
 $ bench new-site foo.bar
 ```
+
 <p align="justify">
 You'll be then prompted to type your MySQL root password (which then goes ahead and creates a new database for your site). A site comes frappé installed by default. Like I mentioned
 </p>
 
 > Frappé is not just a web framework as a whole but also an app itself.
+
+#### Fetching Frappé Apps
+[ERPNext](https://erpnext.org) happens to be two things - a Frappé App and [the world's best 100% Open Source ERP](https://opensource.com/resources/top-4-open-source-erp-systems).
+You can have [erpnext](https://github.com/frappe/erpnext) installed using the following command:
+
+```console
+$ bench get-app $MY_APP_NAME $APP_REMOTE_REPO
+```
+e.g.
+```console
+$ bench get-app erpnext https://github.com/frappe/erpnext
+```
+This goes ahead and fetches the complete source code and places it within your `$MY_BENCH/apps/$MY_APP_NAME` folder. In this case - `frappe-bench/apps/erpnext`
+
+#### Installing Frappé Apps onto Sites
+```console
+$ bench install-app $MY_APP_NAME --site $MY_SITE
+```
+e.g.
+```console
+$ bench install-app erpnext --site foo.bar
+```
 
 #### Tried and Tested
 <p align="justify">
