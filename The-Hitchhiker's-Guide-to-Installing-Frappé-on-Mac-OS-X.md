@@ -212,7 +212,7 @@ This goes ahead and fetches the complete source code and places it within your <
 
 #### Installing Frappé Apps onto Sites
 ```console
-$ bench install-app <MY_APP_NAME> --site <MY_SITE>
+$ bench --site <MY_SITE> install-app <MY_APP_NAME>
 ```
 e.g.
 ```console
