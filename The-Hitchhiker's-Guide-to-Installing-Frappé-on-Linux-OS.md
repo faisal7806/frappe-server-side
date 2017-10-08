@@ -20,51 +20,36 @@ $ curl -sL bit.do/get-bench | python
 
 #### Dependencies
 
-* Install [Homebrew](https://brew.sh/) - Mac OS X's package manager <br/> (Requires [Ruby](https://www.ruby-lang.org/en/downloads/) installed. To our luck, Ruby comes packaged with most Mac OS X systems)
-> *On OS X El Capitan, Yosemite, Mavericks, and macOS Sierra, Ruby 2.0 is included. OS X Mountain Lion, Lion, and Snow Leopard ship with Ruby 1.8.7*
->
-> Ruby Lang [Documentation](https://www.ruby-lang.org/en/documentation/installation/#homebrew)
-
-(Type `ruby --version` to check whether Ruby is available on your system)
-
+* Install [`git`](https://git-scm.com)
+**Debian**
 ```console
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ sudo apt-get install git
 ```
 
-* Ensure your `$PATH` variable points to **Homebrew** (installed within `/usr/local/bin`)
+* Check whether **git** has been installed correctly
 ```console
-$ echo "export PATH=/usr/local/bin:/usr/local/sbin:$PATH" >> ~/.bash_profile
-```
-
-* Check whether **Homebrew** has been installed correctly
-```console
-$ brew doctor
+$ git --version
 ```
 
 <p align="justify">
-You should then see - <b>Your system is ready to brew!</b> on your terminal screen. Fix the warnings and errors mentioned, if not.
+You should then see <code>git version X.Y.Z</code> on your terminal screen.
 </p>
 
 <p align="justify">
-<a href="https://github.com/frappe/frappe">Frappé</a> requires Python 2.7 installed. To our luck, Python comes shipped with most Mac OS X systems. However...
+<a href="https://github.com/frappe/frappe">Frappé</a> requires Python 2.7 installed. To our luck, Python comes shipped with most Linux OS distributions. However, we might require the `python-dev` package installed for using Python's C API.
 </p>
 
-> *"The version of Python that ships with OS X is great for learning, but it’s not good for development. The version shipped with OS X may be out of date from the official current Python release, which is considered the stable production version."*
-> 
-> [Kenneth Reitz](https://www.kennethreitz.org/), [The Hitchhiker's Guide to Python](http://docs.python-guide.org/en/latest/starting/install/osx/)
-
-* To install Python 2.7 on your Mac OS using `brew`, simply:
+* To install Python 2.7 `dev` package on your Linux OS, simply:
+**Debian**
 ```console
-$ brew install python
+$ sudo apt-get install python-dev
 ```
 
-* Check whether **Python 2.7** has been installed correctly
+* Install `pip` (Python's Package Manager):
 ```console
-$ python --version
+$ wget -O - https://bootstrap.pypa.io/get-pip.py | python
 ```
-<p align="justify">
-You should then see <code>Python 2.7.X</code> on your terminal screen. <b>Homebrew</b>'s Python comes with <a href="https://pip.pypa.io"><code>pip</code></a> (<em>Homebrew for Python</em>) out of the box for you.
-</p>
+
 
 <p align="justify">
 <a href="https://github.com/frappe/frappe">Frappé</a> uses <a href="https://mariadb.org">MariaDB</a> (for <a href="https://en.wikipedia.org/wiki/Relational_database_management_system">RDBMS</a>) as its database engine, <a href="https://redis.io">Redis</a> for caching and as a message broker and <a href="https://nodejs.org">Node.js</a> for everything JavaScript. Go ahead and install 'em all.
