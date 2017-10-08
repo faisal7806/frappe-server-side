@@ -9,16 +9,45 @@ To the best of my knowledge, this will be the only page you'd ever require to in
 <b>NOTE:</b> To see if your Mac OS X version has been tested for the following script, check <a href="#tried-and-tested">here</a>. You're free to revise this page in order to add your Mac OS X version if you're successful with this script too (<em>psst</em>, helps others).
 </p>
 
+#### Getting <a href="https://github.com/frappe/frappe">Frappé</a> onto your system
+<p align="justify">
+Before going further, here's something you need to know. <a href="https://github.com/frappe/frappe">Frappé</a> is not just a web framework as a whole but also an app itself.
+
+##### Q. Wait, what's an app?
+<p align="justify">
+You can think of an app in the <a href="https://github.com/frappe/frappe">Frappé</a> jargon as a collection of mutable definitions and custom functionalities for a said use-case (basically, a codebase). You then install such apps on sites (which consists of one database at a domain, files, etc.) that acts as the view layer to your app (just like any other website).
+</p>
+
+##### Q. Apps? Sites? Why would you do such a thing?
+<p align="justify">
+<b>Multi-tenancy</b>. <a href="https://github.com/frappe/frappe">Frappé</a> was built with an intention for you to reuse a codebase, definitions, functions, views, etc. Both, apps and sites are contained within what we call as - <em>drum rolls</em> - <b>the Bench!</b>
+</p>
+
+<p align="center">
+    <img src="https://i.imgur.com/dZBThmp.png" height="150"/>
+</p>
+
+<p align="justify">
+You then manage your apps and sites within your Bench. To know more, click <a href="https://www.youtube.com/watch?v=eCAMPcl7NKc&feature=youtu.be&t=32s">here</a> to completely know the architecture from the author of <a href="https://github.com/frappe/frappe">frappé</a>, <a href="https://github.com/rmehta">Rushabh Mehta</a> himself.
+</p>
+
+##### Q. Apps? Sites? And now Bench?
+Yes, the Bench! You can think of the bench as the guardian for both, your apps and sites. Bench is the heart and soul of apps and sites built using the <a href="https://github.com/frappe/frappe">frappé</a> framework. You store, update, manage and mutate apps within your bench. Not just that
+> [`bench`](https://github.com/frappe/bench) is to frappé, what `apt-get` is to Debian-based Linux OS :wink:
+
+<p align="justify">
+We provide you the <a href="https://github.com/frappe/bench"><code>bench</code></a> command-line tool for you to create Benches, Apps and Sites. For installing apps built on Frappé, we use <a href="https://git-scm.com"><code>git</code></a> as our Source Control Manager (SCM) to have them fetched from remote repositories.
+</p>
+
+<p align="justify">
+To know more about <b>the Bench</b>, check out <a href="https://www.youtube.com/watch?v=GVWrKuj-EAc&feature=youtu.be&t=41s">this</a> talk from the author of <a href="https://github.com/frappe/bench">bench</a> (<a href="https://github.com/pdvyas">Pratik Vyas</a>).
+</p>
+
 ### Installation
 
 First, open your Terminal (`Ctrl` + `Alt` + `T`)
 
-#### TL;DR
-```console
-$ curl -sL bit.do/get-bench | python
-```
-
-#### Dependencies
+### Dependencies
 
 * Install [`git`](https://git-scm.com)
 
