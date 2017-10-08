@@ -9,6 +9,7 @@
 </div>
 
 * [[Home]]
+* [Installation](https://github.com/frappe/frappe/wiki#installation)
 
 ### Support
 * [Discuss](https://discuss.erpnext.com)
