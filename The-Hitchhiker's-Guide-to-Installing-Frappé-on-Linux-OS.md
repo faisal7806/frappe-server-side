@@ -228,4 +228,4 @@ $ bench install-app erpnext --site foo.bar
 
 | Name         | Version | By
 |--------------|---------|---
-| macOS Sierra | 10.12.5 | Achilles Rasquinha <br/> [@achillesrasquinha](https://github.com/achillesrasquinha), <<a href="mailto:achilles@frappe.io">achilles@frappe.io</a>>
+| Ubuntu       | 16.04.1 | Ameya Shenoy <br/> [@codingCoffee](https://github.com/codingCoffee), <<a href="mailto:ameya@frappe.io">ameya@frappe.io</a>>
