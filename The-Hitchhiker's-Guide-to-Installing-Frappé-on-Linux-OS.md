@@ -66,10 +66,10 @@ You should then see <code>git version X.Y.Z</code> on your terminal screen.
 </p>
 
 <p align="justify">
-<a href="https://github.com/frappe/frappe">Frappé</a> requires Python 2.7 installed. To our luck, Python comes shipped with most Linux OS distributions. However, we might require the `python-dev` package installed for using Python's C API.
+<a href="https://github.com/frappe/frappe">Frappé</a> requires Python 2.7 installed. To our luck, Python comes shipped with most Linux OS distributions. However, we might require the <code>python-dev</code> package installed for using Python's C API.
 </p>
 
-* To install Python 2.7 `dev` package on your Linux OS, simply:
+* To install Python 2.7.X `dev` package on your Linux OS, simply:
 
 **Debian**
 ```console
@@ -81,59 +81,13 @@ $ sudo apt-get install python-dev
 $ wget -O - https://bootstrap.pypa.io/get-pip.py | python
 ```
 
-
 <p align="justify">
 <a href="https://github.com/frappe/frappe">Frappé</a> uses <a href="https://mariadb.org">MariaDB</a> (for <a href="https://en.wikipedia.org/wiki/Relational_database_management_system">RDBMS</a>) as its database engine, <a href="https://redis.io">Redis</a> for caching and as a message broker and <a href="https://nodejs.org">Node.js</a> for everything JavaScript. Go ahead and install 'em all.
 </p>
 
-```console
-$ brew install mariadb redis node
-```
+#### Getting [Bench](https://github.com/frappe/bench) onto your system
 
-<p align="justify">
-<b>Homebrew</b>'s Node.js comes with <a href="https://www.npmjs.com"><code>npm</code></a> (<em>Homebrew for Node.js</em>) installed for you.
-</p>
-
-#### Getting <a href="https://github.com/frappe/frappe">Frappé</a> onto your system
-<p align="justify">
-Before going further, here's something you need to know. <a href="https://github.com/frappe/frappe">Frappé</a> is not just a web framework as a whole but also an app itself.
-
-##### Q. Wait, what's an app?
-<p align="justify">
-You can think of an app in the <a href="https://github.com/frappe/frappe">Frappé</a> jargon as a collection of mutable definitions and custom functionalities for a said use-case (basically, a codebase). You then install such apps on sites (which consists of one database at a domain, files, etc.) that acts as the view layer to your app (just like any other website).
-</p>
-
-##### Q. Apps? Sites? Why would you do such a thing?
-<p align="justify">
-<b>Multi-tenancy</b>. <a href="https://github.com/frappe/frappe">Frappé</a> was built with an intention for you to reuse a codebase, definitions, functions, views, etc. Both, apps and sites are contained within what we call as - <em>drum rolls</em> - <b>the Bench!</b>
-</p>
-
-<p align="center">
-    <img src="https://i.imgur.com/dZBThmp.png" height="150"/>
-</p>
-
-<p align="justify">
-You then manage your apps and sites within your Bench. To know more, click <a href="https://www.youtube.com/watch?v=eCAMPcl7NKc&feature=youtu.be&t=32s">here</a> to completely know the architecture from the author of <a href="https://github.com/frappe/frappe">frappé</a>, <a href="https://github.com/rmehta">Rushabh Mehta</a> himself.
-</p>
-
-##### Q. Apps? Sites? And now Bench?
-Yes, the Bench! You can think of the bench as the guardian for both, your apps and sites. Bench is the heart and soul of apps and sites built using the <a href="https://github.com/frappe/frappe">frappé</a> framework. You store, update, manage and mutate apps within your bench. Not just that
-> [`bench`](https://github.com/frappe/bench) is to frappé, what Homebrew is to Mac OS X :wink:
-
-<p align="justify">
-We provide you the <a href="https://github.com/frappe/bench"><code>bench</code></a> command-line tool for you to create Benches, Apps and Sites. For installing apps built on Frappé, we use <a href="https://git-scm.com"><code>git</code></a> as our Source Control Manager (SCM) to have them fetched from remote repositories.
-</p>
-
-<p align="justify">
-To know more about <b>the Bench</b>, check out <a href="https://www.youtube.com/watch?v=GVWrKuj-EAc&feature=youtu.be&t=41s">this</a> talk from the author of <a href="https://github.com/frappe/bench">bench</a> (<a href="https://github.com/pdvyas">Pratik Vyas</a>).
-</p>
-
-Go ahead and install <a href="https://git-scm.com"><code>git</code></a>
-```console
-$ brew install git
-```
-
-and install Bench using <a href="https://pip.pypa.io"><code>pip</code></a>
+Install Bench via <a href="https://pip.pypa.io"><code>pip</code></a>
 ```console
 $ pip install -e git+https://github.com/frappe/bench#egg=frappe-bench
 ```
