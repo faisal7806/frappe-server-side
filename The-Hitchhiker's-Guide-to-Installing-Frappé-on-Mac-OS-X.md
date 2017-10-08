@@ -178,7 +178,7 @@ $ bench start
 
 #### Creating Sites
 <p align="justify">
-<b>NOTE:</b>You might need another terminal instance to run the following commands within the path to your <code><MY_BENCH></code> directory.
+<b>NOTE:</b> You might need another terminal instance to run the following commands within the path to your <code>MY_BENCH</code> directory.
 </p>
 
 ```console
