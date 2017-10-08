@@ -174,11 +174,11 @@ You'll be then prompted to type your MySQL root password (which then goes ahead 
 <a href="https://erpnext.org">ERPNext</a> happens to be two things - a Frappé App and <a href="https://opensource.com/resources/top-4-open-source-erp-systems">the world's best 100% Open Source ERP</a>. You can have <a href="https://github.com/frappe/erpnext">erpnext</a> fetched and stored within your bench using the following command:
 
 ```console
-$ bench get-app <MY_APP_NAME> <APP_REMOTE_URL>
+$ bench get-app <APP_REMOTE_URL|VALID_FRAPPE_APP>
 ```
 e.g.
 ```console
-$ bench get-app erpnext https://github.com/frappe/erpnext
+$ bench get-app erpnext
 ```
 <p align="justify">
 This goes ahead and fetches the complete source code and places it within your <code>MY_BENCH/apps/MY_APP_NAME</code> folder. In this case - <code>frappe-bench/apps/erpnext</code>
