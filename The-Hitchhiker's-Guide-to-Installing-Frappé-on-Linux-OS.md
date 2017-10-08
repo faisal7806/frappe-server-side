@@ -21,6 +21,7 @@ $ curl -sL bit.do/get-bench | python
 #### Dependencies
 
 * Install [`git`](https://git-scm.com)
+
 **Debian**
 ```console
 $ sudo apt-get install git
@@ -40,6 +41,7 @@ You should then see <code>git version X.Y.Z</code> on your terminal screen.
 </p>
 
 * To install Python 2.7 `dev` package on your Linux OS, simply:
+
 **Debian**
 ```console
 $ sudo apt-get install python-dev
