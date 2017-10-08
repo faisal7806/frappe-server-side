@@ -11,14 +11,14 @@ To the best of my knowledge, this will be the only page you'd ever require to in
 
 ### Installation
 
-First, open your Terminal (Finder > Go (Menu Bar) > Utilities > Terminal)
+First, open your Terminal (`Ctrl` + `Alt` + `T`)
 
 #### TL;DR
 ```console
 $ curl -sL bit.do/get-bench | python
 ```
 
-#### Brewing
+#### Dependencies
 
 * Install [Homebrew](https://brew.sh/) - Mac OS X's package manager <br/> (Requires [Ruby](https://www.ruby-lang.org/en/downloads/) installed. To our luck, Ruby comes packaged with most Mac OS X systems)
 > *On OS X El Capitan, Yosemite, Mavericks, and macOS Sierra, Ruby 2.0 is included. OS X Mountain Lion, Lion, and Snow Leopard ship with Ruby 1.8.7*
