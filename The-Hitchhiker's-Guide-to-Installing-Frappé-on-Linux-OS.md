@@ -87,6 +87,57 @@ $ wget -O - https://bootstrap.pypa.io/get-pip.py | python
 <a href="https://github.com/frappe/frappe">Frappé</a> uses <a href="https://mariadb.org">MariaDB</a> (for <a href="https://en.wikipedia.org/wiki/Relational_database_management_system">RDBMS</a>) as its database engine, <a href="https://redis.io">Redis</a> for caching and as a message broker and <a href="https://nodejs.org">Node.js</a> for everything JavaScript. Go ahead and install 'em all.
 </p>
 
+**Debian**
+
+* To install MariaDB 10.2 `stable` package on your Linux OS, simply:
+```console
+$ sudo apt-get install software-properties-common
+$ sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
+$ sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.ubuntu-tw.org/mirror/mariadb/repo/10.2/ubuntu xenial main'
+
+$ sudo apt-get update
+$ sudo apt-get install mariadb-server
+```
+During this installation you'll be prompted to set the MySQL root password. It is really important that you remember this password, since it'll be useful later on! 
+You'll also need the MySQL database development files
+```console
+$ sudo apt-get install libmysqlclient-dev
+```
+You also need to edit the mariadb.cnf
+```console
+$ sudo nano /etc/mysql/conf.d/mariadb.cnf
+```
+And add this to the file
+```console
+[mysqld]
+innodb-file-format=barracuda
+innodb-file-per-table=1
+innodb-large-prefix=1
+character-set-client-handshake = FALSE
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+
+[mysql]
+default-character-set = utf8mb4
+```
+(Now press (Ctrl-X) to exit!)
+Finally restart the mysql server and you'll be good to go!
+```console
+$ sudo service mysql restart
+```
+
+* To install Redis on your Linux OS, simply:
+```console
+$ sudo apt-get install redis-server
+```
+
+* To install Node.js 8.X package on your Linux OS, simply:
+```console
+$ sudo apt-get install curl
+$ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+$ sudo apt-get install -y nodejs
+```
+
 #### Getting [Bench](https://github.com/frappe/bench) onto your system
 
 Install Bench via <a href="https://pip.pypa.io"><code>pip</code></a>
