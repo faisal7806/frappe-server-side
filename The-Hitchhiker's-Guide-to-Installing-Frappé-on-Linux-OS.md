@@ -78,7 +78,7 @@ $ sudo apt-get install python-dev
 
 * Install `pip` (Python's Package Manager):
 ```console
-$ wget -O - https://bootstrap.pypa.io/get-pip.py | python
+$ wget -O - https://bootstrap.pypa.io/get-pip.py | sudo python
 ```
 
 <p align="justify">
