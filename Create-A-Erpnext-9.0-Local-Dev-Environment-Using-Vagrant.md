@@ -34,11 +34,11 @@ $ vagrant plugin install vagrant-vbguest
 ```
 
 ## Create local ERPNext project folder
-Create a project folder in your local user root directory and name it something that makes sense to you. For example:  **erp_v9_001**
+Create a project folder in your local user root directory and name it something that makes sense to you. For example:  **~/erp_v9_001**
 
 Copy the **ERPNext-Vagrant.box** file from your downloads folder into this folder.
 
-In your terminal navigate into your new project folder :
+Open your terminal and navigate into your new project folder :
 
 ```
 $ cd ~/erp_v9_001
@@ -131,7 +131,7 @@ The important changes we made to the vagrant file are:
 
 5: We increased the VM alotted memory from 1024MB to 2048MB. This speeds up ERPNext response time.
 
-**Important to note is that in our vagrant file the SYNCED_FOLDER line is currently commented out**. This is because when Vagrant sets up its shared folders it gives priority to the Dev host machine which is currently empty.
+**Important to note** is that in our vagrant file the **SYNCED_FOLDER** line is currently commented out. This is because when Vagrant sets up its shared folders it gives priority to the Dev host machine which is currently empty.
 
 From within your local project folder `~/erp_v9_001` issue the command `vagrant up`
 
@@ -165,15 +165,16 @@ Then issue the command
 
 `sudo mv /home/frappe/frappe-bench-TMP/* /home/frappe/frappe-bench/`
 
-This will take a few minutes to copy all the ERPNext files into your Local Host machines project folder. Once completed update Ubuntu with `sudo get-apt update` then `cd frappe-bench` and `bench update` 
+This will take a few minutes to copy all the ERPNext files into your Local Host machines project folder.
+Once completed update Ubuntu with `sudo get-apt update` then `cd frappe-bench` and `bench update` 
 
 Currently just ignore any SNIMissingWarnings.
 
-Once ERPNext is up to date issue the command `bench start` and point your web browser at `http://localhost:8080` and start your initial ERPNext setup.
+Once ERPNext is up to date issue the command `bench start` from VM frappe-bench folder and point your web browser at `http://localhost:8080` and start your initial ERPNext setup.
 
-The command `vagrant halt` from your Local Dev machines project folder will shut down the VM.
+The command `vagrant halt` from your Local Dev machine project folder will shut down the VM.
 
-You can create as many seperate VM's on your Local Dev machine as you like. Just create a new project folder `~/erp_v9_002` and copy and paste our previous Vagrant file into it. Change `config.vm.box = "erp_v9_001"` to `config.vm.box = "erp_v9_002"` and comment out the shared folder line in the vagrant file then save it.
+You can create as many seperate VM's on your Local Dev machine as you like. Just create a new project folder `~/erp_v9_002` and copy and paste our previous Vagrant file and ERPNext-Vagrant.box into it. Change `config.vm.box = "erp_v9_001"` to `config.vm.box = "erp_v9_002"` and comment out the shared folder line in the vagrant file then save it.
 
 ```
 $ cd ~/erp_v9_002
