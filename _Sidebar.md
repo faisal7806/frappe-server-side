@@ -12,7 +12,6 @@
 * [Installation](https://github.com/frappe/frappe/wiki#installation)
 
 ### Support
-* [Discuss](https://discuss.erpnext.com)
+* [Discuss](https://discuss.frappe.io)
 * [GitHub Issues](https://github.com/frappe/frappe/issues)
-* [Gitter](https://gitter.im/frappe/erpnext)
 * [Stack Overflow](https://stackoverflow.com/questions/tagged/frappe)
