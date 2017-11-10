@@ -218,7 +218,7 @@ $ bench --site <MY_SITE> install-app <MY_APP_NAME>
 ```
 e.g.
 ```console
-$ bench install-app erpnext --site foo.bar
+$ bench --site foo.bar install-app erpnext
 ```
 
 #### Tried and Tested
