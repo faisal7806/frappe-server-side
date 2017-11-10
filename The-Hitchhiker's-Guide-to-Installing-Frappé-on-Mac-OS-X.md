@@ -119,10 +119,8 @@ $ brew install git
 
 and install Bench using <a href="https://pip.pypa.io"><code>pip</code></a>
 ```console
-$ pip install --user -e git+https://github.com/frappe/bench#egg=frappe-bench
+$ pip install frappe-bench
 ```
-
-NOTE: We're having Bench <a href="https://pip.pypa.io"><code>pip</code></a>ed soon (Click [here](https://github.com/frappe/bench/pull/490) for more details).
 
 * Check whether **Bench** has been installed correctly
 ```console
