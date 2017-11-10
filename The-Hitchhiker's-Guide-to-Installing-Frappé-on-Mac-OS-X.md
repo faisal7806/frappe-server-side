@@ -195,6 +195,12 @@ You'll be then prompted to type your MySQL root password (which then goes ahead 
 
 > Frappé is not just a web framework as a whole but also an app itself.
 
+Now, type [http://localhost:8000](http://localhost:8000) on your favourite browser. Login with username as - *Administrator* and your newly created password. You should then see something like this:
+
+![](http://g.recordit.co/tuC70uxw4V.gif)
+
+Voilà!
+
 #### Fetching Frappé Apps
 <p align="justify">
 <a href="https://erpnext.org">ERPNext</a> happens to be two things - a Frappé App and <a href="https://opensource.com/resources/top-4-open-source-erp-systems">the world's best 100% Open Source ERP</a>. You can have <a href="https://github.com/frappe/erpnext">erpnext</a> fetched and stored within your bench using the following command:
