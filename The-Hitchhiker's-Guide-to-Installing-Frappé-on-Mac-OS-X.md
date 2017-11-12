@@ -248,11 +248,6 @@ Now you can simply access the site you just created using the link <a href="http
 <b>NOTE:</b> If you're attempting to revise this page after successfully installing and running frappé, kindly add the required details in the following format only.
 </p>
 
-#### Tried and Tested
-<p align="justify">
-<b>NOTE:</b> If you're attempting to revise this page after successfully installing and running frappé, kindly add the required details in the following format only.
-</p>
-
 | Name         | Version | By
 |--------------|---------|---
 | macOS Sierra | 10.12.5 | Achilles Rasquinha <br/> [@achillesrasquinha](https://github.com/achillesrasquinha), <<a href="mailto:achilles@frappe.io">achilles@frappe.io</a>>
