@@ -244,6 +244,24 @@ e.g.
 $ bench --site foo.bar install-app erpnext
 ```
 
+#### Site based multi-tenancy
+<p align="justify">
+Frappé lets you create multiple sites, in a single instance. Use the text-editor of your choice (I'm using nano here) and add an entry of the site you just created into the <code>/etc/hosts</code> file. 
+</p>
+
+```console
+$ sudo nano /etc/hosts
+```
+Add the following line and save the file
+```console
+$ 127.0.0.1	foo.bar
+```
+
+#### You're all set!
+<p align="justify">
+Now you can simply access the site you just created using the link <a href="http://foo.bar:8000">foo.bar:8000</a>  
+</p>
+
 #### Tried and Tested
 <p align="justify">
 <b>NOTE:</b> If you're attempting to revise this page after successfully installing and running frappé, kindly add the required details in the following format only.
