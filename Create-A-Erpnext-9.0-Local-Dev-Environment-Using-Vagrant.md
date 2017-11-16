@@ -33,6 +33,16 @@ We now want to install the **vbguest** plugin. This plugin allows the Host and G
 $ vagrant plugin install vagrant-vbguest
 ```
 
+if error with 'vagrant-vguest (> 0)' try
+```
+$ vagrant plugin install vagrant-vbguest --debug
+```
+
+and check vagrant-vbguest plugin with
+```
+$ vagrant plugin list
+```
+
 ## Create local ERPNext project folder
 Create a project folder in your local user root directory and name it something that makes sense to you. For example:  **~/erp_v9_001**
 
