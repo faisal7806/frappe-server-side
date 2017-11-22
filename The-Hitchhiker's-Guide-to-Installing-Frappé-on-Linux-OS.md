@@ -142,7 +142,7 @@ $ sudo apt-get install -y nodejs
 
 Install Bench via <a href="https://pip.pypa.io"><code>pip</code></a>
 ```console
-$ pip install --user -e git+https://github.com/frappe/bench#egg=frappe-bench
+$ sudo pip install -e git+https://github.com/frappe/bench#egg=frappe-bench
 ```
 
 NOTE: We're having Bench <a href="https://pip.pypa.io"><code>pip</code></a>ed soon (Click [here](https://github.com/frappe/bench/pull/490) for more details).
