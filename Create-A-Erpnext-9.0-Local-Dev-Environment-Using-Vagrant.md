@@ -176,7 +176,7 @@ Then issue the command
 `sudo mv /home/frappe/frappe-bench-TMP/* /home/frappe/frappe-bench/`
 
 This will take a few minutes to copy all the ERPNext files into your Local Host machines project folder.
-Once completed update Ubuntu with `sudo get-apt update` then `cd frappe-bench` and `bench update` 
+Once completed update Ubuntu with `sudo apt-get update` then `cd frappe-bench` and `bench update` 
 
 Currently just ignore any SNIMissingWarnings.
 
