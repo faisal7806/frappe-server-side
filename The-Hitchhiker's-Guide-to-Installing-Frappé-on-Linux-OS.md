@@ -220,6 +220,28 @@ You'll be then prompted to type your MySQL root password (which then goes ahead 
 
 > Frappé is not just a web framework as a whole but also an app itself.
 
+#### Site based multi-tenancy
+<p align="justify">
+Frappé lets you create multiple sites, in a single instance. To enable site based multi-tenancy empty the contents of the file <code>currentsite.txt</code> using the text-editor of your choice (I'm using nano here)
+</p>
+
+```console
+$ nano sites/currentsite.txt
+```
+
+<p align="justify">
+Then add an entry of the site you just created into the <code>/etc/hosts</code> file. 
+</p>
+
+```console
+$ sudo nano /etc/hosts
+```
+
+Add the following line and save the file
+```console
+$ 127.0.0.1	foo.bar
+```
+
 #### Fetching Frappé Apps
 <p align="justify">
 <a href="https://erpnext.org">ERPNext</a> happens to be two things - a Frappé App and <a href="https://opensource.com/resources/top-4-open-source-erp-systems">the world's best 100% Open Source ERP</a>. You can have <a href="https://github.com/frappe/erpnext">erpnext</a> fetched and stored within your bench using the following command:
@@ -242,19 +264,6 @@ $ bench --site <MY_SITE> install-app <MY_APP_NAME>
 e.g.
 ```console
 $ bench --site foo.bar install-app erpnext
-```
-
-#### Site based multi-tenancy
-<p align="justify">
-Frappé lets you create multiple sites, in a single instance. Use the text-editor of your choice (I'm using nano here) and add an entry of the site you just created into the <code>/etc/hosts</code> file. 
-</p>
-
-```console
-$ sudo nano /etc/hosts
-```
-Add the following line and save the file
-```console
-$ 127.0.0.1	foo.bar
 ```
 
 #### You're all set!
