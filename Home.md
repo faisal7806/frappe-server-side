@@ -19,6 +19,7 @@ To install frappé right from scratch, check out our exhaustive guides:
 * [[The Hitchhiker's Guide to Installing Frappé on Mac OS X]]
 * [[The Hitchhiker's Guide to Installing Frappé on Linux OS]]
 * [[The Hitchhiker's Guide to Installing Frappé on Windows OS]] (Contributors Required)
+* [[The Hitchhiker's Guide to Installing Frappé on a Raspberry Pi 3 with Debian 9]]
 
 #### Support
 * [Discuss](https://discuss.frappe.io)
