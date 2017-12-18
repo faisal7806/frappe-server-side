@@ -2,7 +2,7 @@ You must have the python extension for VSCode for this to work.
 
 - Once you install it, go to "Open Configurations" from the "Debug" menu
 - Add the below to the list : 
-
+- Make sure your workspaceRoot (The folder that's opened in VSCode) is the apps folder
 ```
         {
             "name": "Frappe",
@@ -24,7 +24,6 @@ You must have the python extension for VSCode for this to work.
 ```
     "python.pythonPath": "/Users/vjfalk/frappe-develop/env/bin/python",
 ```
- - Set your workspaceRoot variable to the apps folder for your bench
  - Create a file in the frappe folder called `debug.py`
  - In the file, add the below : 
 ```
