@@ -33,6 +33,9 @@ frappe.app.serve(port=<The port of your bench, usually 8000>, sites_path='<Absol
 ```
  - Edit the Procfile inside your bench, and remove the line that starts with `bench serve`
  - Edit `frappe/app.py`, in the `run_simple` method, change `use_reloader` to `False` 
+ - Edit your `/etc/hosts` and add an entry for the site(s) you want to debug
  - Run `bench start` in the terminal
  - Start debugging process in VSCode and wait for output to say `Running on http://0.0.0...`
- - You should be able to debug your Frappe applications!
+ - Open your site by accessing it from your browser with the hostname you have set
+ - If you see output in the "Debug Console" of VSCode, it's working!
+ - DEBUG! 💃 
