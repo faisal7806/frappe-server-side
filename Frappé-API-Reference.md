@@ -1,5 +1,4 @@
 ### Table of Contents
-* [UI](
 * [Control](#control)
 
 #### [Control](https://github.com/frappe/frappe/tree/develop/frappe/public/js/frappe/form/controls)
