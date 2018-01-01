@@ -21,13 +21,15 @@ e.g. `frappe.get_meta('Task').fields` is the list of fields in Task doctype
 
 ###### `frappe.get_all(doctype, filters, fields)`
 
-e.g. frappe.get_all('Project', filters={'status': 'Open'}, fields=['name', 'description'])
+e.g. `frappe.get_all('Project', filters={'status': 'Open'}, fields=['name', 'description'])`
 
 Returns a list of dict objects from the database
 
-###### `frappe.get_list(doctype, filters, fields)`
+###### `frappe.get_list(doctype, filters, fields, order_by)`
 
-Sames as frappe.get_all, but will only show permitted for the user
+Sames as frappe.get_all, but will only show records permitted for the user
+
+Allows sorting with the order_by parameter (optional). E.g. `frappe.get_list('Payment Entry', filters={'docstatus': 0, 'payment_type': 'Pay'}, fields=['name, 'posting_date', 'paid_amount'], order_by='posting_date')`
 
 ###### `frappe.get_value(doctype, name, fieldname)`
 
