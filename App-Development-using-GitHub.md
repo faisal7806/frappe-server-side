@@ -69,7 +69,7 @@ When you start making changes, whether to frappe/erpnext, or to modify your own 
 7. Push the changes from this commit to your repository
 
     ```
-    git push origin [branch_name]
+    git push origin [my_branch_name]
     ```
 
 8. If you are done making changes to this branch, change back to the master or develop branch (depending on what were on before)
