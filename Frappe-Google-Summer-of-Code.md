@@ -13,10 +13,14 @@ This page is dedicated for **Instructions** and **Idea List** for students wishi
 We're excited to announce that Frappe has applied as a Mentor Organization for Google Summer of Code 2018. To know more about this program, visit [summerofcode.withgoogle.com](https://summerofcode.withgoogle.com)
 
 ##### Table of Contents
+* [How do I start?](#how-do-i-start)
 * [Students](#students)
 * [How do I apply?](#how-do-i-apply)
 * [Ideas List](#ideas-list)
 * [How do I connect?](#how-do-i-connect)
+
+##### How do I start?
+Both Frappe and ERPNext are monolithic in their own domains and we certainly don't expect you to know everything about it! However, it's quite necessary for you to have it set up to start contributing.
 
 ##### Students
 As per the timeline provided by [GSoC](https://developers.google.com/open-source/gsoc/timeline), students can begin applying between March 12, 2018 16:00 UTC to March 27, 2018 16:00 UTC. However if you'd like to start working on your proposal earlier, we watch out for a few things:
