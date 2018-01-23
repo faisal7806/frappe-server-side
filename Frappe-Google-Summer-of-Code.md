@@ -4,7 +4,7 @@
 
 This page is dedicated for **Instructions** and **Idea List** for students wishing to apply for the [Google Summer of Code](https://summerofcode.withgoogle.com) under our Organization - [Frappe](https://frappe.io).
 
-***NOTE***: As of 23rd January 2018, we're not sure whether we will be accepted for GSoC 2018 (The list of accepted organizations will be out on the 12th of . However, this is a definitive guide for you to know all about our organization and apply as a student developer (under the program), and also updates related to GSoC activities.
+***NOTE***: As of 23rd January 2018, we're not sure whether we will be accepted for GSoC 2018 (The list of accepted organizations will be out on the 12th of February, 2018. However, this is a definitive guide for you to know all about our organization and apply as a student developer (under the program), and also updates related to GSoC activities.
 
 #### Timeline
 * [Google Summer of Code 2018](#google-summer-of-code-2017)
