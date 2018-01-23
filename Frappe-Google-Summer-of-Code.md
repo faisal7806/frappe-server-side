@@ -1,5 +1,9 @@
-This page is dedicated to instructions for students wishing to apply to Google Summer of Code 2018 under our Organization (Frappe).
+<div align="center">
+  <img src="http://i.imgur.com/mu6FKzO.png" alt="Google Summer of Code Logo"/>
+</div>
 
-*NOTE:* As of January 23rd, 2018, we're not sure whether we will be accepted however, this is the definitive guide for you to know and apply for.
+This page is dedicated for instructions to students wishing to apply for Google Summer of Code 2018 under our Organization (Frappe).
 
-[What is Frappe]
+*NOTE:* As of January 23rd 2018, we're not sure whether we will be accepted for GSoC 2018. However, this is a definitive guide for you to know all about our organisation and apply as a Student for the same.
+
+#### Google Summer of Code 2018
