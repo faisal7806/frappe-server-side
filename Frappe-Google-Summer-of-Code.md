@@ -34,6 +34,11 @@ You should raise a discussion on [discuss.erpnext.com](https://discuss.erpnext.c
 ##### Ideas List
 We've mentioned out a suggested list of ideas from which you might want to propose. Please feel free to submit proposals that aren't part of this list.
 
+- [Frappejs](https://github.com/frappe/frappejs)
+- [Frappe Chat](https://github.com/frappe/frappe/issues/4725)
+- [Hub](https://github.com/erpnext/hub)
+- [Dashboards](https://github.com/frappe/charts)
+- [Fedex Integration for ERPNext](https://github.com/frappe/erpnext/issues/11468)
+
 ##### How do I connect?
 You can shoot us an email at developers@frappe.io to connect with the Development Team. Or, you can raise a discussion (ideas, queries, etc.) at [discuss.erpnext.com](https://discuss.erpnext.com) with the **Category - GSoC > Discussion** (Preferable). Please make sure that the content of your discussion is crisp, clear and detailed (if required).
-
