@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="http://i.imgur.com/mu6FKzO.png" alt="Google Summer of Code Logo"/>
+  <img src="https://i.imgur.com/qTXyqGN.png" alt="Google Summer of Code Logo"/>
 </div>
 
 This page is dedicated for **Instructions** and **Idea List** for students wishing to apply for the [Google Summer of Code](https://summerofcode.withgoogle.com) under our Organization - [Frappe](https://frappe.io).
