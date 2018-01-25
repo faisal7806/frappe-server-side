@@ -20,22 +20,25 @@ We're excited to announce that Frappe has applied as a Mentor Organization for G
 * [How do I connect?](#how-do-i-connect)
 
 ##### How do I start?
-Both Frappe and ERPNext are monolithic in their own domains and we certainly don't expect you to know everything about it! However, it's quite necessary for you to have it set up to start contributing.
+Both Frappe and ERPNext are monolithic in their own domains and we certainly don't expect you to know everything about it! However, it's quite necessary for you to have it set up to start contributing. Head over to our documentation ([1](https://frappe.io), [2](https://github.com/frappe/frappe/wiki)) to get yourself started. In case you have any queries, feel free to reach out to our ever-active community at [discuss.erpnext.com](https://discuss.erpnext.com).
 
 ##### Students
 As per the timeline provided by [GSoC](https://developers.google.com/open-source/gsoc/timeline), students can begin applying between March 12, 2018 16:00 UTC to March 27, 2018 16:00 UTC. However if you'd like to start working on your proposal earlier, we watch out for a few things:
 
-* You **MUST** prepare and send in at-least one Pull Request (more, the better) to any of the following repositories - [frappe](https://github.com/frappe/frappe), [erpnext](https://github.com/frappe/erpnext) or [bench](https://github.com/frappe/bench). There are tonnes of issues raised by our ardent community of users and developers, feel free to pick up any one. Ensure you've added the tag `GSoC` to your PR and a link to your application discussion (see [How do I apply?](#how-do-i-apply))
+* Read the [GSoC Guide for Students](https://google.github.io/gsocguides/student/) (word by word) as well as its [FAQ](https://developers.google.com/open-source/gsoc/faq).
+* Communicate with our developers at [discuss.erpnext.com](https://discuss.erpnext.com).
+* You **MUST** prepare and send in at-least one Pull Request (more, the better) to any of the following repositories - [frappe](https://github.com/frappe/frappe), [erpnext](https://github.com/frappe/erpnext) or [bench](https://github.com/frappe/bench). There are tonnes of issues raised by our ardent community of users and developers, feel free to pick up any one. Ensure you've added the tag `GSoC` to your PR and a link to your application discussion (see [How do I apply?](#how-do-i-apply)).
+* Report Bugs, or help us out with Documentation!
 * **DO NOT** promise highly-ambitious goals and clearly let us know the amount of time you're keen to dedicate. (We're quite flexible that way!)
 
 ##### How do I apply?
 You should raise a discussion on [discuss.erpnext.com](https://discuss.erpnext.com) under the Category - GSoC > Application. The post must contain your name, email and a quick description of what you're keen to work for this summer (if you're keen to work on any idea from the [Ideas List](#ideas-list), please mention it out). A prospective mentor should then get in touch with you. Talk to your mentor about what he/she expects from your application and accept feedback. It's advisable to follow recommendations provided by your mentor.
 
 ##### Ideas List
-We've mentioned out a suggested list of ideas from which you might want to propose. Please feel free to submit proposals that aren't part of this list.
+We've mentioned out a suggested list of ideas from which you might want to propose. Please feel free to submit proposals that aren't part of this list (we encourage new ideas 😄):
 
-- [Frappejs](https://github.com/frappe/frappejs)
-- [Frappe Chat](https://github.com/frappe/frappe/issues/4725)
+- [FrappeJS and Accounting](https://github.com/frappe/frappejs)
+- [Frappe Chat and WebRTC](https://github.com/frappe/frappe/issues/4725)
 - [Hub](https://github.com/erpnext/hub)
 - [Dashboards](https://github.com/frappe/charts)
 - [Fedex Integration for ERPNext](https://github.com/frappe/erpnext/issues/11468)
