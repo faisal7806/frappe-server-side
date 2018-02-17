@@ -173,7 +173,7 @@ List of Triggers
 * onsubmit
 * onload_post_render
 
-Child Table Triggers
+Child Table Triggers (need to be on the subtable DocType)
 * fieldname_add
 * fieldname_move
 * fieldname_before_remove
@@ -186,6 +186,18 @@ frappe.ui.form.on("Salary Slip", {
     // this function is called when the value of company is changed.
 
   }
+});
+```
+
+Example for child table (e.g. in Sales Invoice custom script):
+```
+frappe.ui.form.on('Sales Invoice Item', {
+    items_add: function(frm) {
+      // adding a row ... 
+   },
+   items_remove: function(frm) {
+      // removing a row ... 
+   }
 });
 ```
 
