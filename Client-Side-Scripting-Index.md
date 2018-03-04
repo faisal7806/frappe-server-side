@@ -208,7 +208,7 @@ cur_frm.cscript.wash_type = function(doc, cdt, cdn) {
 ### Remove a Standard button from Form's toolbar
 
 	cur_frm.cscript.custom_refresh = function() {
-		if(!cur_frm.doc.__islocal && cur_frm.doc.owner === wn.boot.profile.name) {
+		if(!cur_frm.doc.__islocal && cur_frm.doc.owner === user) {
 			cur_frm.appframe.buttons.Submit.remove();
 		}
 	}
