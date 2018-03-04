@@ -215,13 +215,13 @@ cur_frm.cscript.wash_type = function(doc, cdt, cdn) {
 
 ### Assign Expected Delivery Date as x days after Sales Order Date
 	cur_frm.cscript.custom_sales_order_date = function(doc) {
-		cur_frm.set_value("expected_delivery_date", wn.datetime.add_days(doc.sales_order_date, x));
+		cur_frm.set_value("expected_delivery_date", frappe.datetime.add_days(doc.sales_order_date, x));
 	}
 
 	cur_frm.cscript.custom_onload = cur_frm.cscript.custom_sales_order_date;
 
 ### Prevent back-dating for Resolution Date in Customer Issues
-    if (doc.resolution_date && wn.datetime.get_day_diff(new Date(), wn.datetime.str_to_obj(doc.resolution_date)) > 0) { 
+    if (doc.resolution_date && frappe.datetime.get_day_diff(new Date(), frappe.datetime.str_to_obj(doc.resolution_date)) > 0) { 
             validated = false;
              msgprint("Resolution Date cannot be a past date"); // or any other message you want..
          }
