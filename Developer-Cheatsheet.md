@@ -217,3 +217,12 @@ frappe.run_serially([
   () => frappe.new_doc('ToDo')
 ]);
 ```
+
+## Tests
+
+To run individual test use 
+
+```
+bench --site test-service run-tests --module erpnext.tests.test_woocommerce
+```
+
