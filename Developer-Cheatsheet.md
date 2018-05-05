@@ -48,6 +48,11 @@ e.g. frappe.get_single('Dropbox Settings')
 
 Return a `frappe.model.document.Document` object of the given Single doctype.`
 
+###### `frappe.get_installed_apps()`
+
+Returns a list of all the installed apps in the current site.
+
+
 ## Document Object
 
 ##### Load a document
