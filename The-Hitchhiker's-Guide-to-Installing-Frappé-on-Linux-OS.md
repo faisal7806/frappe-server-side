@@ -140,7 +140,7 @@ $ sudo apt-get install -y nodejs
 
 * To install yarn run
 ```console
-sudo npm install -g yarn
+$ sudo npm install -g yarn
 ```
 
 #### Getting [Bench](https://github.com/frappe/bench) onto your system
