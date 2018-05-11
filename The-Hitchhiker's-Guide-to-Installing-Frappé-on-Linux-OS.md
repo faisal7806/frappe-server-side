@@ -138,6 +138,10 @@ $ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
 ```
 
+*To install yarn run
+```sudo npm install -g yarn
+```
+
 #### Getting [Bench](https://github.com/frappe/bench) onto your system
 
 Install Bench via <a href="https://pip.pypa.io"><code>pip</code></a>
