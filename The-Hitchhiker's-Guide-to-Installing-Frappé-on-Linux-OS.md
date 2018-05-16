@@ -98,7 +98,9 @@ $ sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.ubuntu-tw.or
 $ sudo apt-get update
 $ sudo apt-get install mariadb-server
 ```
-During this installation you'll be prompted to set the MySQL root password. It is really important that you remember this password, since it'll be useful later on! 
+During this installation you'll be prompted to set the MySQL root password. If you are not prompted for the same, you'll have to initialize the MySQL server setup yourself after the above command completes. You can initialize the MySQL server setup by executing the following command `mysql_secure_installation`. **Remember**: only run it if you're not prompted the password during setup.
+
+It is really important that you remember this password, since it'll be useful later on! 
 You'll also need the MySQL database development files
 ```console
 $ sudo apt-get install libmysqlclient-dev
@@ -285,3 +287,4 @@ Now you can simply access the site you just created using the link <a href="http
 | Name         | Version | By
 |--------------|---------|---
 | Ubuntu       | 16.04.1 | Ameya Shenoy <br/> [@codingCoffee](https://github.com/codingCoffee), <<a href="mailto:ameya@frappe.io">ameya@frappe.io</a>>
+| Ubuntu       | 18.04   | Ameya Shenoy <br/> [@codingCoffee](https://github.com/codingCoffee), <<a href="mailto:ameya@frappe.io">ameya@frappe.io</a>>
