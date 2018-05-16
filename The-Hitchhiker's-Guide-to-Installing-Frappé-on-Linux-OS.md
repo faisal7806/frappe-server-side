@@ -147,7 +147,8 @@ $ sudo npm install -g yarn
 
 Install Bench via <a href="https://pip.pypa.io"><code>pip</code></a>
 ```console
-$ sudo pip install -e git+https://github.com/frappe/bench#egg=frappe-bench
+$ git clone https://github.com/frappe/bench
+$ sudo pip install ./bench
 ```
 
 NOTE: We're having Bench <a href="https://pip.pypa.io"><code>pip</code></a>ed soon (Click [here](https://github.com/frappe/bench/pull/490) for more details).
