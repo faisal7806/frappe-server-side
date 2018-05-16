@@ -53,7 +53,7 @@ First, open your Terminal (`Ctrl` + `Alt` + `T`)
 
 * Install [`git`](https://git-scm.com)
 
-**Debian**
+**Debian/Ubuntu**
 ```console
 $ sudo apt-get install git
 ```
@@ -73,7 +73,7 @@ You should then see <code>git version X.Y.Z</code> on your terminal screen.
 
 * To install Python 2.7.X `dev` package on your Linux OS, simply:
 
-**Debian**
+**Debian/Ubuntu**
 ```console
 $ sudo apt-get install python-dev
 ```
@@ -87,7 +87,7 @@ $ wget -O - https://bootstrap.pypa.io/get-pip.py | sudo python
 <a href="https://github.com/frappe/frappe">Frappé</a> uses <a href="https://mariadb.org">MariaDB</a> (for <a href="https://en.wikipedia.org/wiki/Relational_database_management_system">RDBMS</a>) as its database engine, <a href="https://redis.io">Redis</a> for caching and as a message broker and <a href="https://nodejs.org">Node.js</a> for everything JavaScript. Go ahead and install 'em all.
 </p>
 
-**Debian**
+**Debian/Ubuntu**
 
 * To install MariaDB 10.2 `stable` package on your Linux OS, simply:
 ```console
