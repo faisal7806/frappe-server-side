@@ -96,7 +96,7 @@ $ sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656
 $ sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.ubuntu-tw.org/mirror/mariadb/repo/10.2/ubuntu xenial main'
 
 $ sudo apt-get update
-$ sudo apt-get install mariadb-server
+$ sudo apt-get install mariadb-server-10.2
 ```
 During this installation you'll be prompted to set the MySQL root password. If you are not prompted for the same, you'll have to initialize the MySQL server setup yourself after the above command completes. You can initialize the MySQL server setup by executing the following command `mysql_secure_installation`. **Remember**: only run it if you're not prompted the password during setup.
 
