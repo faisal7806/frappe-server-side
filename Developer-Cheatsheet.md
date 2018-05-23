@@ -74,7 +74,7 @@ doc.save()
 ### Insert a new doc
 
 ```
-doc = frappe.new_doc({
+doc = frappe.get_doc({
 	"doctype": "Project",
 	"title": "My new project",
 	"status": "Open"
