@@ -231,3 +231,10 @@ To run individual test use
 bench --site test-service run-tests --module erpnext.tests.test_woocommerce
 ```
 
+## Utility
+
+To know list of Installed Apps of a Site
+```
+bench --site [sitename] console
+frappe.get_installed_apps() 
+```
