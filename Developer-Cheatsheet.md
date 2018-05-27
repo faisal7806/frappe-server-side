@@ -205,12 +205,27 @@ frappe.ui.form.on('Sales Invoice Item', {
    }
 });
 ```
+#### 2. Adding Standard JS Listeners to form fields
+Sometimes the built in triggers are not enough, so you can use standard JavaScript event listeners together with triggers to achieve better results. For a comprehensive list of listeners, check [this site](https://developer.mozilla.org/en-US/docs/Web/Events). The following example loads a listener once the document has been rendered and loaded. The listener runs some code when a key is pressed in the `customer` field.
 
-#### 2. Change value in the form
+```
+frappe.ui.form.on("Sales Invoice", {
+    onload_post_render: function(frm) {
+        // This function is run right after a Sales Invoice is rendered and loaded
+        
+        // This listener is added to the customer field, listening for a keypress event
+        cur_frm.fields_dict.customer.$input.on("keypress", function(evt){
+	    // Code specified here will run when a key is pressed on the customer field.
+        });
+    }
+});
+```
+#### 3. Change value in the form
 
 ```
 frm.set_value(fieldname, value);
 ```
+
 
 ## Running Tasks Serially
 
