@@ -31,6 +31,8 @@ Sames as frappe.get_all, but will only show records permitted for the user
 
 Allows sorting with the order_by parameter (optional). E.g. `frappe.get_list('Payment Entry', filters={'docstatus': 0, 'payment_type': 'Pay'}, fields=['name, 'posting_date', 'paid_amount'], order_by='posting_date')`
 
+Note that the `get_list` command will return no more than 20 items by default. To increase this, use the `limit_page_length` parameter. Using the `limit_start` parameter allows to use pagination. In case the requested is a child table, do not forget to pass the parent parameter with the parent doctype to check permissions.
+
 ###### `frappe.get_value(doctype, name, fieldname)`
 
 Return a single value from the database 
