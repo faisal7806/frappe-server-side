@@ -89,14 +89,14 @@ $ wget -O - https://bootstrap.pypa.io/get-pip.py | sudo python
 
 **Debian/Ubuntu**
 
-* To install MariaDB 10.2 `stable` package on your Linux OS, simply:
+* To install MariaDB 10.3 `stable` package on your Linux OS, simply:
 ```console
 $ sudo apt-get install software-properties-common
 $ sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
-$ sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.ubuntu-tw.org/mirror/mariadb/repo/10.2/ubuntu xenial main'
+$ sudo add-apt-repository 'deb [arch=amd64,i386,ppc64el] http://ftp.ubuntu-tw.org/mirror/mariadb/repo/10.3/ubuntu xenial main'
 
 $ sudo apt-get update
-$ sudo apt-get install mariadb-server-10.2
+$ sudo apt-get install mariadb-server-10.3
 ```
 During this installation you'll be prompted to set the MySQL root password. If you are not prompted for the same, you'll have to initialize the MySQL server setup yourself after the above command completes. You can initialize the MySQL server setup by executing the following command `mysql_secure_installation`. **Remember**: only run it if you're not prompted the password during setup.
 
@@ -112,9 +112,6 @@ $ sudo nano /etc/mysql/conf.d/mariadb.cnf
 And add this to the file
 ```console
 [mysqld]
-innodb-file-format=barracuda
-innodb-file-per-table=1
-innodb-large-prefix=1
 character-set-client-handshake = FALSE
 character-set-server = utf8mb4
 collation-server = utf8mb4_unicode_ci
