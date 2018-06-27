@@ -7,6 +7,8 @@ To the best of our knowledge, this will be the only page you'd ever require to i
 </p>
 <p align="justify">
 <b>NOTE:</b> To see if your Linux OS distribution has been tested for the following script, check <a href="#tried-and-tested">here</a>. You're free to revise this page in order to add your Linux OS distribution if you're successful with this script too (<em>psst</em>, helps others).
+
+Note that the method described here will install Frappe's developer branch. If you want the stable production branch, follow the [Easy Install](https://github.com/frappe/bench#easy-install) method.
 </p>
 
 #### Getting <a href="https://github.com/frappe/frappe">Frappé</a> onto your system
