@@ -19,7 +19,7 @@ frappe.ui.form.on("[DOCTYPE]", {
 * [SOURCE] Is the data you are pulling from the linked document
 * [TARGET] Is the field that you are placing the target into
 
-Note:  This replaces `cur_frm.add_fetch("[LINK FIELD]", "[SOURCE]", "[TARGET]");` that is referenced in many places in the documentation and in forums.  `cur_frm` has been depreciated and should not be used.
+Note:  This replaces `cur_frm.add_fetch("[LINK FIELD]", "[SOURCE]", "[TARGET]");` that is referenced in many places in the documentation and in forums.  `cur_frm` has been deprecated and should not be used.
 
 See also: [[Fetching Child Tables|(Client-Side-Scripting)Fetching-child-tables]]
 
