@@ -107,9 +107,9 @@ You'll also need the MySQL database development files
 ```console
 $ sudo apt-get install libmysqlclient-dev
 ```
-You also need to edit the mariadb.cnf
+You also need to edit the mariadb configuration (although the guide in README doesn't mention this, you'll face an error message asking you to do exactly this if you follow the README. So you might as well go ahead and do this)
 ```console
-$ sudo nano /etc/mysql/conf.d/mariadb.cnf
+$ sudo nano /etc/mysql/my.cnf
 ```
 And add this to the file
 ```console
