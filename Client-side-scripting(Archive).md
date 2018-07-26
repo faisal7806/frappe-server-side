@@ -248,7 +248,7 @@ def get_item_qty(item_code, wash_type):
 		}
 	}
 
-### Change CSS Properties without editing CSS files
+### Change CSS Properties for some specific fields in Doctype.
 
       frappe.ui.form.on("Doctype Name", {
                 refresh: function(frm) {
