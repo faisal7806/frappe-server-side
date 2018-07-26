@@ -247,3 +247,19 @@ def get_item_qty(item_code, wash_type):
 			})
 		}
 	}
+
+### Change CSS Properties without editing CSS files
+
+      frappe.ui.form.on("Doctype Name", {
+                refresh: function(frm) {
+                                set_css(frm);
+                }
+      });
+
+      var set_css = function (frm)
+         {
+	       document.querySelectorAll("[data-fieldname='field_name']")[1].style.height ="50px";
+	       document.querySelectorAll("[data-fieldname='field_name']")[1].style.width ="120px";
+	       document.querySelectorAll("[data-fieldname='field_name']")[1].style.backgroundColor ="red";
+
+         }
