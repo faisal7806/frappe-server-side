@@ -5,6 +5,7 @@ Your bench instance allows you to connect to an external database by setting a c
 Here's a step-by-step tutorial on how to setup an RDS Instance for ERPNext 
 
 * Create a MariaDB instance from the RDS Panel (Recommend at least a t2.small instance)
+* Enable A-Z Deployment (this is a optional step that comes from a personal opinion)
 * Make sure to keep the default username as "root"
 * The password you set will be the root password
 * Create a parameter group that matches the below settings : 
