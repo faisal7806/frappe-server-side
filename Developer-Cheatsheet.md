@@ -177,7 +177,7 @@ List of Triggers
 * onload
 * refresh
 * validate
-* onsubmit
+* on_submit
 * onload_post_render
 
 Child Table Triggers (need to be on the subtable DocType)
