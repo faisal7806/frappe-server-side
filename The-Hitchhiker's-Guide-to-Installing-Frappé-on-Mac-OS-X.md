@@ -76,6 +76,32 @@ $ brew install mariadb redis node
 <b>Homebrew</b>'s Node.js comes with <a href="https://www.npmjs.com"><code>npm</code></a> (<em>Homebrew for Node.js</em>) installed for you.
 </p>
 
+<p align="justify">
+You also need to edit the mariadb configuration 
+</p>
+
+```console
+$ mate /usr/local/etc/my.cnf 
+```
+And add this to the file
+
+```console
+[mysqld]
+character-set-client-handshake = FALSE
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+
+[mysql]
+default-character-set = utf8mb4
+```
+(Now save the file and close the window)
+
+Finally restart the mysql server and you'll be good to go!
+```console
+$ mysql.server restart
+```
+
+
 #### Getting <a href="https://github.com/frappe/frappe">Frappé</a> onto your system
 <p align="justify">
 Before going further, here's something you need to know. <a href="https://github.com/frappe/frappe">Frappé</a> is not just a web framework as a whole but also an app itself.
