@@ -4,7 +4,7 @@ Custom server-side script must be consistently indented in order to function pro
 
 As a rule of thumb, any module-level method definition should have no indentation (i.e. not tabs before the def). For example:
 
-    @webnotes.whitelist()
+    @frappe.whitelist()
     def get_some_value():
         """A module method that fetches and returns X from the database"""
 
