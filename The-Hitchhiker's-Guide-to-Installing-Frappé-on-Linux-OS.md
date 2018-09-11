@@ -233,6 +233,7 @@ Frappé lets you create multiple sites, in a single instance. To enable site bas
 </p>
 
 ```console
+$ bench config dns_multitenant on
 $ nano sites/currentsite.txt
 ```
 
