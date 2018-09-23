@@ -149,7 +149,7 @@ $ sudo npm install -g yarn
 Install Bench via <a href="https://pip.pypa.io"><code>pip</code></a>
 ```console
 $ git clone https://github.com/frappe/bench
-$ sudo pip install ./bench
+$ pip install -e ./bench
 ```
 
 NOTE: We're having Bench <a href="https://pip.pypa.io"><code>pip</code></a>ed soon (Click [here](https://github.com/frappe/bench/pull/490) for more details).
@@ -288,3 +288,4 @@ Now you can simply access the site you just created using the link <a href="http
 |--------------|---------|---
 | Ubuntu       | 16.04.1 | Ameya Shenoy <br/> [@codingCoffee](https://github.com/codingCoffee), <<a href="mailto:ameya@frappe.io">ameya@frappe.io</a>>
 | Ubuntu       | 18.04   | Ameya Shenoy <br/> [@codingCoffee](https://github.com/codingCoffee), <<a href="mailto:ameya@frappe.io">ameya@frappe.io</a>>
+| Ubuntu       | 16.04.1 | Achilles Rasquinha <br/> [@achillesrasquinha](https://git.io/achilles), <<a href="mailto:achillesrasquinha@gmail.com">achillesrasquinha@gmail.com</a>>
