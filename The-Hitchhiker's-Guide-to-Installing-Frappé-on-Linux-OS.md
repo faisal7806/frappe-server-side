@@ -103,7 +103,9 @@ $ sudo apt-get install mariadb-server-10.3
 During this installation you'll be prompted to set the MySQL root password. If you are not prompted for the same, you'll have to initialize the MySQL server setup yourself after the above command completes. You can initialize the MySQL server setup by executing the following command `mysql_secure_installation`. **Remember**: only run it if you're not prompted the password during setup.
 
 It is really important that you remember this password, since it'll be needed later on! 
-You'll also need the MySQL database development files
+Test whether the installation has worked with `mysql -u root -p -h localhost`. You should be prompted for the mysql root password you have provided during the installation. Get back out of the mysql console by typing `\q`
+ 
+Next you'll need the MySQL database development files
 ```console
 $ sudo apt-get install libmysqlclient-dev
 ```
