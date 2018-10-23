@@ -80,9 +80,9 @@ You should then see <code>git version X.Y.Z</code> on your terminal screen.
 $ sudo apt-get install python-dev
 ```
 
-* Install `pip` (Python's Package Manager):
+* Install `setuptools` and `pip` (Python's Package Manager):
 ```console
-$ wget -O - https://bootstrap.pypa.io/get-pip.py | sudo python
+$ sudo apt-get install python-setuptools python-pip
 ```
 
 <p align="justify">
@@ -291,3 +291,4 @@ Now you can simply access the site you just created using the link <a href="http
 | Ubuntu       | 16.04.1 | Ameya Shenoy <br/> [@codingCoffee](https://github.com/codingCoffee), <<a href="mailto:ameya@frappe.io">ameya@frappe.io</a>>
 | Ubuntu       | 18.04   | Ameya Shenoy <br/> [@codingCoffee](https://github.com/codingCoffee), <<a href="mailto:ameya@frappe.io">ameya@frappe.io</a>>
 | Ubuntu       | 16.04.5 | Achilles Rasquinha <br/> [@achillesrasquinha](https://git.io/achilles), <<a href="mailto:achillesrasquinha@gmail.com">achillesrasquinha@gmail.com</a>>
+| Linux Mint   | 19      | Sagar Vora <br/> [@sagarvora](https://github.com/sagarvora), <<a href="mailto:sagar@resilient.tech">sagar@resilient.tech</a>>
