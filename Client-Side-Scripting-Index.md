@@ -1,10 +1,10 @@
-	##Archived Page
-###This page will no longer be maintained.  [Please see The New Wiki Page](https://github.com/frappe/erpnext/wiki/Community-Developed-Custom-Scripts) for the most up to date version.
+## Archived Page
+### This page will no longer be maintained.  [Please see The New Wiki Page](https://github.com/frappe/erpnext/wiki/Community-Developed-Custom-Scripts) for the most up to date version.
 	---
 
-#Client Side Scripting
+# Client Side Scripting
 All client side scripting is done with javascript.
-##Syntax
+## Syntax
 ```
 frappe.ui.form.on([DocType], {
     [trigger]: function(frm) {
