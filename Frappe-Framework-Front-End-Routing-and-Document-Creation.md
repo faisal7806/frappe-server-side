@@ -12,7 +12,7 @@ Used to pass variables to a new page. You will almost always want to end your fu
 `frappe.get_route()` returns a list of the route variables
 
 <table>
-<tr><th> frappe.get_route() input </th><th> returned value </th>
+<tr><th> URL </th><th> frappe.get_route() output </th>
 <tr><td> /desk# </td><td> [""] </td></tr>
 <tr><td> /desk#List/Item/List </td><td> ["List", "Item", "List"] </td></tr>
 <tr><td>  /desk#Form/Stock%20Settings/Stock%20Settings </td><td> ["Form", "Stock Settings", "Stock Settings"] </td></tr>
