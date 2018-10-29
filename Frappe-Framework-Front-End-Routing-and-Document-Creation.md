@@ -1,4 +1,4 @@
-There are several helper functions built into the Frappe Framework to help with routing, creating new documents. 
+There are several helper functions built into the Frappe Framework to help with routing, route discovery and creating new documents. 
 
 `frappe.set_route()`
 
@@ -20,6 +20,7 @@ Used to pass variables to a new page. You will almost always want to end your fu
 
 `frappe.model.make_new_doc_and_get_name("Item");` 
 Works for any (parent) doctype. [Example](https://github.com/frappe/erpnext/blob/32dc3bf0822517567acc00cf5a8924d9a1eb4ccc/erpnext/stock/doctype/stock_entry/stock_entry.js#L698)
+Although it's not a front end utility, the [frappe.model.mapper class](https://github.com/frappe/frappe/blob/develop/frappe/model/mapper.py) is usually a better way to accomplish this. 
 
-`frappe.route.on("change", function(){`... Refactored as of 10/25/18.
+`frappe.route.on("change", function(){`... Refactored as of 10/25/18. 
 [Example](https://github.com/frappe/frappe/blob/6e13fcf27f7761202e89e3acf77312832793f9b0/frappe/public/js/frappe/router_history.js#L16)
