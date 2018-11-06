@@ -1,3 +1,11 @@
+[Update November 2018]
+
+It is not really easy to install bench on a mac from scratch. Check this page for more details
+
+[Developing Frappe on a Mac](https://github.com/frappe/bench/wiki/Turning-a-Mac-into-a-Frappe-Framework-Developer-Machine)
+
+---
+
 > From Zero to Hero - [Achilles Rasquinha](https://github.com/achillesrasquinha) <<a href="mailto:achilles@frappe.io">achilles@frappe.io</a>>
 
 <p align="justify">
