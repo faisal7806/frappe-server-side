@@ -161,7 +161,7 @@ OR directly [from pip](https://pypi.org/project/frappe-bench/):
 $ pip install frappe-bench
 ```
 
-NOTE: We're having Bench <a href="https://pip.pypa.io"><code>pip</code></a>ed soon (Click [here](https://github.com/frappe/bench/pull/490) for more details).
+> Bench has been [pip](https://pip.pypa.io)ed (Click [here](https://github.com/frappe/bench/pull/490) for more details).
 
 * Check whether **Bench** has been installed correctly
 ```console
