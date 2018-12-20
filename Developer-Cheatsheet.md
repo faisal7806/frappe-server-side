@@ -98,6 +98,18 @@ def get_last_project():
 
 This will be accessible as `/api/method/myapp.api.get_last_project`
 
+### Syntax Error
+
+You may have noticed that sometimes if there is a syntax error in your Python code and you `bench start`, it fails without telling you why.
+
+To find out the problem, run the following commands:
+
+```
+cd ~/frappe-bench/sites
+../env/bin/python ../apps/frappe/frappe/utils/bench_helper.py
+```
+Hopefully, you will get the correct traceback to fix your error.
+
 ---
 
 # Client Side
