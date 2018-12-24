@@ -11,7 +11,8 @@ Note that the method described here will install Frappe's developer branch. If y
 
 #### Getting [Frappé](https://github.com/frappe/frappe) onto your system
 
-Before going further, here's something you need to know. [Frappé](https://github.com/frappe/frappe) is not just a web framework as a whole but also an app itself. ##### Q. Wait, what's an app?
+Before going further, here's something you need to know. [Frappé](https://github.com/frappe/frappe) is not just a web framework as a whole but also an app itself. 
+##### Q. Wait, what's an app?
 
 You can think of an app in the [Frappé](https://github.com/frappe/frappe) jargon as a collection of mutable definitions and custom functionalities for a said use-case (basically, a codebase). You then install such apps on sites (which consists of one database at a domain, files, etc.) that acts as the view layer to your app (just like any other website).
 
