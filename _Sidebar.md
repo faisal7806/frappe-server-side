@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-   <h1>frappe</h1>
+   <h1>Frappe</h1>
 </div>
 
 * [[Home]]
