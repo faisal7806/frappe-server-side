@@ -1,6 +1,6 @@
 <div align="center">
    <a href="https://frappe.io">
-      <h1>frappe</h1>
+      <h1>Frappe</h1>
       <h4>a batteries included web framework</h4>
    </a>
 </div>
