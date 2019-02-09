@@ -1,6 +1,6 @@
 <div align="center">
    <a href="https://frappe.io">
-      <img src="https://frappe.io/assets/frappe_io/images/frappe-logo.png" width="100%"/>
+      <img src="https://frappe.io/assets/frappe_io/images/frappe-logo.png" width="70%"/>
    </a>
 </div>
 
