@@ -1,11 +1,11 @@
 <div align="center">
    <a href="https://frappe.io">
-      <img src="hhttps://imgur.com/a/rdVlpwI" width="100%"/>
+      <img src="https://imgur.com/a/rdVlpwI" width="100%"/>
    </a>
 </div>
 
 <div align="center">
-   <h1>frappé</h1>
+   <h1>frappe</h1>
 </div>
 
 * [[Home]]
