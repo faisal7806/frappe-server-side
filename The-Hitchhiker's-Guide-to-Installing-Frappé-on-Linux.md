@@ -156,7 +156,7 @@ $ pip install frappe-bench
 
 > Bench has been [pip](https://pip.pypa.io)ed (Click [here](https://github.com/frappe/bench/pull/490) for more details).
 
-* Check whether **Bench** has been installed correctly
+* Check whether **Bench** has been installed correctly (you may wish to log out and log back into your terminal before this step, as this will refresh your environment variable, adding ~/.local/bin to your path if it not already there)
 ```console
 $ bench --version
 ```
