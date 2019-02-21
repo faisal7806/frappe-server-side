@@ -59,7 +59,7 @@ Returns a list of all the installed apps in the current site.
 
 ##### Load a document
 
-```
+```python
 doc = frappe.get_doc(doctype, name)
 
 # get properties
@@ -75,7 +75,7 @@ doc.save()
 
 ### Insert a new doc
 
-```
+```python
 doc = frappe.get_doc({
 	"doctype": "Project",
 	"title": "My new project",
@@ -90,7 +90,7 @@ Add `@frappe.whitelist()` to the function
 
 Example: say your app name is `myapp`, add this to `api.py`
 
-```
+```python
 @frappe.whitelist()
 def get_last_project():
 	return frappe.get_all("Project", limit_page_lenght = 1)[0]
@@ -104,7 +104,7 @@ You may have noticed that sometimes if there is a syntax error in your Python co
 
 To find out the problem, run the following commands:
 
-```
+```bash
 cd ~/frappe-bench/sites
 ../env/bin/python ../apps/frappe/frappe/utils/bench_helper.py
 ```
@@ -137,7 +137,7 @@ Routes for standard views:
 
 To change the route via js, use `frappe.set_route`
 
-```
+```js
 frappe.set_route("List", "Customer");
 ```
 
@@ -147,13 +147,13 @@ To pass values to a view, use global `frappe.route_options`. `frappe.route_optio
 
 Example:
 
-```
+```js
 frappe.set_route("List", "Customer", {"customer_type": "Company"});
 ```
 
 or
 
-```
+```js
 frappe.route_options = {"customer_type": "Company"};
 frappe.set_route("List", "Customer");
 ```
@@ -162,9 +162,9 @@ frappe.set_route("List", "Customer");
 
 Form API
 
-#### 1. To add a new handler on value change.
+### 1. To add a new handler on value change.
 Syntax
-```
+```js
 frappe.ui.form.on([DocType], {
     [trigger]: function(frm) {
         [function];
@@ -172,18 +172,33 @@ frappe.ui.form.on([DocType], {
 });
 ```
 Replace [DocType] with the one you want to use, in quotations.  Example:
-```frappe.ui.form.on("Sales Order", {```
+
+```js
+frappe.ui.form.on("Sales Order", {
+```
+
 or
-```frappe.ui.form.on("Purchase Order", {```
+
+```js
+frappe.ui.form.on("Purchase Order", {
+```
 in the case of a child table, the function still calls the parent doctype.
 
 Replace [Trigger] with the one you want to use. Example:
-```company: function(frm) {```
+
+```js
+company: function(frm) {
+```
+
 This would trigger the function when the company field is modified
 or
-```onload: function(frm) {``` This would trigger the function when the document is loaded.
+```js
+onload: function(frm) {
+``` 
+This would trigger the function when the document is loaded.
 
-List of Triggers
+#### List of Triggers
+
 * Field Names (see the company example above)
 * setup
 * onload
@@ -192,14 +207,26 @@ List of Triggers
 * on_submit
 * onload_post_render
 
-Child Table Triggers (need to be on the subtable DocType)
+What trigger is called when?
+
+Trigger | User > Reload | `F5` | `Ctrl` + `Shift` + `R` | New Document (first time) | New Document (again) | Menu > Reload | Open document (first time) | Open document (again) | Save document
+--------|---|---|---|---|---|---|---|---|---
+Refresh	| ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ 
+Onload	| ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ 
+Setup	| ✓ | ✓ | ✓ | ✓ 
+
+#### Child Table Triggers
+
+Child Table Triggers need to be on the subtable DocType.
+
 * fieldname_add
 * fieldname_move
 * fieldname_before_remove
 * fieldname_remove
 
 Example:
-```
+
+```js
 frappe.ui.form.on("Salary Slip", {
   company: function(frm) {
     // this function is called when the value of company is changed.
@@ -209,7 +236,8 @@ frappe.ui.form.on("Salary Slip", {
 ```
 
 Example for child table (e.g. in Sales Invoice custom script):
-```
+
+```js
 frappe.ui.form.on('Sales Invoice Item', {
     items_add: function(frm) {
       // adding a row ... 
@@ -219,10 +247,12 @@ frappe.ui.form.on('Sales Invoice Item', {
    }
 });
 ```
-#### 2. Adding Standard JS Listeners to form fields
+
+### 2. Adding Standard JS Listeners to form fields
+
 Sometimes the built in triggers are not enough, so you can use standard JavaScript event listeners together with triggers to achieve better results. For a comprehensive list of listeners, check [this site](https://developer.mozilla.org/en-US/docs/Web/Events). The following example loads a listener once the document has been rendered and loaded. The listener runs some code when a key is pressed in the `customer` field.
 
-```
+```js
 frappe.ui.form.on("Sales Invoice", {
     onload_post_render: function(frm) {
         // This function is run right after a Sales Invoice is rendered and loaded
@@ -234,9 +264,10 @@ frappe.ui.form.on("Sales Invoice", {
     }
 });
 ```
-#### 3. Change value in the form
 
-```
+### 3. Change value in the form
+
+```js
 frm.set_value(fieldname, value);
 ```
 
@@ -245,7 +276,7 @@ frm.set_value(fieldname, value);
 
 To run tasks serially, use `frappe.run_serially`
 
-```
+```js
 frappe.run_serially([
   () => frappe.set_route('List', 'ToDo'),
   () => frappe.new_doc('ToDo')
@@ -256,14 +287,14 @@ frappe.run_serially([
 
 To run individual test use 
 
-```
+```bash
 bench --site test-service run-tests --module erpnext.tests.test_woocommerce
 ```
 
 ## Utility
 
 To know list of Installed Apps of a Site
-```
+```bash
 bench --site [sitename] console
 frappe.get_installed_apps() 
 ```
