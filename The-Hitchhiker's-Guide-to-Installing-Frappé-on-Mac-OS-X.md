@@ -1,4 +1,4 @@
-[Update November 2018]
+[Update March 2019]
 
 It is not really easy to install bench on a mac from scratch. Check this page for more details
 
@@ -287,3 +287,4 @@ Now you can simply access the site you just created using the link <a href="http
 |--------------|---------|---
 | macOS Sierra | 10.12.5 | Achilles Rasquinha <br/> [@achillesrasquinha](https://github.com/achillesrasquinha), <<a href="mailto:achilles@frappe.io">achilles@frappe.io</a>>
 | macOS Sierra | 10.12.6 | Prateeksha Singh <br/> [@pratu16x7](https://github.com/pratu16x7), <<a href="mailto:prateeksha@frappe.io">prateeksha@frappe.io</a>>
+| macOS Sierra | 10.14.3 | Mangesh Khairnar <br/> [@mangesh-khairnar](https://github.com/mangesh-khairnar), <<a href="mailto:mangesh@frappe.io">mangesh@frappe.io</a>>
