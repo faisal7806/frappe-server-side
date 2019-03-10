@@ -167,11 +167,15 @@ And there you have it! You're now ready to build something awesome using [frapp�
 #### Bench - Quickstart
 To create a new bench, simply use the `bench init` command as follows:
 ```console
-$ bench init <MY_BENCH>
+$ bench init [--frappe-branch <branch>] <MY_BENCH>
 ```
+By default `bench` would fetch from `develop` branch, So to install from latest stable ([`master`](https://github.com/frappe/frappe/tree/master)) branch or use [other branches](https://github.com/frappe/frappe/branches) to install older versions. 
+
+<small>This option is available only with `bench` installed through git. Latest release doesn't have this yet.
+
 e.g.
 ```console
-$ bench init frappe-bench
+$ bench init --frappe-branch master frappe-bench
 ```
 
 This goes ahead and creates a folder named `frappe-bench` with a whole lot of stuff inside! This might take a while (depending on your internet speed). We, at frappé love our coffee with flavour. Go get one brewed for yourself.
@@ -247,13 +251,14 @@ $ 127.0.0.1	foo.bar
 [ERPNext](https://erpnext.org) happens to be two things - a Frappé App and [the world's best 100% Open Source ERP](https://opensource.com/resources/top-4-open-source-erp-systems). You can have [erpnext](https://github.com/frappe/erpnext) fetched and stored within your bench using the following command:
 
 ```console
-$ bench get-app <APP_REMOTE_URL|VALID_FRAPPE_APP>
+$ bench get-app [--branch <branch>] <APP_REMOTE_URL|VALID_FRAPPE_APP>
 ```
+If you don't want the `development` version, Specify the required branch.
 
 e.g.
 
 ```console
-$ bench get-app erpnext
+$ bench get-app --branch master erpnext
 ```
 
 This goes ahead and fetches the complete source code and places it within your `MY_BENCH/apps/MY_APP_NAME` folder. In this case - `frappe-bench/apps/erpnext`
