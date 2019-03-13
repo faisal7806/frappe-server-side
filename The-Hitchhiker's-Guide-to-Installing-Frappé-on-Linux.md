@@ -205,7 +205,27 @@ Typing an `ls` on your terminal, you should see the following:
 ├── 📁 Procfile           # process file (to let honcho activate a list of all processes)
 ```
 
-Go ahead and start bench as follows:
+#### Is your MariaDB not on the local server? ####
+If you followed instructions above, you installed a local copy of MariaDB on your server.  ERPNext will communicate with MariaDB via a Unix socket.
+
+_However_, there are other deployment options for MariaDB:
+* MariaDB is installed on a different machine.
+* MariaDB is hosted on a virtual container, like Docker.
+
+_If you need to communicate with MariaDB using TCP_, you have to make a quick change:
+1. Edit this file:  ../frappe-bench/sites/_common_site_config.json_
+2. Add this line:
+```
+"db_host": "127.0.0.1"
+```
+Make sure you change the IP address to the correct value.  It could be your localhost, or a virtual network, or the IP of a remote server.
+
+By making this change, when you later try to start ERPNext --> it will connect to MariaDB using **TCP** to that address.  Instead of searching for a local Unix socket (which it would not find, and throw an error)
+
+Again, only make this change if you're _not_ using a local MariaDB installation.
+
+#### Start bench ####
+Go ahead and start bench as follow
 ```console
 $ bench start
 ```
