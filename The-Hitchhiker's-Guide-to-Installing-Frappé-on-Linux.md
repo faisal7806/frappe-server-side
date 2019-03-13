@@ -225,7 +225,7 @@ By making this change, when you later try to start ERPNext --> it will connect t
 Again, only make this change if you're _not_ using a local MariaDB installation.
 
 #### Start bench ####
-Go ahead and start bench as follow
+Go ahead and start bench as follows:
 ```console
 $ bench start
 ```
