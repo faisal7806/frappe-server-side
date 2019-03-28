@@ -289,7 +289,7 @@ All are asynchronous and return a promise.
 
 ### 5. Add a new row to a child table
 
-For example, add a new `Task` 'Update Developer Cheatsheet' to every new project _on load_. (For a list of triggers, see above.)
+For example, add a new `Task` 'Update Developer Cheatsheet' to every new `Project` _on load_. (For a list of triggers, see above.)
 
 ```js
 frappe.ui.form.on("Project", {
@@ -301,6 +301,9 @@ frappe.ui.form.on("Project", {
 	}
 });
 ```
+
+* `tasks` is the name of the child table within `Project`
+* we need to run `refresh_field` for the new row to become visible
 
 ## Running Tasks Serially
 
