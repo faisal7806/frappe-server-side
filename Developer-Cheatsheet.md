@@ -279,8 +279,16 @@ frappe.db.get_single_value(doctype, field)
 frappe.db.get_doc(doctype, name, filters = null)
 frappe.db.get_list(doctype, {fields: [], limit: 20})
 
+// check if document already exists
 frappe.db.exists(doctype, name)
-frappe.db.insert(doc)
+
+// insert a new document:
+frappe.db.insert({
+    doctype: 'Project', 
+    project_name: 'Build a decent documentation', 
+    expected_end_date: '2030-02-28'
+})
+
 frappe.db.delete_doc(doctype, name)
 frappe.db.count(doctype, args={})
 ```
