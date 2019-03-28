@@ -271,6 +271,21 @@ frappe.ui.form.on("Sales Invoice", {
 frm.set_value(fieldname, value);
 ```
 
+### 4. Talk to the database
+
+```js
+frappe.db.get_value(doctype, filters, fieldname, callback, parent_doc)
+frappe.db.get_single_value(doctype, field)
+frappe.db.get_doc(doctype, name, filters = null)
+frappe.db.get_list(doctype, {fields: [], limit: 20})
+
+frappe.db.exists(doctype, name)
+frappe.db.insert(doc)
+frappe.db.delete_doc(doctype, name)
+frappe.db.count(doctype, args={})
+```
+
+All are asynchronous and return a promise.
 
 ## Running Tasks Serially
 
