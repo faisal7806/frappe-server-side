@@ -287,6 +287,21 @@ frappe.db.count(doctype, args={})
 
 All are asynchronous and return a promise.
 
+### 5. Add a new row to a child table
+
+For example, add a new `Task` 'Update Developer Cheatsheet' to every new project _on load_. (For a list of triggers, see above.)
+
+```js
+frappe.ui.form.on("Project", {
+	onload: function (frm) {
+		if (frm.is_new()) {
+			frm.add_child('tasks').title = 'Update Developer Cheatsheet';
+			frm.refresh_field('tasks');
+		}
+	}
+});
+```
+
 ## Running Tasks Serially
 
 To run tasks serially, use `frappe.run_serially`
