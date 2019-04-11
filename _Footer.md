@@ -1,1 +1,1 @@
-Holy shit. If this is all for Ubuntu, why not just put a fucking apt repository up?
+[Contribution Guidelines](https://github.com/frappe/erpnext/wiki/Contribution-Guidelines)
