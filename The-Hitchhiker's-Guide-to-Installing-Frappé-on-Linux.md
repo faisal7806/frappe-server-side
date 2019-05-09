@@ -141,19 +141,20 @@ $ sudo npm install -g yarn
 
 #### Getting [Bench](https://github.com/frappe/bench) onto your system
 
-Install Bench from the github repository
+There are two methods of installing Bench. However, please note that installing frappe-bench directly from pip is currently broken and leads to webpack errors when running `bench init`
+
+1. Recommended - Install Bench from the github repository
 
 ```console
 $ git clone https://github.com/frappe/bench
 $ pip install -e ./bench
 ```
 
-OR directly [from pip](https://pypi.org/project/frappe-bench/):
+2. Currently broken - Install directly [from pip](https://pypi.org/project/frappe-bench/):
 
 ```console
 $ pip install frappe-bench
 ```
-
 > Bench has been [pip](https://pip.pypa.io)ed (Click [here](https://github.com/frappe/bench/pull/490) for more details).
 
 * Check whether **Bench** has been installed correctly (you may wish to log out and log back into your terminal before this step, as this will refresh your environment variable, adding ~/.local/bin to your path if it not already there)
