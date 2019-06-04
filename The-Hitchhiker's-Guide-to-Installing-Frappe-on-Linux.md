@@ -6,7 +6,7 @@ To the best of our knowledge, this will be the only page you'd ever require to i
 
 **NOTE:** To see if your Linux OS distribution has been tested for the following script, check [here](#tried-and-tested). You're free to revise this page in order to add your Linux OS distribution if you're successful with this script too (_psst_, helps others).
 
-Note that the method described here will install Frappe's developer branch. If you want the stable production branch, follow the [Easy Install](https://github.com/frappe/bench#easy-install) method.
+**Note that** the method described here will install Frappe's developer branch/mode. If you want the stable production branch/are looking for a complete production setup, follow the [Easy Install](https://github.com/frappe/bench#easy-install) method.
 
 
 #### Getting [Frappé](https://github.com/frappe/frappe) onto your system
