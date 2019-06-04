@@ -17,8 +17,8 @@
 #### Installation
 
 To install frappe right from scratch, check out our exhaustive guides:
-* [[The Hitchhiker's Guide to Installing Frappé on Mac OS X]]
-* [[The Hitchhiker's Guide to Installing Frappé on Linux]]
+* [[The Hitchhiker's Guide to Installing Frappe on Mac OS X]]
+* [[The Hitchhiker's Guide to Installing Frappe on Linux]]
 * [[The Hitchhiker's Guide to Installing Frappé on Windows OS]] (Contributors Required)
 
 #### Support
