@@ -142,7 +142,7 @@ Routes for standard views:
 - `#Form/[doctype]/[name]`
 - `#Report/[doctype]`
 - `#Calendar/[doctype]`
-- `#Tree/[module name]`
+- `#Tree/[doctype]`
 - `#modules/[module name]`
 - `#activity`
 - `#Dashboard`
