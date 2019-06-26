@@ -142,7 +142,10 @@ Routes for standard views:
 - `#Form/[doctype]/[name]`
 - `#Report/[doctype]`
 - `#Calendar/[doctype]`
+- `#Tree/[module name]`
 - `#modules/[module name]`
+- `#activity`
+- `#Dashboard`
 
 To change the route via js, use `frappe.set_route`
 
