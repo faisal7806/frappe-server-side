@@ -2,21 +2,26 @@ Client Side Scripting:
 
 ### Make fields read-only after saving
 
+```js
     cur_frm.cscript.custom_refresh = function(doc) {
         // use the __islocal value of doc, to check if the doc is saved or not
         cur_frm.set_df_property("myfield", "read_only", doc.__islocal ? 0 : 1);
     }
+```
 
 ### Hide a field based on some condition
 
+```js
     cur_frm.cscript.custom_refresh = function(doc) {
         cur_frm.toggle_display("myfield1", doc.myfield2=="some_value");
     }
+```
 
 ### Get Values from Server
 
 A standard way to query values from server side.
 
+```js
     wn.call({
         method:"webnotes.client.get_value",
         args: {
@@ -34,9 +39,11 @@ A standard way to query values from server side.
             cur_frm.set_value(fieldname, r.message);
         }
     })
+```
 
 ### Make attachments mandatory:
 
+```js
     cur_frm.cscript.custom_validate = function(doc) {
         if(!doc.__islocal) {
             if(!doc.file_list) {
@@ -46,9 +53,11 @@ A standard way to query values from server side.
             }
         }
     }
+```
 
 ### Set Naming System For Item Code
 
+```js
     cur_frm.cscript.custom_validate = function(doc) {
         // clear item_code (name is from item_code)
         doc.item_code = "";
@@ -77,15 +86,17 @@ A standard way to query values from server side.
                 doc.item_code += "BX";
         }
     }
+```
 
 ### Using add_fetch to pull link details
 
 Add this line in the Custom Script (not in any function) for the target DocType (where you want to value to be fetched).
 
+```js
     // set employee_name field to employee_name value from employee link field
     // function add_fetch(link_fieldname, source_fieldname, target_fieldname)
     cur_frm.add_fetch('employee','employee_name','employee_name')
-
+```
     
 
 ### Fetching Values:
@@ -94,15 +105,18 @@ Example, get default "cash_bank_account" when mode_of_payment is updated
 
 On client side:
 
+```js
 	cur_frm.cscript.mode_of_payment = function(doc) {
 		cur_frm.call({
 			method: "get_bank_cash_account",
 			args: { mode_of_payment: doc.mode_of_payment }
 		});
 	}
+```
 
 On server side:
 
+```python
 	# whitelist allows method to be called from web request
 	@webnotes.whitelist()
 	def get_bank_cash_account(mode_of_payment):
@@ -110,11 +124,12 @@ On server side:
 			"cash_bank_account": webnotes.conn.get_value("Mode of Payment", 
 				mode_of_payment, "default_account")
 		}
+```
 
 ### Fetching a table row's values in the form
 
 on client side
-```
+```js
 // client script (example: in sales_invoice.js)
 cur_frm.cscript.wash_type = function(doc, cdt, cdn) {
     var d = locals[cdt][cdn];
@@ -132,7 +147,8 @@ cur_frm.cscript.wash_type = function(doc, cdt, cdn) {
 ```
 
 on server side
-```
+
+```python
 # server script (example: in sales_invoice.py)
 # not a method of DocType object of 
     
@@ -148,24 +164,29 @@ def get_item_qty(item_code, wash_type):
 
 ### Date Validation: Do not allow past dates in a date field
 
+```js
 	cur_frm.cscript.custom_validate = function(doc) {
 		if (doc.from_date < get_today()) {
 			msgprint("You can not select past date in From Date");
 			validated = false;
 		}
 	}
+```
 
 ### Allow user only single purpose of stock entry:
 
+```js
 	cur_frm.cscript.custom_validate = function(doc) {
 		if(user=="user1@example.com" && doc.purpose!="Material Receipt") {
 			msgprint("You are only allowed Material Receipt");
 			validated = false;
 		}
 	}
+```
 
 ### Validation on Stock Entry based on Warehouse Detail
 
+```js
 	cur_frm.cscript.custom_validate = function(doc) {
 		if(user_roles.indexOf("Material Manager")==-1) {
 		
@@ -181,9 +202,11 @@ def get_item_qty(item_code, wash_type):
 			}
 		}
 	}
+```
 
 ### Calculate Incentive in Sales Team table based on some custom logic
 
+```js
 	cur_frm.cscript.custom_validate = function(doc) {
 		// calculate incentives for each person on the deal
 		total_incentive = 0
@@ -200,9 +223,11 @@ def get_item_qty(item_code, wash_type):
 		
 		doc.total_incentive = total_incentive;
 	}
+```
 
 ### Cancel permission based on grand total
 
+```js
 	cur_frm.cscript.custom_before_cancel = function(doc) {
 		if (user_roles.indexOf("Accounts User")!=-1 && user_roles.indexOf("Accounts Manager")==-1
 				&& user_roles.indexOf("System Manager")==-1) {
@@ -213,29 +238,38 @@ def get_item_qty(item_code, wash_type):
 			}
 		}
 	}
+```
 
 ### Remove a Standard button from Form's toolbar
 
+```js
 	cur_frm.cscript.custom_refresh = function() {
 		if(!cur_frm.doc.__islocal && cur_frm.doc.owner === wn.boot.profile.name) {
 			cur_frm.appframe.buttons.Submit.remove();
 		}
 	}
+```
 
 ### Assign Expected Delivery Date as x days after Sales Order Date
+
+```js
 	cur_frm.cscript.custom_sales_order_date = function(doc) {
 		cur_frm.set_value("expected_delivery_date", wn.datetime.add_days(doc.sales_order_date, x));
 	}
 
 	cur_frm.cscript.custom_onload = cur_frm.cscript.custom_sales_order_date;
+```
 
 ### Prevent back-dating for Resolution Date in Customer Issues
+
     if (doc.resolution_date && wn.datetime.get_day_diff(new Date(), wn.datetime.str_to_obj(doc.resolution_date)) > 0) { 
             validated = false;
              msgprint("Resolution Date cannot be a past date"); // or any other message you want..
          }
 
 ### Material Receipt in WarehouseX must be made against Material Request
+
+```js
 	cur_frm.cscript.custom_validate = function(doc) {
 		if(doc.purpose == "Material Receipt") {
 			$.each(frappe.model.get("Stock Entry Detail", {parent:doc.name}), function(i, d) {
@@ -247,9 +281,11 @@ def get_item_qty(item_code, wash_type):
 			})
 		}
 	}
+```
 
 ### Change CSS Properties for some specific fields in Doctype.
 
+```js
       frappe.ui.form.on("Doctype Name", {
                 refresh: function(frm) {
                                 set_css(frm);
@@ -263,3 +299,4 @@ def get_item_qty(item_code, wash_type):
 	       document.querySelectorAll("[data-fieldname='field_name']")[1].style.backgroundColor ="red";
 
          }
+```
