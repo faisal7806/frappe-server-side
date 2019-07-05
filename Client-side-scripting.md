@@ -3,18 +3,18 @@ Client Side Scripting:
 ### Make fields read-only after saving
 
 ```js
-    cur_frm.cscript.custom_refresh = function(doc) {
-        // use the __islocal value of doc, to check if the doc is saved or not
-        cur_frm.set_df_property("myfield", "read_only", doc.__islocal ? 0 : 1);
-    }
+cur_frm.cscript.custom_refresh = function(doc) {
+    // use the __islocal value of doc, to check if the doc is saved or not
+    cur_frm.set_df_property("myfield", "read_only", doc.__islocal ? 0 : 1);
+}
 ```
 
 ### Hide a field based on some condition
 
 ```js
-    cur_frm.cscript.custom_refresh = function(doc) {
-        cur_frm.toggle_display("myfield1", doc.myfield2=="some_value");
-    }
+cur_frm.cscript.custom_refresh = function(doc) {
+    cur_frm.toggle_display("myfield1", doc.myfield2=="some_value");
+}
 ```
 
 ### Get Values from Server
@@ -22,70 +22,70 @@ Client Side Scripting:
 A standard way to query values from server side.
 
 ```js
-    wn.call({
-        method:"webnotes.client.get_value",
-        args: {
-            doctype:"Delivery Note Item",
-            filters: {
-                parent:"DN00038",
-                item_code:"Ser/003"
-            },
-            fieldname:["qty", "stock_uom"]
-        }, 
-        callback: function(r) { 
-            console.log(r);
+wn.call({
+    method:"webnotes.client.get_value",
+    args: {
+        doctype:"Delivery Note Item",
+        filters: {
+            parent:"DN00038",
+            item_code:"Ser/003"
+        },
+        fieldname:["qty", "stock_uom"]
+    }, 
+    callback: function(r) { 
+        console.log(r);
 
-            // set the returned value in a field
-            cur_frm.set_value(fieldname, r.message);
-        }
-    })
+        // set the returned value in a field
+        cur_frm.set_value(fieldname, r.message);
+    }
+})
 ```
 
 ### Make attachments mandatory:
 
 ```js
-    cur_frm.cscript.custom_validate = function(doc) {
-        if(!doc.__islocal) {
-            if(!doc.file_list) {
-                var msg = wn._("Please attach atleast 1 file");
-                msgprint(msg);
-                throw msg;
-            }
+cur_frm.cscript.custom_validate = function(doc) {
+    if(!doc.__islocal) {
+        if(!doc.file_list) {
+            var msg = wn._("Please attach atleast 1 file");
+            msgprint(msg);
+            throw msg;
         }
     }
+}
 ```
 
 ### Set Naming System For Item Code
 
 ```js
-    cur_frm.cscript.custom_validate = function(doc) {
-        // clear item_code (name is from item_code)
-        doc.item_code = "";
+cur_frm.cscript.custom_validate = function(doc) {
+    // clear item_code (name is from item_code)
+    doc.item_code = "";
 
-        // first 2 characters based on item_group
-        switch(doc.item_group) {
-            case "Test A":
-                doc.item_code = "TA";
-                break;
-            case "Test B":
-                doc.item_code = "TB";
-                break;
-            default:
-                doc.item_code = "XX";
-        }
-
-        // add next 2 characters based on brand
-        switch(doc.brand) {
-            case "Brand A":
-                doc.item_code += "BA";
-                break;
-            case "Brand B":
-                doc.item_code += "BB";
-                break;
-            default:
-                doc.item_code += "BX";
-        }
+    // first 2 characters based on item_group
+    switch(doc.item_group) {
+        case "Test A":
+            doc.item_code = "TA";
+            break;
+        case "Test B":
+            doc.item_code = "TB";
+            break;
+        default:
+            doc.item_code = "XX";
     }
+
+    // add next 2 characters based on brand
+    switch(doc.brand) {
+        case "Brand A":
+            doc.item_code += "BA";
+            break;
+        case "Brand B":
+            doc.item_code += "BB";
+            break;
+        default:
+            doc.item_code += "BX";
+    }
+}
 ```
 
 ### Using add_fetch to pull link details
@@ -93,9 +93,9 @@ A standard way to query values from server side.
 Add this line in the Custom Script (not in any function) for the target DocType (where you want to value to be fetched).
 
 ```js
-    // set employee_name field to employee_name value from employee link field
-    // function add_fetch(link_fieldname, source_fieldname, target_fieldname)
-    cur_frm.add_fetch('employee','employee_name','employee_name')
+// set employee_name field to employee_name value from employee link field
+// function add_fetch(link_fieldname, source_fieldname, target_fieldname)
+cur_frm.add_fetch('employee','employee_name','employee_name')
 ```
     
 
@@ -106,24 +106,24 @@ Example, get default "cash_bank_account" when mode_of_payment is updated
 On client side:
 
 ```js
-	cur_frm.cscript.mode_of_payment = function(doc) {
-		cur_frm.call({
-			method: "get_bank_cash_account",
-			args: { mode_of_payment: doc.mode_of_payment }
-		});
-	}
+cur_frm.cscript.mode_of_payment = function(doc) {
+    cur_frm.call({
+        method: "get_bank_cash_account",
+        args: { mode_of_payment: doc.mode_of_payment }
+    });
+}
 ```
 
 On server side:
 
 ```python
-	# whitelist allows method to be called from web request
-	@webnotes.whitelist()
-	def get_bank_cash_account(mode_of_payment):
-		return {
-			"cash_bank_account": webnotes.conn.get_value("Mode of Payment", 
-				mode_of_payment, "default_account")
-		}
+# whitelist allows method to be called from web request
+@webnotes.whitelist()
+def get_bank_cash_account(mode_of_payment):
+    return {
+        "cash_bank_account": webnotes.conn.get_value("Mode of Payment", 
+            mode_of_payment, "default_account")
+    }
 ```
 
 ### Fetching a table row's values in the form
@@ -165,99 +165,99 @@ def get_item_qty(item_code, wash_type):
 ### Date Validation: Do not allow past dates in a date field
 
 ```js
-	cur_frm.cscript.custom_validate = function(doc) {
-		if (doc.from_date < get_today()) {
-			msgprint("You can not select past date in From Date");
-			validated = false;
-		}
-	}
+cur_frm.cscript.custom_validate = function(doc) {
+    if (doc.from_date < get_today()) {
+        msgprint("You can not select past date in From Date");
+        validated = false;
+    }
+}
 ```
 
 ### Allow user only single purpose of stock entry:
 
 ```js
-	cur_frm.cscript.custom_validate = function(doc) {
-		if(user=="user1@example.com" && doc.purpose!="Material Receipt") {
-			msgprint("You are only allowed Material Receipt");
-			validated = false;
-		}
-	}
+cur_frm.cscript.custom_validate = function(doc) {
+    if(user=="user1@example.com" && doc.purpose!="Material Receipt") {
+        msgprint("You are only allowed Material Receipt");
+        validated = false;
+    }
+}
 ```
 
 ### Validation on Stock Entry based on Warehouse Detail
 
 ```js
-	cur_frm.cscript.custom_validate = function(doc) {
-		if(user_roles.indexOf("Material Manager")==-1) {
-		
-			var restricted_in_source = wn.model.get("Stock Entry Detail", 
-				{parent:cur_frm.doc.name, s_warehouse:"Restricted"});
-				
-			var restricted_in_target = wn.model.get("Stock Entry Detail", 
-				{parent:cur_frm.doc.name, t_warehouse:"Restricted"})
-		
-			if(restricted_in_source.length || restricted_in_target.length) {
-				msgprint("Only Material Manager can make entry in Restricted Warehouse");
-				validated = false;
-			}
-		}
-	}
+cur_frm.cscript.custom_validate = function(doc) {
+    if(user_roles.indexOf("Material Manager")==-1) {
+    
+        var restricted_in_source = wn.model.get("Stock Entry Detail", 
+            {parent:cur_frm.doc.name, s_warehouse:"Restricted"});
+            
+        var restricted_in_target = wn.model.get("Stock Entry Detail", 
+            {parent:cur_frm.doc.name, t_warehouse:"Restricted"})
+    
+        if(restricted_in_source.length || restricted_in_target.length) {
+            msgprint("Only Material Manager can make entry in Restricted Warehouse");
+            validated = false;
+        }
+    }
+}
 ```
 
 ### Calculate Incentive in Sales Team table based on some custom logic
 
 ```js
-	cur_frm.cscript.custom_validate = function(doc) {
-		// calculate incentives for each person on the deal
-		total_incentive = 0
-		$.each(wn.model.get("Sales Team", {parent:doc.name}), function(i, d) {
-    
-			// calculate incentive
-			var incentive_percent = 2;
-			if(doc.grand_total > 400) incentive_percent = 4;
+cur_frm.cscript.custom_validate = function(doc) {
+    // calculate incentives for each person on the deal
+    total_incentive = 0
+    $.each(wn.model.get("Sales Team", {parent:doc.name}), function(i, d) {
 
-			// actual incentive
-			d.incentives = flt(doc.grand_total) * incentive_percent / 100;
-			total_incentive += flt(d.incentives)
-		});
-		
-		doc.total_incentive = total_incentive;
-	}
+        // calculate incentive
+        var incentive_percent = 2;
+        if(doc.grand_total > 400) incentive_percent = 4;
+
+        // actual incentive
+        d.incentives = flt(doc.grand_total) * incentive_percent / 100;
+        total_incentive += flt(d.incentives)
+    });
+    
+    doc.total_incentive = total_incentive;
+}
 ```
 
 ### Cancel permission based on grand total
 
 ```js
-	cur_frm.cscript.custom_before_cancel = function(doc) {
-		if (user_roles.indexOf("Accounts User")!=-1 && user_roles.indexOf("Accounts Manager")==-1
-				&& user_roles.indexOf("System Manager")==-1) {
-			if (flt(doc.grand_total) > 10000) {
-				msgprint("You can not cancel this transaction, because grand total \
-					is greater than 10000");
-				validated = false;
-			}
-		}
-	}
+cur_frm.cscript.custom_before_cancel = function(doc) {
+    if (user_roles.indexOf("Accounts User")!=-1 && user_roles.indexOf("Accounts Manager")==-1
+            && user_roles.indexOf("System Manager")==-1) {
+        if (flt(doc.grand_total) > 10000) {
+            msgprint("You can not cancel this transaction, because grand total \
+                is greater than 10000");
+            validated = false;
+        }
+    }
+}
 ```
 
 ### Remove a Standard button from Form's toolbar
 
 ```js
-	cur_frm.cscript.custom_refresh = function() {
-		if(!cur_frm.doc.__islocal && cur_frm.doc.owner === wn.boot.profile.name) {
-			cur_frm.appframe.buttons.Submit.remove();
-		}
-	}
+cur_frm.cscript.custom_refresh = function() {
+    if(!cur_frm.doc.__islocal && cur_frm.doc.owner === wn.boot.profile.name) {
+        cur_frm.appframe.buttons.Submit.remove();
+    }
+}
 ```
 
 ### Assign Expected Delivery Date as x days after Sales Order Date
 
 ```js
-	cur_frm.cscript.custom_sales_order_date = function(doc) {
-		cur_frm.set_value("expected_delivery_date", wn.datetime.add_days(doc.sales_order_date, x));
-	}
+cur_frm.cscript.custom_sales_order_date = function(doc) {
+    cur_frm.set_value("expected_delivery_date", wn.datetime.add_days(doc.sales_order_date, x));
+}
 
-	cur_frm.cscript.custom_onload = cur_frm.cscript.custom_sales_order_date;
+cur_frm.cscript.custom_onload = cur_frm.cscript.custom_sales_order_date;
 ```
 
 ### Prevent back-dating for Resolution Date in Customer Issues
@@ -270,33 +270,33 @@ def get_item_qty(item_code, wash_type):
 ### Material Receipt in WarehouseX must be made against Material Request
 
 ```js
-	cur_frm.cscript.custom_validate = function(doc) {
-		if(doc.purpose == "Material Receipt") {
-			$.each(frappe.model.get("Stock Entry Detail", {parent:doc.name}), function(i, d) {
-				if(d.t_warehouse=="WarehouseX" && !d.material_request) {
-					msgprint("You must receive against Material Request");
-					validated = false;
-					return;
-				}
-			})
-		}
-	}
+cur_frm.cscript.custom_validate = function(doc) {
+    if(doc.purpose == "Material Receipt") {
+        $.each(frappe.model.get("Stock Entry Detail", {parent:doc.name}), function(i, d) {
+            if(d.t_warehouse=="WarehouseX" && !d.material_request) {
+                msgprint("You must receive against Material Request");
+                validated = false;
+                return;
+            }
+        })
+    }
+}
 ```
 
 ### Change CSS Properties for some specific fields in Doctype.
 
 ```js
-      frappe.ui.form.on("Doctype Name", {
-                refresh: function(frm) {
-                                set_css(frm);
-                }
-      });
+frappe.ui.form.on("Doctype Name", {
+        refresh: function(frm) {
+                        set_css(frm);
+        }
+});
 
-      var set_css = function (frm)
-         {
-	       document.querySelectorAll("[data-fieldname='field_name']")[1].style.height ="50px";
-	       document.querySelectorAll("[data-fieldname='field_name']")[1].style.width ="120px";
-	       document.querySelectorAll("[data-fieldname='field_name']")[1].style.backgroundColor ="red";
+var set_css = function (frm)
+    {
+    document.querySelectorAll("[data-fieldname='field_name']")[1].style.height ="50px";
+    document.querySelectorAll("[data-fieldname='field_name']")[1].style.width ="120px";
+    document.querySelectorAll("[data-fieldname='field_name']")[1].style.backgroundColor ="red";
 
-         }
+    }
 ```
