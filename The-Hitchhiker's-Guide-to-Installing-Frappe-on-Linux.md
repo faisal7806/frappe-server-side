@@ -57,7 +57,7 @@ $ git --version
 
 You should then see `git version X.Y.Z` on your terminal screen.
 
-[Frappé](https://github.com/frappe/frappe) requires Python 2.7 installed. To our luck, Python comes shipped with most Linux OS distributions. However, we might require the `python-dev` package installed for using Python's C API.
+[Frappé](https://github.com/frappe/frappe) requires at least Python 2.7 installed, but Python3.5+ also supported. To our luck, Python comes shipped with most Linux OS distributions. However, we might require the `python-dev` package installed for using Python's C API.
 
 * To install Python 2.7.X `dev` package on your Linux OS, simply:
 
@@ -67,10 +67,29 @@ You should then see `git version X.Y.Z` on your terminal screen.
 $ sudo apt-get install python-dev
 ```
 
+Alternatively, to install Python 3.X `dev`:
+
+```console
+$ sudo apt-get install python3-dev
+```
+
 * Install `setuptools` and `pip` (Python's Package Manager):
 
 ```console
 $ sudo apt-get install python-setuptools python-pip
+```
+
+Alternatively, for Python 3.X `setuptools` and `pip` (Python's Package Manager):
+
+```console
+$ sudo apt-get install python3-setuptools python3-pip
+```
+
+You can also create an alias for pip and python to enforce use of python 3:
+
+```
+alias python=python3
+alias pip=pip3
 ```
 
 [Frappé](https://github.com/frappe/frappe) uses [MariaDB](https://mariadb.org) (for [RDBMS](https://en.wikipedia.org/wiki/Relational_database_management_system)) as its database engine, [Redis](https://redis.io) for caching and as a message broker and [Node.js](https://nodejs.org) for everything JavaScript. Go ahead and install 'em all.
@@ -127,10 +146,10 @@ $ sudo service mysql restart
 $ sudo apt-get install redis-server
 ```
 
-* To install Node.js 8.X package on your Linux OS, simply:
+* To install Node.js 10.X package on your Linux OS, simply:
 ```console
 $ sudo apt-get install curl
-$ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+$ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
 ```
 
@@ -143,10 +162,24 @@ $ sudo npm install -g yarn
 
 There are two methods of installing Bench. However, please note that installing frappe-bench directly from pip is currently broken and leads to webpack errors when running `bench init`
 
-1. Recommended - Install Bench from the github repository
+1. Recommended - Install Bench from the github repository (and also install node modules needed for bench install)
 
 ```console
 $ git clone https://github.com/frappe/bench
+$ npm install \
+        chalk \
+        rollup \
+        rollup-plugin-multi-entry \
+        rollup-plugin-commonjs \
+        rollup-plugin-node-resolve \
+        rollup-plugin-uglify \
+        rollup-plugin-postcss \
+        rollup-plugin-buble \
+        rollup-plugin-terser \
+        rollup-plugin-vue \
+        vue-template-compiler \
+        moment \
+    ;
 $ pip install -e ./bench
 ```
 
@@ -155,6 +188,7 @@ $ pip install -e ./bench
 ```console
 $ pip install frappe-bench
 ```
+
 > Bench has been [pip](https://pip.pypa.io)ed (Click [here](https://github.com/frappe/bench/pull/490) for more details).
 
 * Check whether **Bench** has been installed correctly (you may wish to log out and log back into your terminal before this step, as this will refresh your environment variable, adding ~/.local/bin to your path if it not already there)
@@ -168,7 +202,7 @@ And there you have it! You're now ready to build something awesome using [frapp�
 #### Bench - Quickstart
 To create a new bench, simply use the `bench init` command as follows:
 ```console
-$ bench init [--frappe-branch <branch>] <MY_BENCH>
+$ bench init [--frappe-branch <branch>] [--python <path to python executable>] <MY_BENCH>
 ```
 By default `bench` would fetch from `develop` branch, So to install from latest stable ([`master`](https://github.com/frappe/frappe/tree/master)) branch or use [other branches](https://github.com/frappe/frappe/branches) to install older versions. 
 
@@ -177,6 +211,11 @@ By default `bench` would fetch from `develop` branch, So to install from latest 
 e.g.
 ```console
 $ bench init --frappe-branch master frappe-bench
+```
+
+and for python 3:
+```console
+$ bench init --frappe-branch master --python /usr/bin/python3 frappe-bench
 ```
 
 This goes ahead and creates a folder named `frappe-bench` with a whole lot of stuff inside! This might take a while (depending on your internet speed). We, at frappé love our coffee with flavour. Go get one brewed for yourself.
@@ -188,6 +227,16 @@ $ cd <MY_BENCH>
 e.g.
 ```console
 $ cd frappe-bench
+```
+
+To ensure python loads frappe properly, you might need to install the application as a python module:
+```console
+$ ./env/bin/pip install -e apps/frappe/
+```
+
+and for python 3:
+```console
+$ ./env/bin/pip3 install -e apps/frappe/
 ```
 
 #### What should you see?
@@ -284,6 +333,16 @@ $ bench get-app --branch master erpnext
 
 This goes ahead and fetches the complete source code and places it within your `MY_BENCH/apps/MY_APP_NAME` folder. In this case - `frappe-bench/apps/erpnext`
 
+To ensure python loads erpnext properly, you might need to install the application as a python module:
+```console
+$ ./env/bin/pip install -e apps/erpnext/
+```
+
+and for python 3:
+```console
+$ ./env/bin/pip3 install -e apps/erpnext/
+```
+
 #### Installing Frappé Apps onto Sites
 ```console
 $ bench --site <MY_SITE> install-app <MY_APP_NAME>
@@ -297,6 +356,41 @@ $ bench --site foo.bar install-app erpnext
 
 Now you can simply access the site you just created using the link [foo.bar:8000](http://foo.bar:8000)
 
+#### Access your site from the outside
+
+Not satisfied ? You want to be able to show your site to the world ? You can install NGinx and use bench to generate the configuration for you.
+
+* Install nginx
+
+```
+$ sudo apt-get install nginx
+```
+
+* Generate nginx config for your site(s)
+
+```
+$ bench setup nginx
+```
+
+* Remove enable sites
+
+```
+$ rm -f /etc/nginx/sites-enabled/*
+```
+
+* Create symbolic link to nginx conf for frappe
+
+```
+$ sudo ln -s ./config/nginx.conf /etc/nginx/sites-enabled/frappe.conf
+```
+
+* Finally, restart nginx
+```
+$ sudo service nginx restart
+```
+
+You can now access your site at your server's IP address.
+
 #### Tried and Tested
 
 **NOTE:** If you're attempting to revise this page after successfully installing and running frappé, kindly add the required details in the following format only.
@@ -308,3 +402,4 @@ Now you can simply access the site you just created using the link [foo.bar:8000
 | Ubuntu       | 18.04   | Ameya Shenoy <br/> [@codingCoffee](https://github.com/codingCoffee), <<a href="mailto:ameya@frappe.io">ameya@frappe.io</a>>
 | Ubuntu       | 18.04   | Brian Pond <br/> [@PMojito](https://github.com/PMojito), <<a href="mailto:brian@pondconsulting.net">brian@pondconsulting.net</a>>
 | Linux Mint   | 19      | Sagar Vora <br/> [@sagarvora](https://github.com/sagarvora), <<a href="mailto:sagar@resilient.tech">sagar@resilient.tech</a>>
+| Ubuntu       | 16.04.6 | Mathieu BRUNOT <br/> [@madmath03](https://github.com/madmath03), <<a href="mailto:mathieu.brunot@monogramm.io">mathieu.brunot@monogramm.io</a>>
