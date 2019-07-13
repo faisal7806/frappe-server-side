@@ -9,7 +9,7 @@ frappe.ui.form.on("[TARGETDOCTYPE]", {
         frappe.model.with_doc("[SOURCEDOCTYPE]", frm.doc.[TRIGGER], function() {
             var tabletransfer= frappe.model.get_doc("[SOURCEDOCTYPE]", frm.doc.[TRIGGER])
             $.each(tabletransfer.[SOURCECHILDTABLE], function(index, row){
-                d = frm.add_child("[TARGETCHILDTABLE]");
+                var d = frm.add_child("[TARGETCHILDTABLE]");
                 d.[TARGETFIELD1] = row.[SOURCEFIELD1];
                 d.[TARGETFIELD2] = row.[SOURCEFIELD2];
                 frm.refresh_field("[TARGETCHILDTABLE]");
