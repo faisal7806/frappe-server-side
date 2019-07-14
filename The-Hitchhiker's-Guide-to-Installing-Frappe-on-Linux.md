@@ -160,36 +160,10 @@ $ sudo npm install -g yarn
 
 #### Getting [Bench](https://github.com/frappe/bench) onto your system
 
-There are two methods of installing Bench. However, please note that installing frappe-bench directly from pip is currently broken and leads to webpack errors when running `bench init`
-
-1. Recommended - Install Bench from the github repository (and also install node modules needed for bench install)
-
 ```console
 $ git clone https://github.com/frappe/bench
-$ npm install \
-        chalk \
-        rollup \
-        rollup-plugin-multi-entry \
-        rollup-plugin-commonjs \
-        rollup-plugin-node-resolve \
-        rollup-plugin-uglify \
-        rollup-plugin-postcss \
-        rollup-plugin-buble \
-        rollup-plugin-terser \
-        rollup-plugin-vue \
-        vue-template-compiler \
-        moment \
-    ;
 $ pip install -e ./bench
 ```
-
-2. Currently broken - Install directly [from pip](https://pypi.org/project/frappe-bench/):
-
-```console
-$ pip install frappe-bench
-```
-
-> Bench has been [pip](https://pip.pypa.io)ed (Click [here](https://github.com/frappe/bench/pull/490) for more details).
 
 * Check whether **Bench** has been installed correctly (you may wish to log out and log back into your terminal before this step, as this will refresh your environment variable, adding ~/.local/bin to your path if it not already there)
 ```console
@@ -197,7 +171,7 @@ $ bench --version
 ```
 You should then see `X.Y.Z` on your terminal screen.
 
-And there you have it! You're now ready to build something awesome using [frappé](https://github.com/frappe/frappe)
+And there you have it! You're now ready to build something awesome using [frappe](https://github.com/frappe/frappe)
 
 #### Bench - Quickstart
 To create a new bench, simply use the `bench init` command as follows:
