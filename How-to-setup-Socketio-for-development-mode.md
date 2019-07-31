@@ -1,5 +1,4 @@
 1. Set DNS multi-tenant off
-
 ```
 bench config dns_multitenant off
 ```
