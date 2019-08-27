@@ -233,7 +233,7 @@ Child Table Triggers need to be on the subtable DocType.
 
 * fieldname_add
 * fieldname_move
-* fieldname_before_remove
+* before_fieldname_remove
 * fieldname_remove
 
 Example:
