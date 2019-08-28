@@ -178,18 +178,18 @@ To create a new bench, simply use the `bench init` command as follows:
 ```console
 $ bench init [--frappe-branch <branch>] [--python <path to python executable>] <MY_BENCH>
 ```
-By default `bench` would fetch from `develop` branch, So to install from latest stable ([`master`](https://github.com/frappe/frappe/tree/master)) branch or use [other branches](https://github.com/frappe/frappe/branches) to install older versions. 
+By default `bench` would fetch from `develop` branch, So to install from latest stable ([`version-12`](https://github.com/frappe/frappe/tree/version-12)) branch or use [other branches](https://github.com/frappe/frappe/branches) to install older versions. 
 
 <small>This option is available only with `bench` installed through git. Latest release doesn't have this yet.
 
 e.g.
 ```console
-$ bench init --frappe-branch master frappe-bench
+$ bench init --frappe-branch version-12 frappe-bench
 ```
 
 and for python 3:
 ```console
-$ bench init --frappe-branch master --python /usr/bin/python3 frappe-bench
+$ bench init --frappe-branch version-12 --python /usr/bin/python3 frappe-bench
 ```
 
 This goes ahead and creates a folder named `frappe-bench` with a whole lot of stuff inside! This might take a while (depending on your internet speed). We, at frappé love our coffee with flavour. Go get one brewed for yourself.
@@ -302,7 +302,7 @@ If you don't want the `development` version, Specify the required branch.
 e.g.
 
 ```console
-$ bench get-app --branch master erpnext
+$ bench get-app --branch version-12 erpnext
 ```
 
 This goes ahead and fetches the complete source code and places it within your `MY_BENCH/apps/MY_APP_NAME` folder. In this case - `frappe-bench/apps/erpnext`
