@@ -1,3 +1,9 @@
+### This guide is obsolete as of August 2019, in favor of  the is Tree view switch in the DocType form to make any DocType a tree
+
+<img width="1262" alt="Screenshot 2019-09-24 at 12 16 36 PM" src="https://user-images.githubusercontent.com/6195660/65488009-b64e0200-dec5-11e9-8e44-404ced1352c3.png">
+
+***
+
 Go through the following steps to add a tree view to any custom DocType. I'll use {{name}} as a placeholder for the `name` of the DocType, be sure to substitute your DocType's name here. I'll use account tree as an example here
 
 ## DocFields
