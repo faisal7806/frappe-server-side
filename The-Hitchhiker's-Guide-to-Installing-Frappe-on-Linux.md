@@ -328,7 +328,7 @@ $ bench --site foo.bar install-app erpnext
 
 #### You're all set!
 
-Now you can simply access the site you just created using the link [foo.bar:8000](http://foo.bar:8000)
+Now you can simply access the site you just created using this link in the browser [foo.bar:8000](http://foo.bar:8000)
 
 #### Access your site from the outside
 
