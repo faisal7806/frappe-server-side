@@ -37,7 +37,8 @@ default-character-set = utf8mb4
    "update_bench_on_update": true,
    "use_tls": 1,
    "webserver_port": 8000
-   "db_host": "instance.rds.amazonaws.com"
+   "db_host": "instance.rds.amazonaws.com",
+   "rds_db": 1
    }
   ```
 * You should be able to now create a new site on the RDS database by doing `bench new-site` ! 
