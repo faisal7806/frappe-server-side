@@ -30,7 +30,8 @@ default-character-set = utf8mb4
 ```
 
 * Note down the "Endpoint" for that instance
-* Add a key in `common_site_config` called `db_host` and set it to the endpoint you just noted down. Your config should look something like this : 
+* Add a key in `common_site_config` called `db_host` and set it to the endpoint you just noted down.
+* Add another key called `rds_db` and set it to 1. Your config should look something like this : 
 ```
   ...
   
