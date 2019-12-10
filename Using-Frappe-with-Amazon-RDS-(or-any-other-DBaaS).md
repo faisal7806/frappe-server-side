@@ -60,9 +60,8 @@ We're on the frappe server. This should be an EC2 instance in the same VPC as th
 
 3. Now you should be able to create a new site by running `bench new-site`
 
-## Moving an existing database to RDS 
+# Move an existing database to RDS
 
-* Before changing the configuration you want to take a database backup of your site by doing `bench backup` 
-* Once a backup is generated, change the configuration to point at RDS
-* Create a **new** site and then restore the backup from the old site into it
-
+1. Take a database backup of your site with `bench backup`.
+2. Change the configuration as described in "Setup Frappe".
+3. Create a **new** site and restore the backup into it.
