@@ -1,16 +1,17 @@
 Your bench instance allows you to connect to an external database by setting a configuration in your `common_site_config.json` in your `sites` folder. 
 
-**Note : if you're hosting ERPNext on an EC2 instance, use an RDS Instance on the same VPC for better performance.**
-
 # Setup an RDS Instance for Frappe
 
-1. Create a new database from the RDS Panel.
+We're in the AWS Console, on the RDS page.
+
+1. Click the "Create database" button.
 2. Choose "Standard Create" and select "MariaDB" as the database engine.
 3. Choose a supported MariaDB Version (currently, 10.3)
 4. Set the "Master username" to "root" and choose a password. This is the password that bench wants to know when it asks for the "Root password".
 5. Choose the size of the DB instance (at least "t2.small").
 6. Optional: Enable Multi-AZ deployment for redundancy.
-7. Select or create a parameter group that matches the below settings (for MariaDB 10.3).
+7. Choose the same VPC that contains your frappe server EC2 instance.
+8. Select or create a parameter group that matches the below settings (for MariaDB 10.3).
 
 ```
 character-set-client-handshake = FALSE
@@ -19,8 +20,8 @@ collation-server = utf8mb4_unicode_ci
 default-character-set = utf8mb4
 ```
 
-8. Create the database and wait until it's ready
-9. Note down the "Endpoint" for that instance (for example, `instance.rds.amazonaws.com`)
+9. Create the database and wait until it's ready
+10. Note down the "Endpoint" for that instance (for example, `instance.rds.amazonaws.com`)
 
 ### Parameters for MariaDB 10.2
 
@@ -37,6 +38,8 @@ default-character-set = utf8mb4
 ```
 
 # Setup Frappe
+
+We're on the frappe server. This should be an EC2 instance in the same VPC as the database.
 
 1. Test if you can connect to the database
 
