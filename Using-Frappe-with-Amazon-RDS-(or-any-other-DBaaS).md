@@ -38,18 +38,24 @@ default-character-set = utf8mb4
 
 # Setup Frappe
 
-1. Open `frappe-bench/sites/common_site_config.json` with an editor
+1. Test if you can connect to the database
+
+```bash
+    mysql -h instance.rds.amazonaws.com -u root -p
+```
+
+2. Open `frappe-bench/sites/common_site_config.json` with an editor
 
     * Add a key `db_host` and set it to the endpoint you just noted down. Add a key `rds_db` and set it to 1. The two lines should look like this:
 
 ```json
-{
-   "db_host": "instance.rds.amazonaws.com",
-   "rds_db": 1,
-}
+    {
+        "db_host": "instance.rds.amazonaws.com",
+        "rds_db": 1,
+    }
 ```
 
-2. Now you should be able to create a new site by running `bench new-site`
+3. Now you should be able to create a new site by running `bench new-site`
 
 ## Moving an existing database to RDS 
 
