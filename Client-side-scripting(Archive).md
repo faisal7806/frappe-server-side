@@ -256,10 +256,9 @@ def get_item_qty(item_code, wash_type):
                 }
       });
 
-      var set_css = function (frm)
-         {
-	       document.querySelectorAll("[data-fieldname='field_name']")[1].style.height ="50px";
-	       document.querySelectorAll("[data-fieldname='field_name']")[1].style.width ="120px";
-	       document.querySelectorAll("[data-fieldname='field_name']")[1].style.backgroundColor ="red";
-
-         }
+      var set_css = function (frm) {
+          let el = document.querySelectorAll("[data-fieldname='field_name']")[1];
+          el.style.height ="50px";
+          el.style.width ="120px";
+	  el.backgroundColor ="red";
+      }
