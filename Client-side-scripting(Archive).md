@@ -260,5 +260,5 @@ def get_item_qty(item_code, wash_type):
           let el = document.querySelectorAll("[data-fieldname='field_name']")[1];
           el.style.height ="50px";
           el.style.width ="120px";
-	  el.backgroundColor ="red";
+          el.backgroundColor ="red";
       }
