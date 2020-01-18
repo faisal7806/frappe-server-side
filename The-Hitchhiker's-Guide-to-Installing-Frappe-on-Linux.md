@@ -57,6 +57,8 @@ $ git --version
 
 You should then see `git version X.Y.Z` on your terminal screen.
 
+* Pay careful attention to the Python version that you use in the following steps. Read the instructions first carefully before executing the commands.
+
 [Frappé](https://github.com/frappe/frappe) requires at least Python 2.7 installed, but Python3.5+ also supported. To our luck, Python comes shipped with most Linux OS distributions. However, we might require the `python-dev` package installed for using Python's C API.
 
 * To install Python 2.7.X `dev` package on your Linux OS, simply:
@@ -158,12 +160,16 @@ $ sudo apt-get install -y nodejs
 $ sudo npm install -g yarn
 ```
 
+* Reboot the system.
+
 #### Getting [Bench](https://github.com/frappe/bench) onto your system
 
 ```console
 $ git clone https://github.com/frappe/bench
 $ pip install -e ./bench
 ```
+
+* Reboot the system once again.
 
 * Check whether **Bench** has been installed correctly (you may wish to log out and log back into your terminal before this step, as this will refresh your environment variable, adding ~/.local/bin to your path if it not already there)
 ```console
