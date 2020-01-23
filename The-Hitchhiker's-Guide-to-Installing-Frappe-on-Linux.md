@@ -160,8 +160,6 @@ $ sudo apt-get install -y nodejs
 $ sudo npm install -g yarn
 ```
 
-* Reboot the system.
-
 #### Getting [Bench](https://github.com/frappe/bench) onto your system
 
 ```console
@@ -264,10 +262,18 @@ $ bench start
 
 **NOTE:** You might need another terminal instance to run the following commands within the path to your `MY_BENCH` directory.
 
+
 ```console
 $ bench new-site <MY_SITE>
 ```
 e.g.
+
+**NOTE:** Remember to switch to `frappe-bench` subdirectory prior to running the command for creating site.
+
+```console
+$ cd frappe-bench
+```
+
 ```console
 $ bench new-site foo.bar
 ```
