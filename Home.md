@@ -19,7 +19,7 @@
 To install frappe right from scratch, check out our exhaustive guides:
 * [[The Hitchhiker's Guide to Installing Frappe on Mac OS X]]
 * [[The Hitchhiker's Guide to Installing Frappe on Linux]]
-* [[The Hitchhiker's Guide to Installing Frappe on Windows OS]] (Contributors Required)
+* [[The Hitchhiker's Guide to Installing Frappe on Windows OS]] (Windows Subsystem for Linux)
 
 #### Support
 * [Discuss](https://discuss.frappe.io)
