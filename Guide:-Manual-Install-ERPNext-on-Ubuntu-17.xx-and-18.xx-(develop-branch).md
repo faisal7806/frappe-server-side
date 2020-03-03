@@ -233,7 +233,7 @@ bench init erpnext && cd erpnext
 
 Create a new Frappe site.
 <pre>
-<code>bench new-site site1.local
+<code>bench new-site erp.example.com
 </code>
 </pre>
 
