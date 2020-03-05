@@ -87,6 +87,12 @@ Alternatively, for Python 3.X `setuptools` and `pip` (Python's Package Manager):
 $ sudo apt-get install python3-setuptools python3-pip
 ```
 
+Install `virtualenv`:
+
+```console
+$ sudo apt-get install virtualenv
+```
+
 You can also create an alias for pip and python to enforce use of python 3:
 
 ```
