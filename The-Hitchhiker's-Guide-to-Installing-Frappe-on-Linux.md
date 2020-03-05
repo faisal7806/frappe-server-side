@@ -148,10 +148,10 @@ $ sudo service mysql restart
 $ sudo apt-get install redis-server
 ```
 
-* To install Node.js 10.X package on your Linux OS, simply:
+* To install Node.js 12.X package on your Linux OS, simply:
 ```console
 $ sudo apt-get install curl
-$ curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 $ sudo apt-get install -y nodejs
 ```
 
