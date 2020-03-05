@@ -171,8 +171,8 @@ $ sudo npm install -g yarn
 Bench and frappe should run under a non-root user. If you are on a server, as root, create a new sudo user and switch to it. Change `my_user` to any username you like (`frappe` is a common choice, which makes it an attractive target for hackers).
 
 ```console
-adduser --ingroup sudo my_user
-su - my_user
+$ adduser --ingroup sudo my_user
+$ su - my_user
 ```
 
 #### Getting [Bench](https://github.com/frappe/bench) onto your system
