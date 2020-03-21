@@ -180,7 +180,10 @@ $ su - my_user
 
 ```console
 $ git clone https://github.com/frappe/bench
+
 $ pip install -e ./bench
+or if pip is not found (if you have issued "su - my_user")
+$ pip3 install -e ./bench
 ```
 
 * Reboot the system once again.
