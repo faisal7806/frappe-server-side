@@ -389,6 +389,8 @@ $ rm -f /etc/nginx/sites-enabled/*
 
 ```
 $ sudo ln -s ./config/nginx.conf /etc/nginx/sites-enabled/frappe.conf
+or if "sudo service nginx restart" failed because link is not exist
+$ sudo ln -s /home/my_user_id/my_bench_folder/config/nginx.conf /etc/nginx/sites-enabled/frappe.conf
 ```
 
 * Finally, restart nginx
@@ -411,4 +413,5 @@ You can now access your site at your server's IP address.
 | Ubuntu       | 18.04   | Satadru Sengupta <br/> [@fruitjam](https://github.com/fruitjam), <<a href="mailto:fruitjam@gmail.com">fruitjam@gmail.com</a>>
 | Linux Mint   | 19      | Sagar Vora <br/> [@sagarvora](https://github.com/sagarvora), <<a href="mailto:sagar@resilient.tech">sagar@resilient.tech</a>>
 | Ubuntu       | 16.04.6 | Mathieu BRUNOT <br/> [@madmath03](https://github.com/madmath03), <<a href="mailto:mathieu.brunot@monogramm.io">mathieu.brunot@monogramm.io</a>>
-| Debian       |  9.9    | Bob. Followed the Python 3 path. Used Mariadb 10.3 from its origin to avoid dependency conflicts (ssllib), see [here](https://linuxize.com/post/how-to-install-mariadb-on-debian-9/#installing-mariadb-on-debian-9-from-mariadb-repositories). The path for ln above is wrong I think.
+| Debian       |  9.9    | Bob. Followed the Python 3 path. Used Mariadb 10.3 from its origin to avoid dependency conflicts (ssllib), see [here](https://linuxize.com/post/how-to-install-mariadb-on-debian-9/#installing-mariadb-on-debian-9-from-mariadb-repositories). The path for ln above is wrong I think.<br/>
+| Ubuntu       | 18.04   | Adam Tang <br/> [@adamtang79](https://github.com/adamtang79)
