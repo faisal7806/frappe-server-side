@@ -189,6 +189,8 @@ $ pip3 install -e ./bench
 * Reboot the system once again.
 
 * Check whether **Bench** has been installed correctly (you may wish to log out and log back into your terminal before this step, as this will refresh your environment variable, adding ~/.local/bin to your path if it not already there)
+
+* You must login / "su - your_user_id" using the user id which you have used to install **Bench**
 ```console
 $ bench --version
 ```
