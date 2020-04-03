@@ -1,6 +1,7 @@
 You must have the python extension for VSCode for this to work. 
 
-- Once you install it, go to "Open Configurations" from the "Debug" menu
+- Once you install it, go to "Open Configurations" from the "Run" menu
+- Select "Python" > "Python File" (You may have to open a python file to have the "Python" option appear
 - Add the below to the list : 
 - Make sure your workspaceRoot (The folder that's opened in VSCode) is the apps folder
 ```
@@ -12,11 +13,8 @@ You must have the python extension for VSCode for this to work.
             "pythonPath": "${config:python.pythonPath}",
             "program": "${workspaceRoot}/frappe/debug.py",
             "cwd": "${workspaceRoot}",
-            "debugOptions": [
-                "WaitOnAbnormalExit",
-                "WaitOnNormalExit",
-                "RedirectOutput"
-            ]
+            "console": "integratedTerminal",
+            "redirectOutput": true
         },
 ```
  - Open VSCode Settings
@@ -33,7 +31,7 @@ frappe.app.serve(port=<The port of your bench, usually 8000>, sites_path='<Absol
 ```
  - Edit the Procfile inside your bench, and remove the line that starts with `bench serve`
  - Edit `frappe/app.py`, in the `run_simple` method, change `use_reloader` to `False` 
- - Edit your `/etc/hosts` and add an entry for the site(s) you want to debug
+ - Edit your `/etc/hosts` and add an entry for the site(s) you want to debug (do this on host machine if using Remote Development Extensions for developing inside a VM)
  - Run `bench start` in the terminal
  - Start debugging process in VSCode and wait for output to say `Running on http://0.0.0...`
  - Open your site by accessing it from your browser with the hostname you have set
