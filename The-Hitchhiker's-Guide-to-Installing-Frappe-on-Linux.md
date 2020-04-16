@@ -411,6 +411,7 @@ You can now access your site at your server's IP address.
 | Ubuntu       | 18.04   | Ameya Shenoy <br/> [@codingCoffee](https://github.com/codingCoffee), <<a href="mailto:ameya@frappe.io">ameya@frappe.io</a>>
 | Ubuntu       | 18.04   | Brian Pond <br/> [@PMojito](https://github.com/PMojito), <<a href="mailto:brian@pondconsulting.net">brian@pondconsulting.net</a>>
 | Ubuntu       | 18.04   | Satadru Sengupta <br/> [@fruitjam](https://github.com/fruitjam), <<a href="mailto:fruitjam@gmail.com">fruitjam@gmail.com</a>>
+| Ubuntu       | 18.04   | Raffael Meyer <br/> [@barredterra](https://github.com/barredterra), <<a href="mailto:raffael@alyf.de">raffael@alyf.de</a>>
 | Linux Mint   | 19      | Sagar Vora <br/> [@sagarvora](https://github.com/sagarvora), <<a href="mailto:sagar@resilient.tech">sagar@resilient.tech</a>>
 | Ubuntu       | 16.04.6 | Mathieu BRUNOT <br/> [@madmath03](https://github.com/madmath03), <<a href="mailto:mathieu.brunot@monogramm.io">mathieu.brunot@monogramm.io</a>>
 | Debian       |  9.9    | Bob. Followed the Python 3 path. Used Mariadb 10.3 from its origin to avoid dependency conflicts (ssllib), see [here](https://linuxize.com/post/how-to-install-mariadb-on-debian-9/#installing-mariadb-on-debian-9-from-mariadb-repositories). The path for ln above is wrong I think.<br/>
