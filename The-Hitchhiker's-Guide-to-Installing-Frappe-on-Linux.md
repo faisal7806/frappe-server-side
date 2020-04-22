@@ -417,4 +417,4 @@ You can now access your site at your server's IP address.
 | Debian       |  9.9    | Bob. Followed the Python 3 path. Used Mariadb 10.3 from its origin to avoid dependency conflicts (ssllib), see [here](https://linuxize.com/post/how-to-install-mariadb-on-debian-9/#installing-mariadb-on-debian-9-from-mariadb-repositories). The path for ln above is wrong I think.<br/>
 | Ubuntu       | 18.04   | Adam Tang <br/> [@adamtang79](https://github.com/adamtang79)
 | Debian       | 10.3    | X1123 <br /> [@x1123](https://github.com/x1123)
-| UBUNTU       | 19.10   | Klaus Kapppel <br/> Python3 Path, had to set root password and collation unicode for mariadb.
+| UBUNTU       | 19.10   | Klaus Kappel <br/> python3 path, had to set root password and collation unicode for mariadb.
