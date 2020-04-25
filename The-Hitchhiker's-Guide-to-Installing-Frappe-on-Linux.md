@@ -165,6 +165,10 @@ $ sudo apt-get install -y nodejs
 ```console
 $ sudo npm install -g yarn
 ```
+*Note:  Yarn is actually Facebook's alternative to `npm`. If running `yarn` from `npm` causes you problems, you may find it might better to do:*
+```
+$ sudo apt install yarn
+```
 
 #### Create a user
 
