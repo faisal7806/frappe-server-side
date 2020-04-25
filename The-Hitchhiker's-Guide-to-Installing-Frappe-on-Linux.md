@@ -274,11 +274,7 @@ By making this change, when you later try to start ERPNext --> it will connect t
 Again, only make this change if you're _not_ using a local MariaDB installation.
 
 -----
-**Caution:** *Before starting bench!* If you are redoing previous installations, remove any browser tabs that might still be trying to open connections to the site you previously created. While it is not certain they will mess with your installation, you **will** see spurious errors logged...  
-
-```console
-15:30:50 socketio.1       | Unable to join chat room. Error: getaddrinfo EAI_AGAIN mysite.localhost:80
-```
+**Caution:** *Before starting bench!* If you are redoing previous installations, remove any browser tabs that might still be trying to open connections to the site you previously created. While it is not certain they will mess with your installation, you could see errors logged unrelated to your installation steps.
 
 #### Start bench ####
 
@@ -326,9 +322,15 @@ Then add an entry of the site you just created into the `/etc/hosts` file.
 $ sudo nano /etc/hosts
 ```
 
+
 Add the following line and save the file
 ```console
 $ 127.0.0.1	foo.bar
+```
+*Note: If you skip this step or make a mistake doing it, you will see `socketio` throwing DNS errors in your bench log like this:*
+
+```console
+15:30:50 socketio.1       | Unable to join chat room. Error: getaddrinfo EAI_AGAIN mysitefoo.bar:80
 ```
 
 #### Fetching Frappé Apps
