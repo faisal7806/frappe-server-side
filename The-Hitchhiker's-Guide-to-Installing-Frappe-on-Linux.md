@@ -432,4 +432,4 @@ You can now access your site at your server's IP address.
 | Ubuntu       | 18.04   | Adam Tang <br/> [@adamtang79](https://github.com/adamtang79)
 | Debian       | 10.3    | X1123 <br /> [@x1123](https://github.com/x1123)
 | Ubuntu       | 19.10   | Klaus Kappel <br/> python3 path, had to set root password for mariadb.
-| Ubuntu - Lubuntu| 18.04   | Hanz Tura <br/> [@hanztura](https://github.com/hanztura)
+| Ubuntu - Lubuntu| 18.04   | Hanz Tura <br/> [@hanztura](https://github.com/hanztura), <<a href="mailto:hanz@xofytech.com">hanz@xofytech.com</a>>
