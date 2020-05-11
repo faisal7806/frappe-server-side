@@ -37,6 +37,9 @@ sudo python get-pip.py
 </code>
 </pre>
 
+Install setup tools
+<pre><code>sudo apt install python3-distutils -y</code></pre>
+
 <p>
 "Ensure that you have the latest version of " 
 <code>pip</code>
