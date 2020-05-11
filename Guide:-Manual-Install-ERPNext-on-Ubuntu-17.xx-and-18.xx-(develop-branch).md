@@ -124,7 +124,7 @@ Before configuring the database, you will need to secure MariaDB. You can secure
 
 Add the Nodesource repository for Node.js 8.x.
 <pre>
-<code>sudo curl --silent --location https://deb.nodesource.com/setup_8.x | sudo bash -
+<code>sudo curl --silent --location https://deb.nodesource.com/setup_10.x | sudo bash -
 </code>
 </pre>
 
