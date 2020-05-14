@@ -142,6 +142,7 @@ collation-server = utf8mb4_unicode_ci
 [mysql]
 default-character-set = utf8mb4
 ```
+_Note any includes that might overwrite these settings!_
 
 (Now press (Ctrl-X) to exit!)
 Finally restart the mysql server and you'll be good to go!
