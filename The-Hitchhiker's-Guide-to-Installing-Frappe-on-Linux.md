@@ -435,3 +435,4 @@ You can now access your site at your server's IP address.
 | Ubuntu       | 19.10   | Klaus Kappel <br/> python3 path, had to set root password for mariadb.
 | Ubuntu - Lubuntu| 18.04   | Hanz Tura <br/> [@hanztura](https://github.com/hanztura), <<a href="mailto:hanz@xofytech.com">hanz@xofytech.com</a>>
 | CentOS 8 | CentOS Linux release 8.1.1911 (Core) | Nilesh [@nileshgr](https://github.com/nileshgr)
+| Eelementary OS | 5.1 Hera | x1123 [@x1123](https://github.com/x1123)<br /> python3 erpnext version-12 and I suggesting to add option command >> pip --install frappe-bench - for production server as suggested. without -e \editable option\ 
