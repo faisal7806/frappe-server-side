@@ -436,7 +436,7 @@ You can now access your site at your server's IP address.
 | Linux Mint   | 19      | Sagar Vora <br/> [@sagarvora](https://github.com/sagarvora), <<a href="mailto:sagar@resilient.tech">sagar@resilient.tech</a>>
 | Ubuntu       | 16.04.6 | Mathieu BRUNOT <br/> [@madmath03](https://github.com/madmath03), <<a href="mailto:mathieu.brunot@monogramm.io">mathieu.brunot@monogramm.io</a>>
 | Debian       |  9.9    | Bob. Followed the Python 3 path. Used Mariadb 10.3 from its origin to avoid dependency conflicts (ssllib), see [here](https://linuxize.com/post/how-to-install-mariadb-on-debian-9/#installing-mariadb-on-debian-9-from-mariadb-repositories). The path for ln above is wrong I think.<br/>
-| Ubuntu       | 20.04   | Adam Tang <br/> [@adamtang79](https://github.com/adamtang79)
+| Ubuntu       | 20.04   | Adam Tang [@adamtang79](https://github.com/adamtang79)<br/>mysql_secure_installation without sudo will raise Access denied for user root@localhost
 | Debian       | 10.3    | X1123 <br /> [@x1123](https://github.com/x1123)
 | Ubuntu       | 19.10   | Klaus Kappel <br/> python3 path, had to set root password for mariadb.
 | Ubuntu - Lubuntu| 18.04   | Hanz Tura <br/> [@hanztura](https://github.com/hanztura), <<a href="mailto:hanz@xofytech.com">hanz@xofytech.com</a>>
