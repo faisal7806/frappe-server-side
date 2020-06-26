@@ -114,7 +114,13 @@ $ sudo apt-get update
 $ sudo apt-get install mariadb-server-10.3
 ```
 
-During this installation you'll be prompted to set the MySQL root password. If you are not prompted for the same, you'll have to initialize the MySQL server setup yourself after the above command completes. You can initialize the MySQL server setup by executing the following command `mysql_secure_installation`. **Remember**: only run it if you're not prompted the password during setup.
+During this installation you'll be prompted to set the MySQL root password. If you are not prompted for the same, you'll have to initialize the MySQL server setup yourself after the above command completes. You can initialize the MySQL server setup by executing the following command
+
+```console
+$ sudo mysql_secure_installation
+```
+
+**Remember**: only run `sudo mysql_secure_installation` if you're not prompted the password during setup.
 
 It is really important that you remember this password, since it'll be needed later on! 
 Test whether the installation has worked with `mysql -u root -p -h localhost`. You should be prompted for the mysql root password you have provided during the installation. Get back out of the mysql console by typing `\q`
@@ -430,7 +436,7 @@ You can now access your site at your server's IP address.
 | Linux Mint   | 19      | Sagar Vora <br/> [@sagarvora](https://github.com/sagarvora), <<a href="mailto:sagar@resilient.tech">sagar@resilient.tech</a>>
 | Ubuntu       | 16.04.6 | Mathieu BRUNOT <br/> [@madmath03](https://github.com/madmath03), <<a href="mailto:mathieu.brunot@monogramm.io">mathieu.brunot@monogramm.io</a>>
 | Debian       |  9.9    | Bob. Followed the Python 3 path. Used Mariadb 10.3 from its origin to avoid dependency conflicts (ssllib), see [here](https://linuxize.com/post/how-to-install-mariadb-on-debian-9/#installing-mariadb-on-debian-9-from-mariadb-repositories). The path for ln above is wrong I think.<br/>
-| Ubuntu       | 18.04   | Adam Tang <br/> [@adamtang79](https://github.com/adamtang79)
+| Ubuntu       | 20.04   | Adam Tang <br/> [@adamtang79](https://github.com/adamtang79)
 | Debian       | 10.3    | X1123 <br /> [@x1123](https://github.com/x1123)
 | Ubuntu       | 19.10   | Klaus Kappel <br/> python3 path, had to set root password for mariadb.
 | Ubuntu - Lubuntu| 18.04   | Hanz Tura <br/> [@hanztura](https://github.com/hanztura), <<a href="mailto:hanz@xofytech.com">hanz@xofytech.com</a>>
