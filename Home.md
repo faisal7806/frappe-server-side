@@ -25,13 +25,15 @@ To install frappe right from scratch, check out our exhaustive guides:
 
 We are following the below schedules for current releases.
 
-- Version 11: 3rd Wednesday of every 2 months
-- Version 12: 3rd Thursday of every 2 months
-- Version 13 Beta: 3rd Thursday of every month
+<pre>
+<b>Version 11</b>          3rd Wednesday of every 2 months
+<b>Version 12</b>          3rd Thursday of every 2 months
+<b>Version 13 Beta</b>     3rd Thursday of every month
+</pre>
 
 **Note:** Fixes for critical issues will be released out of the schedule. 
 
-The pre-release branch will be made 10 days before the release date for 
+The **pre-release** branch will be made 10 days before the release date for 
 each version and testing will be done on that pre-release branch. 
 Any fixes based on testing should go into both
 pre-release and hotfix/develop branches via separate pull requests.
