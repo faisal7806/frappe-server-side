@@ -11,7 +11,7 @@
 
 ### Table of Contents
 * [Installation](#installation)
-* [[API Reference]]
+* [API Reference](https://frappeframework.com/docs/user/en/api)
 * [Support](#support)
 
 #### Installation
