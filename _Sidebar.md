@@ -11,8 +11,6 @@
 * [[Home]]
 * [Installation](https://github.com/frappe/frappe/wiki#installation)
 
-### [API Reference](Frappe-API-Reference)
-
 ### Support
 * [Discuss](https://discuss.frappe.io)
 * [GitHub Issues](https://github.com/frappe/frappe/issues)
