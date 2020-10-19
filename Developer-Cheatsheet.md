@@ -325,6 +325,39 @@ frappe.ui.form.on("Project", {
 * `tasks` is the name of the child table within `Project`
 * we need to run `refresh_field` for the new row to become visible
 
+### Filter link options in a child table
+
+```js
+frappe.ui.form.on('{{ parent DocType }}', {
+	onload: function(frm) {
+		frm.set_query('{{ link field name }}', '{{ child table name }}', function() {
+			return {
+				'filters': {
+					'{{ field in linked doctype }}': ['{{ operator }}', '{{ value }}']
+				}
+			};
+		});
+	},
+});
+```
+
+For example, consider this snippet from **Web Page** doctype. **Web Page** contains a child table named `page_blocks`, which contains a link field to **Web Template**. The following restricts the link query to show only **Web Templates** which are not of type "Component".
+
+```js
+frappe.ui.form.on('Web Page', {
+	onload: function(frm) {
+		frm.set_query('web_template', 'page_blocks', function() {
+			return {
+				'filters': {
+					'type': ['!=', 'Component']
+				}
+			};
+		});
+	},
+});
+
+```
+
 ## Running Tasks Serially
 
 To run tasks serially, use `frappe.run_serially`
