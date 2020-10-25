@@ -179,7 +179,15 @@ sudo apt-get install -y nodejs
 sudo npm install -g yarn
 ```
 
-- If you intend to use the PDF generation functionality provided by frappe, you'll need to install `wkhtmltopdf`. You can download a package from [here](https://wkhtmltopdf.org/downloads.html).
+- If you intend to use the PDF generation functionality provided by frappe, you'll need to install `wkhtmltopdf`. You can download a package from [here](https://wkhtmltopdf.org/downloads.html). 
+
+For **Ubuntu 18.04**, the installation will look like this:
+
+```
+wget https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_amd64.deb
+sudo apt install ./wkhtmltox_0.12.6-1.bionic_amd64.deb
+rm wkhtmltox_0.12.6-1.bionic_amd64.deb
+```
 
 #### Create a user
 
