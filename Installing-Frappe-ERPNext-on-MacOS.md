@@ -33,7 +33,7 @@ brew install python
 Set it in path (also add it in `~/.zshrc` so that it is executed every time you open the terminal):
 
 ```
-export PATH="/usr/local/opt/python/libexec/bin:$PATH" (in ~/.zshrc)
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 ```
 
 #### Install Pre requisites
@@ -64,6 +64,23 @@ set password for 'root'@'localhost' = password('NEWPASS');
 flush privileges;
 ```
 
+Set encodings:
+
+Edit `vim /usr/local/etc/my.cnf`
+
+```
+[mysqld]
+innodb-file-format=barracuda
+innodb-file-per-table=1
+innodb-large-prefix=1
+character-set-client-handshake = FALSE
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+
+[mysql]
+default-character-set = utf8mb4
+```
+
 #### Install Bench
 
 Create a folder for frappe development
@@ -85,3 +102,32 @@ Create your first bench
 bench init frappe-bench
 ```
 
+#### Install ERPNext
+
+```
+bench get-app erpnext
+```
+
+(Debugging tips: if python libraries fail, try changing the versions of the pre-requisites in `apps/erpnext/requirements.txt`)
+
+#### Setup `/etc/hosts`
+
+```
+Add your sites in /etc/hosts
+
+127.0.0.1 frappe1.local frappe2.local
+```
+
+#### Create your first site
+
+Create your first site
+
+```
+bench start
+```
+
+On a new bench
+
+```
+bench new-site frappe1.local
+```
