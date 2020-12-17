@@ -1,3 +1,7 @@
+[Update Dec 2020]
+
+**Latest Guide:** It is really easy now [[Installing Frappe ERPNext on MacOS]]
+
 [Update March 2019]
 
 It is not really easy to install bench on a mac from scratch. Check this page for more details
