@@ -17,9 +17,10 @@
 #### Installation
 
 To install frappe right from scratch, check out our exhaustive guides:
-* [[The Hitchhiker's Guide to Installing Frappe on Mac OS X]]
+* [[Installing Frappe ERPNext on MacOS]]
 * [[The Hitchhiker's Guide to Installing Frappe on Linux]]
 * [[The Hitchhiker's Guide to Installing Frappe on Windows OS]] (Windows Subsystem for Linux)
+* [[The Hitchhiker's Guide to Installing Frappe on Mac OS X]] (deprecated)
 
 ### Release Schedule
 
